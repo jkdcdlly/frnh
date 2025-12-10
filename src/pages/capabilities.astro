@@ -6,6 +6,8 @@ import Button from '../components/ui/Button.astro';
 import CapabilityAccordion from '../components/react/CapabilityAccordion';
 import { Image } from 'astro:assets';
 import ImageReveal from '../components/react/ImageReveal';
+import { SITE } from '@config/site'; 
+
 
 import warehouseImg from '@assets/photo-1566576721346-d4a3b4eaeb55.jpg';
 import manufacturingImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
@@ -110,7 +112,7 @@ const capabilities = [
 ];
 ---
 
-<BaseLayout title="Our Capabilities - AstroFlow">
+<BaseLayout title={`Our Capabilities - ${SITE.title}`}>
   <!-- Hero Section -->
   <section class="relative h-[70vh] min-h-[500px] flex items-center overflow-hidden">
     <!-- Background Image with Overlay -->
@@ -286,7 +288,7 @@ const capabilities = [
           Get Started Today
         </div>
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          Ready to Optimize with <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">AstroFlow</span>?
+          Ready to Optimize with <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">{SITE.title}</span>?
       </h2>
         <p class="text-xl md:text-2xl text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed">
           Let's discuss how our capabilities can transform your business and accelerate your growth.

@@ -1,9 +1,12 @@
 // Site configuration
 export const SITE = {
-  title: 'AstroFlow',
+  title: 'FRNH®',
   description: 'Leading provider of optimized logistics and manufacturing solutions with state-of-the-art facilities and industry expertise.',
   url: 'https://yourdomain.com',
-  author: 'AstroFlow',
+  author: 'FRNH®',
+    // 新增配置建议
+  email: 'quotes@gmail.com', 
+  emailDomain: 'gmail.com' 
 } as const;
 
 export const NAVIGATION = [

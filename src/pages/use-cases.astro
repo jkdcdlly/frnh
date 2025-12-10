@@ -6,7 +6,7 @@ import TestimonialCard from '@components/ui/TestimonialCard.astro';
 import UseCaseTabs from '@components/react/UseCaseTabs';
 import StatsCards from '@components/react/StatsCards';
 import { Image } from 'astro:assets';
-
+import { SITE } from '@config/site'; 
 import ecommerceImg from '@assets/photo-1607082349566-187342175e2f.jpg';
 import healthcareImg from '@assets/photo-1587854692152-cbe660dbde88.jpg';
 import automotiveImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
@@ -104,7 +104,7 @@ const useCases:any[] = [
 
 const testimonials:any[] = [
   {
-    quote: "AstroFlow's automated warehousing solution transformed our e-commerce operations. We reduced order processing time by 40% and achieved 99.5% accuracy. Their same-day shipping capabilities helped us compete with industry giants.",
+    quote: `${SITE.title}'s automated warehousing solution transformed our e-commerce operations. We reduced order processing time by 40% and achieved 99.5% accuracy. Their same-day shipping capabilities helped us compete with industry giants.`,
     name: "Sarah Mitchell",
     role: "VP Operations, TechRetail",
     image: testimonial1Img,

@@ -11,7 +11,7 @@ import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
 const features = [
   {
     icon: Warehouse,
-    title: 'Advanced Warehousing',
+    title: 'Advanced Warehousing222',
     description: 'Climate-controlled facilities with automated inventory systems and 24/7 security.',
     image: warehouseImg,
   },

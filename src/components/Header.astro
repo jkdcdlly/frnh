@@ -1,5 +1,6 @@
 ---
-import { NAVIGATION } from '@config/site';
+import { NAVIGATION,SITE } from '@config/site';
+
 import { Package } from 'lucide-react';
 import MobileMenu from '@components/react/MobileMenu';
 
@@ -17,7 +18,7 @@ const isActiveLink = (href: string) : boolean => { return href === currentPathna
           <Package className="w-6 h-6 text-white" />
         </div>
         <span class="text-2xl font-bold bg-linear-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent">
-          AstroFlow
+          {SITE.title}
         </span>
       </a>
     </div>
