@@ -1,26 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PremiumHero from '../components/home/PremiumHero.astro';
-import ServiceHighlights from '../components/home/ServiceHighlights.astro';
-import ImageGrid from '../components/home/ImageGrid.astro';
-import StatsShowcase from '../components/home/StatsShowcase.astro';
-import IndustriesServed from '../components/home/IndustriesServed.astro';
-import TechnologyInnovation from '../components/home/TechnologyInnovation.astro';
-import ProcessWorkflow from '../components/home/ProcessWorkflow.astro';
-import Testimonials from '../components/home/Testimonials.astro';
-import PremiumCTA from '../components/home/PremiumCTA.astro';
-import ServiceHighlights2 from '@/components/home/ServiceHighlights2.astro';
----
+import HomeTemplate from '@/components/HomeTemplate.astro';
+import { languages } from '@/i18n/ui';
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'zh' } },
+    { params: { lang: 'vi' } },
+  ];
+}
 
-<BaseLayout>
-  <PremiumHero />
-  <ServiceHighlights />
-  <ServiceHighlights2 />
-  <ImageGrid />
-  <!-- <IndustriesServed /> -->
-  <TechnologyInnovation />
-  <ProcessWorkflow />
-  <!-- <StatsShowcase />
-  <Testimonials /> -->
-  <PremiumCTA />
-</BaseLayout>
+const { lang } = Astro.params;
+---
+<!-- 默认语言为 en -->
+<HomeTemplate lang={lang} />
