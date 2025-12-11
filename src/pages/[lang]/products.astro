@@ -8,9 +8,9 @@ import { Image } from 'astro:assets';
 import ImageReveal from '@/components/react/ImageReveal';
 import { SITE } from '@config/site'; 
 
-import { capabilities } from '@/data/products/zh/fire-sealing';
+// import { capabilities } from '@/data/products/zh/fire-sealing';
 
-import { getProducts } from '@/data/products/index';
+import { getProductsByCategory } from '@/data/products/index';
 
 import heroBgImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
 import ctaBgImg from '@/assets/photo-1553413077-190dd305871c.jpg';
@@ -35,7 +35,7 @@ export function getStaticPaths() {
 // 优先使用传入的 props.lang，如果没有则尝试从 URL params 获取，最后回退到默认值
 const { lang: langParam } = Astro.params;
 const { lang = langParam || 'en' } = Astro.props;
-const { fireSealing: fireSealingProducts } = getProducts(lang);
+const fireSealingProducts = getProductsByCategory('fire-sealing', lang);
 ---
 
 <BaseLayout title={`Our Products - ${SITE.title}`} lang={lang}>
