@@ -10,7 +10,7 @@ import { steelStructureProducts as viSteelStructure } from './vi/steel-structure
 
 // 定义分类元数据
 export const categories = [
-  // { id: 'all', name: { zh: '全部产品', en: 'All Products', vi: 'Tất cả sản phẩm' } },
+  { id: 'all', name: { zh: '全部产品', en: 'All Products', vi: 'Tất cả sản phẩm' } },
   { id: 'fire-sealing', name: { zh: '防火封堵材料', en: 'Fire Sealing Materials', vi: 'Vật liệu chống cháy' } },
   { id: 'steel-structure', name: { zh: '钢结构防火涂料', en: 'Steel Structure Fire Coating', vi: 'Sơn chống cháy kết cấu thép' } },
 ];
