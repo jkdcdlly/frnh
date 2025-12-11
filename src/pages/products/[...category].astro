@@ -1,0 +1,25 @@
+---
+import ProductsPage from '../[lang]/products/[...category].astro';
+import { defaultLang } from '@/i18n/ui';
+
+export function getStaticPaths() {
+  // 这里只需要生成分类的路径，不需要语言参数
+  const categories = ['all', 'fire-sealing', 'steel-structure'];
+  
+  const paths = [];
+  // 1. /products (对应 category 为 undefined)
+  paths.push({ params: { category: undefined } });
+  
+  // 2. /products/fire-sealing 等
+  categories.forEach(cat => {
+    if (cat !== 'all') {
+      paths.push({ params: { category: cat } });
+    }
+  });
+  
+  return paths;
+}
+---
+
+<!-- 直接渲染多语言组件，强制传入默认语言 -->
+<ProductsPage lang={defaultLang} />

@@ -19,7 +19,7 @@ import gangjiegou7 from '@assets/钢结构防火涂料/钢结构防火涂料-隧
 import gangjiegou8 from '@assets/钢结构防火涂料/钢结构防火涂料-特种室外非膨胀型防火涂料.jpg';
 import gangjiegou9 from '@assets/钢结构防火涂料/钢结构防火涂料-特种室外膨胀型防火涂料.jpg';
 
-
+import fanghuotest from '@assets/防火封堵材料/image2.png';
 
 // 原始数据 (6个)
 const originalFeatures = [
@@ -27,55 +27,55 @@ const originalFeatures = [
     icon: Warehouse,
     // title: 'Advanced Warehousing',
     // description: 'Climate-controlled facilities with automated inventory systems.',
-    image: gangjiegou1,
+    image: fanghuotest,
   },
   {
     icon: Truck,
     title: 'Fast Transportation',
     description: 'Multi-modal logistics network ensuring rapid delivery.',
-    image: gangjiegou2,
+    image: fanghuotest,
   },
   {
     icon: Package,
     title: 'Quality Manufacturing',
     description: 'ISO-certified production with precision engineering.',
-    image: gangjiegou3,
+    image: fanghuotest,
   },
   {
     icon: BarChart3,
     title: 'Real-Time Analytics',
     description: 'Complete supply chain visibility with advanced tracking.',
-    image: gangjiegou4,
+    image: fanghuotest,
   },
   {
     icon: Shield,
     title: 'Secure Operations',
     description: 'Industry-leading security protocols protecting assets.',
-    image: gangjiegou5,
+    image: fanghuotest,
   },
   {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock.',
-    image: gangjiegou6,
+    image: fanghuotest,
   },
     {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock.',
-    image: gangjiegou7,
+    image: fanghuotest,
   },
     {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock.',
-    image: gangjiegou8,
+    image: fanghuotest,
   },
     {
     icon: Headphones,
     title: '24/7 Support',
     description: 'Dedicated teams available around the clock.',
-    image: gangjiegou9,
+    image: fanghuotest,
   }
 ];
 

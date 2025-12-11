@@ -1,15 +1,39 @@
 ---
-import { languages } from '@/i18n/ui';
+import { languages, defaultLang } from '@/i18n/ui';
 import { Globe, ChevronDown } from 'lucide-react';
+import { getLocalizedPath } from '@/i18n/utils';
 
 interface Props {
   currentLang?: string;
 }
 
-const { currentLang = 'en' } = Astro.props;
+const { currentLang = defaultLang } = Astro.props;
 
 // 获取当前语言的显示名称
-const currentLabel = languages[currentLang as keyof typeof languages] || languages.en;
+const currentLabel = languages[currentLang as keyof typeof languages] || languages[defaultLang];
+const pathname = Astro.url.pathname;
+
+// --- 核心逻辑修复 ---
+// 1. 获取原始路径（去除语言前缀）
+let originalPath = pathname;
+const supportedLangs = Object.keys(languages).filter(lang => lang !== defaultLang);
+
+for (const lang of supportedLangs) {
+  // 检查路径是否以 /zh, /vi 等开头
+  const prefix = `/${lang}`;
+  if (originalPath === prefix || originalPath.startsWith(`${prefix}/`)) {
+    originalPath = originalPath.slice(prefix.length);
+    break;
+  }
+}
+
+// 2. 确保路径以 / 开头（处理空字符串的情况）
+if (!originalPath.startsWith('/')) {
+  originalPath = '/' + originalPath;
+}
+
+// 调试日志：保存文件后，请查看 VS Code 的终端输出，确认 originalPath 是否正确
+// console.log('LanguagePicker Debug:', { pathname, originalPath, currentLang });
 ---
 
 <div class="relative group ml-4 z-50">
@@ -27,7 +51,7 @@ const currentLabel = languages[currentLang as keyof typeof languages] || languag
     <div class="p-1.5">
       {Object.entries(languages).map(([lang, label]) => (
         <a
-          href={`/${lang === 'en' ? '' : lang}`}
+          href={getLocalizedPath(originalPath, lang)} 
           class={`flex items-center px-3 py-2 text-sm rounded-lg transition-colors ${
             currentLang === lang 
               ? 'bg-blue-50 text-blue-600 font-medium' 

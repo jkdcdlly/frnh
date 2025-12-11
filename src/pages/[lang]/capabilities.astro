@@ -8,108 +8,20 @@ import { Image } from 'astro:assets';
 import ImageReveal from '@/components/react/ImageReveal';
 import { SITE } from '@config/site'; 
 
+import { capabilities } from '@/data/products/zh/fire-sealing';
 
-import warehouseImg from '@/assets/photo-1566576721346-d4a3b4eaeb55.jpg';
-import manufacturingImg from '@/assets/photo-1581091226825-a6a2a5aee158.jpg';
-import transportationImg from '@/assets/photo-1601584115197-04ecc0da31d7.jpg';
-import supplyChainImg from '@/assets/photo-1460925895917-afdab827c52f.jpg';
-import valueAddedServicesImg from '@/assets/photo-1558618666-fcd25c85cd64.jpg';
-import technologyIntegrationImg from '@/assets/photo-1558494949-ef010cbdcc31.jpg';
-import heroBgImg from '@/assets/photo-1586528116311-ad8dd3c8310d.jpg';
+import { getProducts } from '@/data/products/index';
+
+import heroBgImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
 import ctaBgImg from '@/assets/photo-1553413077-190dd305871c.jpg';
 
-const capabilities = [
-  {
-    title: 'Warehousing & Storage',
-    description: 'State-of-the-art warehousing facilities equipped with advanced inventory management systems, climate control, and 24/7 security.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-    </svg>`,
-    image: warehouseImg,
-    features: [
-      'Climate-controlled storage',
-      'Automated inventory tracking',
-      'Cross-docking capabilities',
-      'Hazmat certified facilities',
-      'Real-time stock visibility'
-    ]
-  },
-  {
-    title: 'Manufacturing Services',
-    description: 'ISO 9001 certified manufacturing with precision engineering, quality control, and flexible production capabilities.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-    </svg>`,
-    image: manufacturingImg,
-    features: [
-      'CNC machining & fabrication',
-      'Assembly & kitting',
-      'Quality inspection',
-      'Prototype development',
-      'Custom tooling & fixtures'
-    ]
-  },
-  {
-    title: 'Transportation & Distribution',
-    description: 'Comprehensive multi-modal transportation network ensuring efficient, reliable delivery across all regions.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-    </svg>`,
-    image: transportationImg,
-    features: [
-      'Ground transportation (LTL/FTL)',
-      'Air freight services',
-      'Ocean freight',
-      'Last-mile delivery',
-      'Route optimization'
-    ]
-  },
-  {
-    title: 'Supply Chain Management',
-    description: 'End-to-end supply chain solutions with advanced analytics, forecasting, and optimization capabilities.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-    </svg>`,
-    image: supplyChainImg,
-    features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Network design',
-      'Risk management',
-      'Performance analytics'
-    ]
-  },
-  {
-    title: 'Value-Added Services',
-    description: 'Comprehensive value-added services to enhance your product offerings and streamline operations.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-    </svg>`,
-    image: valueAddedServicesImg,
-    features: [
-      'Product labeling & packaging',
-      'Returns management',
-      'Quality inspection',
-      'Kit assembly',
-      'Custom packaging design'
-    ]
-  },
-  {
-    title: 'Technology & Integration',
-    description: 'Advanced technology platform with seamless integration capabilities for complete visibility and control.',
-    icon: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>`,
-    image: technologyIntegrationImg,
-    features: [
-      'WMS & TMS integration',
-      'EDI & API connectivity',
-      'Real-time tracking',
-      'Automated reporting',
-      'Mobile applications'
-    ]
-  }
-];
+
+// 允许从 Props 接收 lang（当被作为组件引用时）
+interface Props {
+  lang?: string;
+}
+
+
 
 export function getStaticPaths() {
   return [
@@ -119,7 +31,11 @@ export function getStaticPaths() {
 }
 
 // 2. 获取当前语言参数
-const { lang } = Astro.params;
+// const { lang } = Astro.params;
+// 优先使用传入的 props.lang，如果没有则尝试从 URL params 获取，最后回退到默认值
+const { lang: langParam } = Astro.params;
+const { lang = langParam || 'en' } = Astro.props;
+const { fireSealing: fireSealingProducts } = getProducts(lang);
 ---
 
 <BaseLayout title={`Our Capabilities - ${SITE.title}`} lang={lang}>
@@ -164,36 +80,16 @@ const { lang } = Astro.params;
   <!-- Main Capabilities -->
   <Section background="gray">
     <!-- Accordion View for Mobile/Compact -->
-    <div class="lg:hidden mb-12">
+    <!-- <div class="lg:hidden mb-12">
       <CapabilityAccordion capabilities={capabilities} client:load />
-    </div>
+    </div> -->
     
     <!-- Grid View for Desktop -->
-    <div class="hidden lg:block space-y-24">
-      {capabilities.map((capability, index) => (
-        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-          <div class={`${index % 2 === 1 ? 'lg:col-start-2' : ''} animate-fadeInUp`}>
-            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-linear-to-br from-blue-500 to-teal-500 text-white mb-6 shadow-lg">
-              <div class="w-8 h-8" set:html={capability.icon.replace('w-12 h-12', 'w-8 h-8').replace('currentColor', 'white')} />
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {capability.title}
-            </h2>
-            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-              {capability.description}
-            </p>
-            <ul class="space-y-3">
-              {capability.features.map((feature) => (
-                <li class="flex items-center space-x-3">
-                  <svg class="w-5 h-5 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span class="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+    <div class=" lg:block space-y-24">
+      {fireSealingProducts.map((capability, index) => (
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-cente border-b pb-24 last:border-0 last:pb-0">
+          
+          <div>
             <ImageReveal client:load delay={index * 0.1}>
               <div class="relative aspect-4/3 group overflow-hidden rounded-2xl shadow-2xl">
                 <Image 
@@ -210,6 +106,30 @@ const { lang } = Astro.params;
                 </div>
               </div>
             </ImageReveal>
+          </div>
+          <div class="animate-fadeInUp">
+            {/* <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-linear-to-br from-blue-500 to-teal-500 text-white mb-6 shadow-lg">
+              <div class="w-8 h-8"  />
+            </div> */}
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {capability.title}
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              {capability.description}
+            </p>
+            {/* 修正：添加可选链检查，防止 features 为空时报错 */}
+            {capability.features && (
+              <ul class="space-y-3">
+                {capability.features.map((feature) => (
+                  <li class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       ))}

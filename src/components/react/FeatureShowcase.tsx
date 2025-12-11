@@ -25,105 +25,36 @@ import fanghuo13 from '@assets/防火封堵材料/防火封堵材料-阻火包�
 import fanghuo14 from '@assets/防火封堵材料/防火封堵材料-阻火模块.jpg';
 import fanghuo15 from '@assets/防火封堵材料/防火封堵材料-L型防火隔板.jpg';
 
-// 原始数据 (6个)
-const originalFeatures = [
-  {
-    icon: Warehouse,
-    // title: 'Advanced Warehousing',
-    // description: 'Climate-controlled facilities with automated inventory systems.',
-    image: fanghuo1,
-  },
-  {
-    icon: Truck,
-    title: 'Fast Transportation',
-    description: 'Multi-modal logistics network ensuring rapid delivery.',
-    image: fanghuo2,
-  },
-  {
-    icon: Package,
-    title: 'Quality Manufacturing',
-    description: 'ISO-certified production with precision engineering.',
-    image: fanghuo3,
-  },
-  {
-    icon: BarChart3,
-    title: 'Real-Time Analytics',
-    description: 'Complete supply chain visibility with advanced tracking.',
-    image: fanghuo4,
-  },
-  {
-    icon: Shield,
-    title: 'Secure Operations',
-    description: 'Industry-leading security protocols protecting assets.',
-    image: fanghuo5,
-  },
-  {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo6,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo7,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo8,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo9,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo10,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo11,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo12,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo13,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo14,
-  },
-    {
-    icon: Headphones,
-    title: '24/7 Support',
-    description: 'Dedicated teams available around the clock.',
-    image: fanghuo15,
-  },
-];
+import fanghuotest from '@assets/防火封堵材料/image2.png';
+// import { steelStructureProducts } from '@/data/products/zh/steel-structure';
 
-// 扩充数据：复制一份以实现无缝滚动 (6 -> 12)
-const features = [...originalFeatures, ...originalFeatures];
+import { steelStructureProducts as zhSteelStructure } from '@/data/products/zh/steel-structure';
+import { steelStructureProducts as enSteelStructure } from '@/data/products/en/steel-structure';
+import { steelStructureProducts as viSteelStructure } from '@/data/products/vi/steel-structure';
+// import { steelStructureProducts } from '@/data/products/zh/fire-sealing';
+// 原始数据 (6个)
+
+// 定义 Props 接口
+interface FeatureShowcaseProps {
+  lang?: 'zh' | 'en' | 'vi';
+}
+
+// 建立语言映射
+const productsMap = {
+  zh: zhSteelStructure,
+  en: enSteelStructure,
+  vi: viSteelStructure,
+};
+
+
 // const features = [...originalFeatures];
 
-export default function FeatureShowcase() {
+export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
+  // 根据传入的 lang 获取对应的数据，默认为 en
+  const currentProducts = productsMap[lang] || productsMap['en'];
+
+  // 扩充数据：复制一份以实现无缝滚动
+  const features = [...currentProducts, ...currentProducts];
   const x = useMotionValue(0);
   // 使用 ref 来追踪精确位置，避免依赖 x.get() 带来的潜在延迟或冲突
   const xRef = useRef(0);
@@ -135,7 +66,7 @@ export default function FeatureShowcase() {
   const CARD_WIDTH = 300;
   const GAP = 32;
   const TOTAL_ITEM_WIDTH = CARD_WIDTH + GAP;
-  const HALF_CONTENT_WIDTH = TOTAL_ITEM_WIDTH * originalFeatures.length;
+  const HALF_CONTENT_WIDTH = TOTAL_ITEM_WIDTH * currentProducts.length;
 
   // 每一帧都会执行的动画循环
   useAnimationFrame((time, delta) => {
@@ -192,7 +123,11 @@ export default function FeatureShowcase() {
       }
     });
   };
-
+// 辅助函数：生成带语言前缀的路径 (简单的 React 版本)
+  const getLocalizedPath = (path: string) => {
+    if (lang === 'en') return path;
+    return `/${lang}${path.startsWith('/') ? path : '/' + path}`;
+  };
   return (
     <div 
       className="relative w-full overflow-hidden py-8 group/container"
@@ -226,21 +161,29 @@ export default function FeatureShowcase() {
         className="flex gap-8 w-max px-4"
         style={{ x }} 
       >
+        
         {features.map((feature, index) => (
           <div
             key={`${feature.title}-${index}`}
             className="relative w-[300px] shrink-0 group cursor-pointer"
-          >
+          >  
             <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-[400px]">
+           
               {/* Image */}
               <div className="relative h-full overflow-hidden">
+                 <a 
+                    href={getLocalizedPath(`/products/detail/${feature.slug}`)} 
+                    
+                    // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
+                    draggable={false}
+                  >
                 <img
                   src={feature.image.src}
                   alt={feature.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 border border-blue-200 border-4"
                   loading="lazy"
                   decoding="async" // 异步解码，防止阻塞主线程导致动画卡顿
-                />
+                /></a>
                 {/* <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" /> */}
                 
                 {/* Icon overlay */}
@@ -248,16 +191,21 @@ export default function FeatureShowcase() {
                   <feature.icon className="w-6 h-6 text-blue-600" />
                 </div> */}
               </div>
-
-              {/* Content */}
-              {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-200 opacity-90">{feature.description}</p>
-              </div> */}
+              
+              {/* <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 backdrop-blur-sm bg-blue-700/70 rounded-b-lg"> */}
+                {/* <h3 className="text-2xl font-bold mb-2">{feature.title}</h3> */}
+                {/* <p className="text-sm text-gray-900 opacity-90">{feature.description}</p> */}
+              {/* </div> */}
             </div>
+
+                <div className="mt-4 px-4">
+                <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-900 opacity-90">{feature.description}</p>
+              </div>
           </div>
         ))}
       </motion.div>
     </div>
   );
 }
+

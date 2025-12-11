@@ -1,6 +1,6 @@
 export const vi = {
   'nav.home': 'Trang chủ',
-  'nav.capabilities': 'Năng lực',
+  'nav.products': 'Sản phẩm',
   'nav.useCases': 'Trường hợp sử dụng',
   'nav.facilities': 'Cơ sở vật chất',
   'nav.rfq': 'Yêu cầu báo giá',
@@ -19,15 +19,20 @@ export const vi = {
   'tech.title.highlight': 'Công nghệ tiên tiến',
   'tech.description': 'Nền tảng công nghệ của chúng tôi kết hợp AI, IoT và phân tích nâng cao để cung cấp các giải pháp hậu cần thông minh thích ứng và tối ưu hóa trong thời gian thực.',
   'tech.cta': 'Khám phá công nghệ',
-  'tech.ai.title': 'Hồ sơ công ty & Điểm mạnh cốt lõi',
-  'tech.ai.desc': 'Công ty TNHH Vật liệu Chịu lửa Phong Rui Langfang, thành lập năm 2015, là một doanh nghiệp chủ chốt chuyên sản xuất các sản phẩm chống cháy và vật liệu chống cháy. Công ty nằm trong khu kinh tế Bắc Kinh - Thiên Tân - Hà Bắc, gần Khu vực mới Xiong\'an, tận dụng lợi thế địa lý để phục vụ thị trường trong nước và quốc tế. Với vốn đăng ký 75 triệu nhân dân tệ và tập trung vào đổi mới công nghệ, công ty đã xây dựng được danh tiếng là đối tác đáng tin cậy trong ngành an toàn cháy nổ.',
-  'tech.visibility.title': 'Sản phẩm cốt lõi & Phạm vi thị trường​',
-  'tech.visibility.desc': 'Công ty có danh mục sản phẩm phong phú bao gồm 28 loại thuộc ba dòng chính, bao gồm sơn chống cháy phồng/không phồng trong nhà và ngoài trời cho kết cấu thép, sơn chống cháy cho hầm, sơn chống cháy cho cáp, vật liệu bịt kín hữu cơ linh hoạt, vật liệu bịt kín vô cơ, túi chống cháy, tấm chống cháy và mô-đun chống cháy. Các sản phẩm chủ lực này được đánh giá cao cả trong và ngoài nước, được bán trên toàn quốc và xuất khẩu sang nhiều quốc gia và khu vực như Trung Đông và Đông Nam Á, thể hiện ảnh hưởng rộng rãi trên thị trường',
-  'tech.iot.title': 'Chứng nhận & Đảm bảo chất lượng​',
-  'tech.iot.desc': 'Công ty rất coi trọng chất lượng sản phẩm và sự tuân thủ. Tất cả các sản phẩm đã vượt qua sự đánh giá nghiêm ngặt và chứng nhận của Trung tâm Đánh giá Sản phẩm Phòng cháy Quốc gia. Ngoài ra, công ty sở hữu nhiều giấy phép hành chính và quyền sở hữu trí tuệ, xây dựng hệ thống kiểm soát chất lượng toàn diện để đảm bảo độ tin cậy và an toàn của sản phẩm.',
-  'tech.security.title': 'Triết lý kinh doanh & Triển vọng tương lai​',
-  'tech.security.desc': 'Công ty luôn tuân thủ triết lý phát triển "lấy trung thực làm gốc, khách hàng là trên hết, lấy con người làm trung tâm, kinh doanh dựa trên đạo đức", tập trung vào nhu cầu của khách hàng. Thông qua đổi mới liên tục và quản lý trung thực, công ty đã nhận được sự công nhận rộng rãi từ các ngành xã hội. Trong tương lai, Langfang Fengrui sẽ tiếp tục hợp tác chặt chẽ với các đối tác trong và ngoài nước để cung cấp cho khách hàng các sản phẩm và dịch vụ tốt hơn, cùng thúc đẩy sự phát triển của ngành vật liệu xây dựng chống cháy.',
 
+  
+  "tech.ai.title": "Giới thiệu & Vị trí",
+  "tech.ai.desc": "Công ty TNHH Vật liệu Chịu lửa Phong Thụy Lang Phường chuyên sản xuất sản phẩm PCCC và vật liệu chống cháy. Tọa lạc tại trung tâm Vùng kinh tế Bột Hải Kinh-Tân-Thạch, liền kề Khu mới Hùng An, là doanh nghiệp trọng điểm ngành vật liệu chống cháy tỉnh Hà Bắc.",
+
+  "tech.visibility.title": "Sản phẩm & Thị trường",
+  "tech.visibility.desc": "Sản phẩm của chúng tôi gồm 3 dòng chính với 28 chủng loại, được tiêu thụ toàn quốc và xuất khẩu sang Trung Đông, Đông Nam Á, v.v. Các sản phẩm chủ lực như sơn chống cháy giãn nở/không giãn nở cho kết cấu thép trong nhà/ngoài trời, sơn chống cháy hầm, sơn chống cháy cáp điện, vật liệu bịt kín hữu cơ/vô cơ dẻo, gối chặn lửa, tấm ngăn cháy, mô-đun chặn lửa có uy tín cao trong nước.",
+
+  "tech.iot.title": "Chứng nhận & Triết lý",
+  "tech.iot.desc": "Tất cả sản phẩm đã được Trung tâm Giám định Chất lượng Sản phẩm PCCC thẩm định và chứng nhận. Toàn thể nhân viên tuân thủ triết lý 'Lấy chữ tín làm gốc, Khách hàng là thượng đế, Lấy con người làm trung tâm, Kinh doanh có đạo đức', qua nhiều năm nỗ lực, đã nhận được sự công nhận của xã hội.",
+
+  "tech.security.title": "Tầm nhìn & Hợp tác",
+  "tech.security.desc": "Công ty sẽ tiếp tục duy trì sự chân thành và đổi mới, lấy nhu cầu khách hàng làm định hướng, không ngừng phấn đấu, cống hiến những sản phẩm và dịch vụ tốt hơn để đạt được sự hài lòng của khách hàng. Chúng tôi chân thành cảm ơn các đối tác trong và ngoài nước đã hỗ trợ và hợp tác, mong muốn được hợp tác với những người bạn tâm huyết với sự nghiệp vật liệu xây dựng tiết kiệm năng lượng."
+,
   // Process Section
   'process.label': 'Quy trình làm việc',
   'process.title.prefix': 'Quy trình',
@@ -51,4 +56,12 @@ export const vi = {
 
   // Site Meta
   'site.description':'Nhà cung cấp hàng đầu các giải pháp tối ưu hóa logistics và sản xuất với các cơ sở hiện đại và chuyên môn trong ngành.',
+
+    'OurProducts': 'Sản phẩm của chúng tôi',
+  'ServiceHighlights.title1': 'Kết cấu thép',
+  'ServiceHighlights.title2': 'Sơn chống cháy',
+  'ServiceHighlights.desc':'Lớp phủ đặc biệt này, khi được phủ lên bề mặt các kết cấu thép, có thể làm chậm quá trình tăng nhiệt độ của thép trong đám cháy thông qua cách nhiệt và các phương pháp khác, nhờ đó tăng giới hạn chịu lửa và tạo thời gian cho việc sơ tán người và cứu hộ chữa cháy.',
+  'ServiceHighlights3.title1': 'Chống cháy',
+  'ServiceHighlights3.title2': 'Vật liệu bịt kín',
+  'ServiceHighlights3.desc': 'Vật liệu chống cháy đặc biệt được sử dụng để bịt kín các lỗ xuyên và khe nối trong các tòa nhà hoặc cơ sở nhằm ngăn chặn sự lan truyền của ngọn lửa và khói độc.'
 } as const;

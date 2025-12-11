@@ -1,14 +1,15 @@
 ---
 import { NAVIGATION,SITE,getNavigation } from '@config/site';
 import LanguagePicker from '@components/ui/LanguagePicker.astro';
-import { Package } from 'lucide-react';
+import { Package, ChevronDown } from 'lucide-react';
 import MobileMenu from '@components/react/MobileMenu';
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '@/i18n/utils';
 const { currentPathname } = Astro.props;
 // const isActiveLink = (href: string) : boolean => { return href === currentPathname; }
 const lang = getLangFromUrl(new URL(currentPathname, Astro.site || 'http://localhost:4321'));
 const t = useTranslations(lang);
-
+import logoImage from '@/assets/logo.jpg'; 
+import { Image } from 'astro:assets';
 // 1. 直接调用配置里的函数获取当前语言的导航
 const navItems = getNavigation(lang);
 
@@ -26,12 +27,19 @@ const isActiveLink = (href: string) : boolean => {
     <!-- Logo -->
     <div class="flex items-center">
       <a href={getLocalizedPath('/', lang)} class="flex items-center space-x-3 group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-blue-600 to-teal-600 group-hover:scale-110 transition-transform">
+        <!-- <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-blue-600 to-teal-600 group-hover:scale-110 transition-transform">
           <Package className="w-6 h-6 text-white" />
-        </div>
-        <span class="text-2xl font-bold bg-linear-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent">
-          {SITE.title}
-        </span>
+        </div> -->
+        <!-- <span class="text-2xl font-bold bg-linear-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent flex items-start">{SITE.title}<sup class="text-lg pt-1 text-blue-700 font-bold">{SITE.title_r}</sup>
+        </span> -->
+        <!-- 使用图片 Logo -->
+        <Image 
+          src={logoImage} 
+          alt={SITE.title} 
+          class="h-10 w-auto object-contain" 
+          loading="eager" 
+        />
+
       </a>
     </div>
 
@@ -39,6 +47,33 @@ const isActiveLink = (href: string) : boolean => {
     <div class="hidden lg:flex lg:items-center lg:space-x-1">
       {navItems.map((item) => {
         const isActive = isActiveLink(item.href);
+        // 如果有子菜单，渲染下拉菜单
+        if (item.children && item.children.length > 0) {
+          return (
+            <div class="relative group">
+              <a
+                class={`flex items-center px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all ${isActive ? 'nav-active' : ''}`}
+              >
+                {item.name}
+                <ChevronDown className="w-4 h-4 ml-1 opacity-50 group-hover:opacity-100 transition-opacity" />
+              </a>
+              
+              {/* Dropdown Menu */}
+              <div class="absolute left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left translate-y-2 group-hover:translate-y-0 z-50">
+                <div class="p-1.5">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class="block px-4 py-2.5 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                    >
+                      {child.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        }
         return (
         <a
           href={item.href}

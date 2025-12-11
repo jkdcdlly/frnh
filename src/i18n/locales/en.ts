@@ -1,6 +1,6 @@
 export const en = {
   'nav.home': 'Home',
-  'nav.capabilities': 'Capabilities',
+  'nav.products': 'Products',
   'nav.useCases': 'Use Cases',
   'nav.facilities': 'Facilities',
   'nav.rfq': 'Request Quote',
@@ -20,15 +20,20 @@ export const en = {
   'tech.description': 'Our technology stack combines AI, IoT, and advanced analytics to deliver intelligent logistics solutions that adapt and optimize in real-time.',
   'tech.cta': 'Explore Our Technology',
 
-  'tech.ai.title': 'Company Profile & Core Strengths',
-  'tech.ai.desc': "Langfang Fengrui Refractory Materials Co., Ltd., established in 2015, is a key enterprise specializing in the production of fire protection products and flame-retardant materials . Strategically located in the Beijing-Tianjin-Hebei economic zone near the Xiong'an New Area, the company leverages its geographic advantages to serve domestic and international markets . With a registered capital of RMB 75 million and a focus on technological innovation, it has built a reputation as a trusted partner in the fire safety industry",
+  
+  
+  "tech.ai.title": "Company Profile & Location",
+  "tech.ai.desc": "Langfang Fengrui Refractory Materials Co., Ltd. produces fire protection and flame-retardant materials. Located in the Beijing-Tianjin-Hebei Bohai Rim Economic Zone and adjacent to Xiong'an New Area, it is a key fireproof materials enterprise in Hebei Province.",
 
-  'tech.visibility.title': 'Core Products & Market Coverage​',
-  'tech.visibility.desc': 'The company boasts a rich product portfolio encompassing 28 varieties across three main series, including indoor and outdoor intumescent/non-intumescent fireproof coatings for steel structures, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, firestop bags, fireproof boards, and firestop modules. These flagship products enjoy high acclaim in both domestic and international markets, being sold nationwide and exported to multiple countries and regions such as the Middle East and Southeast Asia, demonstrating extensive market influence',
-  'tech.iot.title': 'Qualifications & Quality Assurance​',
-  'tech.iot.desc': 'The company places great emphasis on product quality and compliance. All products have passed rigorous review and certification by the National Fire Product Conformity Assessment Center. Additionally, the company holds multiple administrative licenses and intellectual property rights, establishing a comprehensive quality control system to ensure product reliability and safety.',
-  'tech.security.title': 'Business Philosophy & Future Outlook​',
-  'tech.security.desc': 'The company always adheres to the development philosophy of "integrity-based, customer first, people-oriented, and virtue-driven business," focusing on customer needs. Through continuous innovation and honest management, it has gained wide recognition from all sectors of society. In the future, Langfang Fengrui will continue to work hand in hand with domestic and international partners to provide customers with better products and services, jointly promoting the development of the fireproof building materials industry.',
+  "tech.visibility.title": "Core Products & Market",
+  "tech.visibility.desc": "Our products include 3 series and 28 varieties, sold nationwide and exported to the Middle East, Southeast Asia, etc. Leading products like indoor/outdoor intumescent and non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof pillows, fireproof boards, and fireproof modules enjoy a high reputation in China.",
+
+  "tech.iot.title": "Certifications & Philosophy",
+  "tech.iot.desc": "All products are certified by the Center for Certification of Fire Products. Upholding the philosophy of 'Integrity, User-First, People-Oriented, Ethical Business,' we have earned broad recognition through years of dedication.",
+
+  "tech.security.title": "Vision & Cooperation",
+  "tech.security.desc": "We remain committed to integrity and innovation, focusing on customer needs to deliver better products and services. We thank our global partners for their support and eagerly seek collaboration with those dedicated to energy-saving building materials to contribute to the industry."
+,
   // Process Section
   'process.label': 'How We Work',
   'process.title.prefix': 'Our Proven',
@@ -52,4 +57,16 @@ export const en = {
   
   // Site Meta
   'site.description':'Leading provider of optimized logistics and manufacturing solutions with state-of-the-art facilities and industry expertise.',
+
+
+  'ServiceHighlights.title1': 'Steel Structure',
+  'ServiceHighlights.title2': 'Fire-resistant Coating',
+    'ServiceHighlights.desc':'A special coating applied to the surface of steel structures that can delay the rise in temperature of the steel during a fire through thermal insulation and other means, thereby increasing its fire resistance limit and gaining time for personnel evacuation and firefighting and rescue operations.',
+
+  
+  'OurProducts': 'Our Products',
+  'ServiceHighlights3.title1': 'Fire-resistant',
+  'ServiceHighlights3.title2': 'Sealing Materials',
+  'ServiceHighlights3.desc': 'Special flame-retardant materials used to seal penetrations and construction joints in buildings or facilities to prevent the spread of flames and toxic smoke.'
+  
 } as const;

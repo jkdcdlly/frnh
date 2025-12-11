@@ -15,5 +15,7 @@ export function useTranslations(lang: keyof typeof ui) {
 // 辅助函数：生成带语言前缀的路径
 export function getLocalizedPath(path: string, lang: string) {
   if (lang === defaultLang) return path;
+  console.log('getLocalizedPath Debug111:', lang, path);
+  console.log('getLocalizedPath Debug222:', `/${lang}${path.startsWith('/') ? path : '/' + path}`);
   return `/${lang}${path.startsWith('/') ? path : '/' + path}`;
 }

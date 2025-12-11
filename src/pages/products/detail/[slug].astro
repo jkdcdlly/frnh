@@ -1,0 +1,22 @@
+---
+import ProductDetailPage from '../../[lang]/products/detail/[slug].astro';
+import { defaultLang } from '@/i18n/ui';
+import { getAllProducts } from '@/data/products/index';
+
+export function getStaticPaths() {
+  // 获取默认语言的所有产品
+  const products = getAllProducts(defaultLang);
+  
+  return products.map(product => ({
+    params: { slug: product.slug },
+    // 这里可以传 props，但因为我们是复用组件，组件内部可能也会重新获取数据
+    // 为了保险，我们只传 params，让组件自己处理，或者把 product 传给组件
+    props: { product } 
+  }));
+}
+
+const { product } = Astro.props;
+---
+
+<!-- 直接渲染多语言组件，强制传入默认语言和产品数据 -->
+<ProductDetailPage lang={defaultLang} product={product} />
