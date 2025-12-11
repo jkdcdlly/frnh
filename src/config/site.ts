@@ -1,3 +1,5 @@
+import { useTranslations, getLocalizedPath } from '@/i18n/utils';
+import type { ui } from '@/i18n/ui';
 // Site configuration
 export const SITE = {
   title: 'FRNH®',
@@ -9,14 +11,20 @@ export const SITE = {
   emailDomain: 'gmail.com' 
 } as const;
 
-export const NAVIGATION = [
-  { name: 'Home', href: '/' },
-  { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Use Cases', href: '/use-cases' },
-  { name: 'Facilities', href: '/facilities' },
-  { name: 'Request Quote', href: '/rfq' },
-  { name: 'Documentation', href: '/documentation' },
-] as const;
+// 将常量改为函数，接收当前语言作为参数
+export const getNavigation = (lang: keyof typeof ui) => {
+  const t = useTranslations(lang);
+  
+  return [
+    { name: t('nav.home'), href: getLocalizedPath('/', lang) },
+    { name: t('nav.capabilities'), href: getLocalizedPath('/capabilities', lang) },
+    { name: t('nav.useCases'), href: getLocalizedPath('/use-cases', lang) },
+    { name: t('nav.facilities'), href: getLocalizedPath('/facilities', lang) },
+    { name: t('nav.rfq'), href: getLocalizedPath('/rfq', lang) },
+    { name: t('nav.docs'), href: getLocalizedPath('/documentation', lang) },
+  ];
+};
+export const NAVIGATION = getNavigation('en');
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/company/yourcompany',
