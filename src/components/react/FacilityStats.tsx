@@ -7,7 +7,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { icon: Package, title: 'Total Square Footage', value: '2.25M+' },
+  { icon: Package, title: 'Total Square Footage2222', value: '2.25M+' },
   { icon: Truck, title: 'Delivery Vehicles', value: '200+' },
   { icon: Users, title: 'Trained Staff', value: '1,000+' },
   { icon: Globe, title: 'Geographic Reach', value: 'Global' }

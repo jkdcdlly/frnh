@@ -1,10 +1,11 @@
 export const vi = {
   'nav.home': 'Trang chủ',
   'nav.products': 'Sản phẩm',
-  'nav.useCases': 'Trường hợp sử dụng',
-  'nav.facilities': 'Cơ sở vật chất',
+  'nav.useCases': 'Dự án thi công',
+  'nav.facilities': 'ví dụ về bố trí nhà máy',
   'nav.rfq': 'Yêu cầu báo giá',
   'nav.docs': 'Tài liệu',
+  'nav.aboutour': 'Về công ty chúng tôi',
   'hero.title': 'Tối ưu hóa hoạt động của bạn',
   'hero.subtitle': 'Chuyển đổi chuỗi cung ứng của bạn với các giải pháp hậu cần và sản xuất tích hợp của chúng tôi.',
   'hero.cta.quote': 'Yêu cầu báo giá',
@@ -12,6 +13,8 @@ export const vi = {
   'footer.QuickLinks': 'Liên kết nhanh',
   'footer.Services': 'Dịch vụ',
   'footer.GetStarted': 'Bắt đầu',
+  'company': 'Công ty',
+  'company.profile':'Hồ sơ công ty',
   
   // Technology Section
   'tech.label': 'Công nghệ & Đổi mới',
@@ -63,5 +66,9 @@ export const vi = {
   'ServiceHighlights.desc':'Lớp phủ đặc biệt này, khi được phủ lên bề mặt các kết cấu thép, có thể làm chậm quá trình tăng nhiệt độ của thép trong đám cháy thông qua cách nhiệt và các phương pháp khác, nhờ đó tăng giới hạn chịu lửa và tạo thời gian cho việc sơ tán người và cứu hộ chữa cháy.',
   'ServiceHighlights3.title1': 'Chống cháy',
   'ServiceHighlights3.title2': 'Vật liệu bịt kín',
-  'ServiceHighlights3.desc': 'Vật liệu chống cháy đặc biệt được sử dụng để bịt kín các lỗ xuyên và khe nối trong các tòa nhà hoặc cơ sở nhằm ngăn chặn sự lan truyền của ngọn lửa và khói độc.'
+  'ServiceHighlights3.desc': 'Vật liệu chống cháy đặc biệt được sử dụng để bịt kín các lỗ xuyên và khe nối trong các tòa nhà hoặc cơ sở nhằm ngăn chặn sự lan truyền của ngọn lửa và khói độc.',
+
+    'facilities.ourInfrastructure': 'Cơ sở nhà máy của chúng tôi',
+  'facilities.our': 'Của chúng tôi',
+  'facilities.facilities': 'Cơ sở nhà máy',
 } as const;

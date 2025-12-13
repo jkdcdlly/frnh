@@ -10,7 +10,8 @@ export const SITE = {
   author: 'FRNH Team',
     // 新增配置建议
   email: 'quotes@gmail.com', 
-  emailDomain: 'gmail.com' 
+  emailDomain: 'gmail.com' ,
+  phone: '+1 (123) 456-7890',
 } as const;
 
 // 将常量改为函数，接收当前语言作为参数
@@ -19,7 +20,7 @@ export const getNavigation = (lang: keyof typeof ui) => {
   const categories = getCategories(lang); // 获取当前语言的分类
   return [
     { name: t('nav.home'), href: getLocalizedPath('/', lang) },
-    { name: t('nav.products'), href: getLocalizedPath('/products', lang) },
+    { name: t('nav.aboutour'), href: getLocalizedPath('/aboutour', lang) },
     { 
       name: t('nav.products'), 
       href: getLocalizedPath('/products', lang),
@@ -34,7 +35,8 @@ export const getNavigation = (lang: keyof typeof ui) => {
     { name: t('nav.useCases'), href: getLocalizedPath('/use-cases', lang) },
     { name: t('nav.facilities'), href: getLocalizedPath('/facilities', lang) },
     { name: t('nav.rfq'), href: getLocalizedPath('/rfq', lang) },
-    { name: t('nav.docs'), href: getLocalizedPath('/documentation', lang) },
+    
+    // { name: t('nav.docs'), href: getLocalizedPath('/documentation', lang) },
   ];
 };
 export const NAVIGATION = getNavigation('en');

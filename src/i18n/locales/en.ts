@@ -1,10 +1,11 @@
 export const en = {
   'nav.home': 'Home',
   'nav.products': 'Products',
-  'nav.useCases': 'Use Cases',
-  'nav.facilities': 'Facilities',
+  'nav.useCases': 'Construction Case',
+  'nav.facilities': 'Factory Area Example',
   'nav.rfq': 'Request Quote',
   'nav.docs': 'Documentation',
+  'nav.aboutour': 'About Our Company',
   'hero.title': 'Optimize Your Operations with',
   'hero.subtitle': 'Transform your supply chain with our integrated logistics and manufacturing solutions.',
   'hero.cta.quote': 'Request a Quote',
@@ -12,6 +13,8 @@ export const en = {
   'footer.QuickLinks': 'Quick Links',
   'footer.Services': 'Services',
   'footer.GetStarted': 'Get Started',
+  'company': 'Company',
+  'company.description':'Company Profile',
   
   // Technology Section
   'tech.label': 'Technology & Innovation',
@@ -67,6 +70,11 @@ export const en = {
   'OurProducts': 'Our Products',
   'ServiceHighlights3.title1': 'Fire-resistant',
   'ServiceHighlights3.title2': 'Sealing Materials',
-  'ServiceHighlights3.desc': 'Special flame-retardant materials used to seal penetrations and construction joints in buildings or facilities to prevent the spread of flames and toxic smoke.'
+  'ServiceHighlights3.desc': 'Special flame-retardant materials used to seal penetrations and construction joints in buildings or facilities to prevent the spread of flames and toxic smoke.',
+
+  'facilities.ourInfrastructure': 'Our Factory Area Facilities',
+  'facilities.our': 'Our',
+  'facilities.facilities': 'Factory Area Facilities',
+  
   
 } as const;

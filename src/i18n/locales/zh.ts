@@ -1,10 +1,11 @@
 export const zh = {
   'nav.home': '首页',
   'nav.products': '我们的产品',
-  'nav.useCases': '应用案例',
-  'nav.facilities': '设施展示',
+  'nav.useCases': '施工案例',
+  'nav.facilities': '厂区示例',
   'nav.rfq': '获取报价',
   'nav.docs': '文档中心',
+  'nav.aboutour': '关于我们公司',
   'hero.title': '优化您的运营流程',
   'hero.subtitle': '通过我们的一体化物流和制造解决方案，彻底改变您的供应链。',
   'hero.cta.quote': '立即询价',
@@ -12,6 +13,8 @@ export const zh = {
   'footer.QuickLinks': '快速链接',
   'footer.Services': '服务项目',
   'footer.GetStarted': '开始使用',
+  'company': '公司',
+  'company.profile':'公司介绍',
   
   // Technology Section
   'tech.label': '技术与创新',
@@ -63,6 +66,10 @@ export const zh = {
   'ServiceHighlights.desc':'涂覆在钢结构表面，能通过隔热等方式延缓钢材在火灾中升温，从而提高其耐火极限，为人员疏散和灭火救援争取时间的特种涂料',
   'ServiceHighlights3.title1': '防火',
   'ServiceHighlights3.title2': '封堵材料',
-  'ServiceHighlights3.desc': '用于密封建筑物或设施中的贯穿孔洞和构造缝隙，以防止火焰和有毒烟气蔓延的专用阻燃材料'
+  'ServiceHighlights3.desc': '用于密封建筑物或设施中的贯穿孔洞和构造缝隙，以防止火焰和有毒烟气蔓延的专用阻燃材料',
+
+    'facilities.ourInfrastructure': '我们的厂区设施',
+  'facilities.our': '我们的',
+  'facilities.facilities': '厂区设施',
   
 } as const;
