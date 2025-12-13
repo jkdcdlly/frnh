@@ -45,7 +45,7 @@ const relatedProducts = allProducts.filter(p => p.slug !== product.slug);
 <BaseLayout title={`${product.title} - Product Details`} lang={lang}>
   <div class="bg-slate-50 py-12 sm:py-20">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Breadcrumb -->
+      <!-- Breadcrumb
       <nav class="flex mb-8 text-sm text-slate-500">
         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
         <span class="mx-2">/</span>
@@ -55,7 +55,7 @@ const relatedProducts = allProducts.filter(p => p.slug !== product.slug);
         <span class="mx-2">/</span>
         <span class="text-slate-900 font-medium">{product.title}</span>
       </nav>
-
+ -->
       <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Section -->
@@ -163,7 +163,7 @@ const relatedProducts = allProducts.filter(p => p.slug !== product.slug);
                 href={`/products/detail/${p.slug}`}
                 class="group block bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-slate-100"
               >
-                <div class="h-48 overflow-hidden">
+                <div class="h-98 overflow-hidden">
                   <Image
                     src={p.image}
                     alt={p.title}

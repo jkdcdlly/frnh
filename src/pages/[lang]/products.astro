@@ -89,13 +89,13 @@ const fireSealingProducts = getProductsByCategory('fire-sealing', lang);
       {fireSealingProducts.map((capability, index) => (
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-cente border-b pb-24 last:border-0 last:pb-0">
           
-          <div>
+          <div >
             <ImageReveal client:load delay={index * 0.1}>
               <div class="relative aspect-4/3 group overflow-hidden rounded-2xl shadow-2xl">
                 <Image 
                   src={capability.image}
                   alt={capability.title}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 "
                   width={1200}
                   height={800}
                 />

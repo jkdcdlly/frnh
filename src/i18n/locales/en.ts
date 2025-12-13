@@ -14,7 +14,7 @@ export const en = {
   'footer.Services': 'Services',
   'footer.GetStarted': 'Get Started',
   'company': 'Company',
-  'company.description':'Company Profile',
+  'company.profile':'Company Profile',
   
   // Technology Section
   'tech.label': 'Technology & Innovation',
