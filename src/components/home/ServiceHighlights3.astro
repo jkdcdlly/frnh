@@ -1,6 +1,6 @@
 ---
 import FeatureShowcase3 from '../react/FeatureShowcase3';
-import { useTranslations } from '@/i18n/utils';
+import { useTranslations,getLocalizedPath } from '@/i18n/utils';
 // 接收父组件传来的 lang
 const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
@@ -22,17 +22,17 @@ const t = useTranslations(lang);
       </p>
     </div>
 
-    <FeatureShowcase3 client:load />
+    <FeatureShowcase3 client:load lang={lang} />
 
     
     
     <!-- Bottom CTA -->
     <div class="text-center mt-16">
       <a 
-        href="/capabilities" 
+        href={getLocalizedPath('/products/fire-sealing', lang)} 
         class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-lg hover:shadow-xl transition-all group"
       >
-        Explore all products
+        {t('explore.all.products')}
         <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>

@@ -1,14 +1,6 @@
 ---
 import HomeTemplate from '@/components/HomeTemplate.astro';
-import { languages } from '@/i18n/ui';
-export function getStaticPaths() {
-  return [
-    { params: { lang: 'zh' } },
-    { params: { lang: 'vi' } },
-  ];
-}
 
-const { lang } = Astro.params;
 ---
 <!-- 默认语言为 en -->
-<HomeTemplate lang={lang} />
+<HomeTemplate lang='en' />

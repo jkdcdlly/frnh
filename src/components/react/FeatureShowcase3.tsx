@@ -1,17 +1,35 @@
 import { useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimationFrame, animate } from 'motion/react';
-import { Warehouse, Truck, Package, BarChart3, Shield, Headphones, ChevronLeft, ChevronRight } from 'lucide-react';
-import { SITE } from '@config/site'; 
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { getLocalizedPath } from '@/i18n/utils';
+import { fireSealingProducts as zhProducts } from '@/data/products/zh/fire-sealing';
+import { fireSealingProducts as enProducts } from '@/data/products/en/fire-sealing';
+import { fireSealingProducts as viProducts } from '@/data/products/vi/fire-sealing';
 
-// 直接引入具体的数据文件，而不是 index.ts
-import { fireSealingProducts } from '@/data/products/zh/fire-sealing';
-// 原始数据 (6个)
+// 建立语言映射
+const productsMap = {
+  zh: zhProducts,
+  en: enProducts,
+  vi: viProducts,
+} as const;
+
+// 定义支持的语言类型为 productsMap 的键
+type Language = keyof typeof productsMap;
+
+// 定义 Props 接口
+interface FeatureShowcaseProps {
+  // 使用更通用且类型安全的写法
+  lang?: Language;
+}
 
 
-// 扩充数据：复制一份以实现无缝滚动 (6 -> 12)
-const features = [...fireSealingProducts, ...fireSealingProducts];
 
-export default function FeatureShowcase() {
+export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
+  // 根据传入的 lang 获取对应的数据，默认为 en
+  const currentProducts = productsMap[lang] ?? productsMap.en;
+
+  // 扩充数据：复制一份以实现无缝滚动
+  const features = [...currentProducts, ...currentProducts];
   const x = useMotionValue(0);
   // 使用 ref 来追踪精确位置，避免依赖 x.get() 带来的潜在延迟或冲突
   const xRef = useRef(0);
@@ -23,7 +41,7 @@ export default function FeatureShowcase() {
   const CARD_WIDTH = 300;
   const GAP = 32;
   const TOTAL_ITEM_WIDTH = CARD_WIDTH + GAP;
-  const HALF_CONTENT_WIDTH = TOTAL_ITEM_WIDTH * fireSealingProducts.length;
+  const HALF_CONTENT_WIDTH = TOTAL_ITEM_WIDTH * currentProducts.length;
 
   // 每一帧都会执行的动画循环
   useAnimationFrame((time, delta) => {
@@ -31,8 +49,8 @@ export default function FeatureShowcase() {
     if (isHovered || isAnimating.current) return;
 
     // 移动速度：0.05px/ms
-    const speed = 0.05; 
-    
+    const speed = 0.05;
+
     // 基于 ref 更新位置
     xRef.current -= speed * delta;
 
@@ -54,12 +72,12 @@ export default function FeatureShowcase() {
     if (isAnimating.current) return;
 
     isAnimating.current = true;
-    
+
     const currentX = xRef.current;
     const targetX = direction === 'left' ? currentX + TOTAL_ITEM_WIDTH : currentX - TOTAL_ITEM_WIDTH;
-    
-    animate(x, targetX, { 
-      duration: 0.5, 
+
+    animate(x, targetX, {
+      duration: 0.5,
       ease: "circOut",
       onUpdate: (latest) => {
         // 关键：在手动动画过程中，必须实时更新 xRef，否则动画结束后自动滚动会跳回旧位置
@@ -82,7 +100,7 @@ export default function FeatureShowcase() {
   };
 
   return (
-    <div 
+    <div
       className="relative w-full overflow-hidden py-8 group/container"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -92,16 +110,16 @@ export default function FeatureShowcase() {
       <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-linear-to-l from-white to-transparent pointer-events-none" />
 
       {/* 左箭头按钮 */}
-      <button 
+      <button
         onClick={() => handleManualScroll('left')}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover/container:opacity-100 hover:scale-110 cursor-pointer border border-slate-100"
         aria-label="Scroll Left"
       >
         <ChevronLeft className="w-6 h-6 text-slate-800" />
       </button>
-      
+
       {/* 右箭头按钮 */}
-      <button 
+      <button
         onClick={() => handleManualScroll('right')}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover/container:opacity-100 hover:scale-110 cursor-pointer border border-slate-100"
         aria-label="Scroll Right"
@@ -112,33 +130,33 @@ export default function FeatureShowcase() {
       {/* 滚动轨道 */}
       <motion.div
         className="flex gap-8 w-max px-4"
-        style={{ x }} 
+        style={{ x }}
       >
-        
+
         {features.map((feature, index) => (
           <div
             key={`${feature.title}-${index}`}
             className="relative w-[300px] shrink-0 group cursor-pointer"
-          >  
+          >
             <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-[400px]">
-           
+
               {/* Image */}
               <div className="relative h-full overflow-hidden">
-                 <a 
-                    href={`/products/detail/${feature.slug}`} 
-                    
-                    // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
-                    draggable={false}
-                  >
-                <img
-                  src={feature.image.src}
-                  alt={feature.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 "
-                  loading="lazy"
-                  decoding="async" // 异步解码，防止阻塞主线程导致动画卡顿
-                />
-                
-                 {/* <div
+                <a
+                  href={getLocalizedPath(`/products/detail/${feature.slug}`, lang)}
+
+                  // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
+                  draggable={false}
+                >
+                  <img
+                    src={feature.image.src}
+                    alt={feature.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 "
+                    loading="lazy"
+                    decoding="async" // 异步解码，防止阻塞主线程导致动画卡顿
+                  />
+
+                  {/* <div
                     className={`absolute top-4 left-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-teal-700 font-bold text-xl `}
                   >
                                         {SITE.title}
@@ -147,23 +165,23 @@ export default function FeatureShowcase() {
                   </div> */}
                 </a>
                 {/* <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" /> */}
-                
+
                 {/* Icon overlay */}
                 {/* <div className="absolute top-4 right-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg z-10">
                   <feature.icon className="w-6 h-6 text-blue-600" />
                 </div> */}
               </div>
-              
+
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 backdrop-blur-sm bg-blue-700/70 rounded-b-lg">
                 <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
                 {/* <p className="text-sm text-gray-900 opacity-90">{feature.description}</p> */}
               </div>
             </div>
 
-                <div className="mt-4 px-4">
-                {/* <h3 className="text-2xl font-bold mb-2">{feature.title}</h3> */}
-                <p className="text-sm text-white opacity-90">{feature.description}</p>
-              </div>
+            <div className="mt-4 px-4">
+              {/* <h3 className="text-2xl font-bold mb-2">{feature.title}</h3> */}
+              <p className="text-sm text-white opacity-90">{feature.description}</p>
+            </div>
           </div>
         ))}
       </motion.div>

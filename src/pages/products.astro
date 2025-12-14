@@ -1,7 +1,6 @@
 ---
 // 引用新的动态路由组件
 import ProductsPage from './[lang]/products/[...category].astro';
-import { defaultLang } from '@/i18n/ui';
 ---
 
-<ProductsPage lang={defaultLang} />
+<ProductsPage lang='en' />

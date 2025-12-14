@@ -1,18 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../ui/Button.astro";
-// import warehouseBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
 import warehouseBgImg from "@assets/frnh/1119942995_1234150482_1934581389_副本.png";
-import { NAVIGATION, SOCIAL_LINKS, SITE } from "@config/site";
+import { getLangFromUrl, useTranslations,getLocalizedPath } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="relative py-32 overflow-hidden">
   <!-- Content -->
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="max-w-4xl mx-auto text-center text-white z-10">
-     
+       
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
-        Complete Certification
+        {t('complete.certification')}
       </h2>
     
       <div class="flex flex-col sm:flex-row gap-6 justify-center mb-6">
@@ -20,14 +20,15 @@ import { NAVIGATION, SOCIAL_LINKS, SITE } from "@config/site";
           
           class="inline-flex items-center justify-center px-8 py-4 text-2xl font-semibold text-blue-900 text-white hover:bg-slate-100  hover:shadow-3xl transition-all group"
         >
-          Physical Manufacturer
+          {t('physical.manufacturer')}
+          
        
         </span>
         <span
           
           class="inline-flex items-center justify-center px-8 py-4 text-2xl font-semibold text-white hover:bg-white/10  hover:shadow-3xl transition-all group"
         >
-          High-quality products
+          {t('high.quality.products')}
         
         </span>
       </div>

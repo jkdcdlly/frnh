@@ -1,57 +1,35 @@
 import { useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimationFrame, animate } from 'motion/react';
-import { Warehouse, Truck, Package, BarChart3, Shield, Headphones, ChevronLeft, ChevronRight } from 'lucide-react';
-
-import warehouseImg from '@assets/防火封堵材料/防火封堵材料-L型防火隔板.jpg';
-import truckImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
-import packageImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
-import barChart3Img from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import shieldImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
-import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
-
-import fanghuo1 from '@assets/防火封堵材料/防火封堵材料-电缆防火涂料.jpg';
-import fanghuo2 from '@assets/防火封堵材料/防火封堵材料-多组分封堵材料1.jpg';
-import fanghuo3 from '@assets/防火封堵材料/防火封堵材料-防爆胶泥.jpg';
-import fanghuo4 from '@assets/防火封堵材料/防火封堵材料-防火槽盒.jpg';
-import fanghuo5 from '@assets/防火封堵材料/防火封堵材料-防火密封胶.jpg';
-import fanghuo6 from '@assets/防火封堵材料/防火封堵材料-防火涂层板.jpg';
-import fanghuo7 from '@assets/防火封堵材料/防火封堵材料-复合防火金属板.jpg';
-import fanghuo8 from '@assets/防火封堵材料/防火封堵材料-柔性有机堵料（可塑型）.jpg';
-import fanghuo9 from '@assets/防火封堵材料/防火封堵材料-无机堵料（速固型）.jpg';
-import fanghuo10 from '@assets/防火封堵材料/防火封堵材料-无机防火隔板.jpg';
-import fanghuo11 from '@assets/防火封堵材料/防火封堵材料-有机防火板.jpg';
-import fanghuo12 from '@assets/防火封堵材料/防火封堵材料-阻火包.jpg';
-import fanghuo13 from '@assets/防火封堵材料/防火封堵材料-阻火包带.jpg';
-import fanghuo14 from '@assets/防火封堵材料/防火封堵材料-阻火模块.jpg';
-import fanghuo15 from '@assets/防火封堵材料/防火封堵材料-L型防火隔板.jpg';
-
-import fanghuotest from '@assets/防火封堵材料/image2.png';
-// import { steelStructureProducts } from '@/data/products/zh/steel-structure';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { getLocalizedPath } from '@/i18n/utils';
 
 import { steelStructureProducts as zhSteelStructure } from '@/data/products/zh/steel-structure';
 import { steelStructureProducts as enSteelStructure } from '@/data/products/en/steel-structure';
 import { steelStructureProducts as viSteelStructure } from '@/data/products/vi/steel-structure';
-// import { steelStructureProducts } from '@/data/products/zh/fire-sealing';
 // 原始数据 (6个)
-
-// 定义 Props 接口
-interface FeatureShowcaseProps {
-  lang?: 'zh' | 'en' | 'vi';
-}
 
 // 建立语言映射
 const productsMap = {
   zh: zhSteelStructure,
   en: enSteelStructure,
   vi: viSteelStructure,
-};
+} as const;
+
+// 定义支持的语言类型为 productsMap 的键
+type Language = keyof typeof productsMap;
+
+// 定义 Props 接口
+interface FeatureShowcaseProps {
+  // 使用更通用且类型安全的写法
+  lang?: Language;
+}
 
 
 // const features = [...originalFeatures];
 
 export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
   // 根据传入的 lang 获取对应的数据，默认为 en
-  const currentProducts = productsMap[lang] || productsMap['en'];
+  const currentProducts = productsMap[lang] ?? productsMap.en;
 
   // 扩充数据：复制一份以实现无缝滚动
   const features = [...currentProducts, ...currentProducts];
@@ -123,11 +101,8 @@ export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
       }
     });
   };
-// 辅助函数：生成带语言前缀的路径 (简单的 React 版本)
-  const getLocalizedPath = (path: string) => {
-    if (lang === 'en') return path;
-    return `/${lang}${path.startsWith('/') ? path : '/' + path}`;
-  };
+
+
   return (
     <div 
       className="relative w-full overflow-hidden py-8 group/container"
@@ -172,7 +147,7 @@ export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
               {/* Image */}
               <div className="relative h-full overflow-hidden">
                  <a 
-                    href={getLocalizedPath(`/products/detail/${feature.slug}`)} 
+                    href={getLocalizedPath(`/products/detail/${feature.slug}`, lang)} 
                     
                     // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
                     draggable={false}

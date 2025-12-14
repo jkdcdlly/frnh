@@ -2,23 +2,6 @@ import { useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimationFrame, animate } from 'motion/react';
 import { Warehouse, Truck, Package, BarChart3, Shield, Headphones, ChevronLeft, ChevronRight } from 'lucide-react';
 
-import warehouseImg from '@assets/防火封堵材料/防火封堵材料-L型防火隔板.jpg';
-import truckImg from '@assets/photo-1601584115197-04ecc0da31d7.jpg';
-import packageImg from '@assets/photo-1581091226825-a6a2a5aee158.jpg';
-import barChart3Img from '@assets/photo-1551288049-bebda4e38f71.jpg';
-import shieldImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
-import headphonesImg from '@assets/photo-1486312338219-ce68d2c6f44d.jpg';
-
-import gangjiegou1 from '@assets/钢结构防火涂料/钢结构防火涂料-饰面型防火涂料.jpg';
-import gangjiegou2 from '@assets/钢结构防火涂料/钢结构防火涂料-室内非膨胀防火涂料-石膏基.jpg';
-import gangjiegou3 from '@assets/钢结构防火涂料/钢结构防火涂料-室内非膨胀型防火涂料.jpg';
-import gangjiegou4 from '@assets/钢结构防火涂料/钢结构防火涂料-室内膨胀型防火涂料.jpg';
-import gangjiegou5 from '@assets/钢结构防火涂料/钢结构防火涂料-室外非膨胀型防火涂料.jpg';
-import gangjiegou6 from '@assets/钢结构防火涂料/钢结构防火涂料-室外膨胀型钢结构防火涂料.jpg';
-import gangjiegou7 from '@assets/钢结构防火涂料/钢结构防火涂料-隧道防火涂料.jpg';
-import gangjiegou8 from '@assets/钢结构防火涂料/钢结构防火涂料-特种室外非膨胀型防火涂料.jpg';
-import gangjiegou9 from '@assets/钢结构防火涂料/钢结构防火涂料-特种室外膨胀型防火涂料.jpg';
-
 import fanghuotest from '@assets/防火封堵材料/image2.png';
 
 // 原始数据 (6个)

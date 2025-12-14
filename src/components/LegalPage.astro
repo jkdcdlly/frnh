@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+interface Props {
+  title: string;
+  content: string;
+  lang: string;
+}
+
+const { title, content, lang } = Astro.props;
+---
+
+<BaseLayout title={title} lang={lang}>
+  <div class="container mx-auto px-4 py-16 max-w-4xl">
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">{title}</h1>
+    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xs border border-slate-100">
+      <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+        <Fragment set:html={content} />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

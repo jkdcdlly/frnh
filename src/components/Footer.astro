@@ -31,7 +31,7 @@ import { Image } from 'astro:assets';
         />
         </a>
         <p class="text-sm text-slate-400 leading-relaxed max-w-xs">
-          {SITE.description}
+          {t('site.description')}
         </p>
         <div class="flex space-x-4">
           <a
@@ -83,69 +83,69 @@ import { Image } from 'astro:assets';
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">
           <!-- Services -->
-          {t('footer.Services')}
+          {t('nav.products')}
         </h3>
         <ul class="space-y-3">
           <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/products/fire-sealing', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Warehousing & Storage
+              {t('fire.sealing')}
             </a>
           </li>
           <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/products/steel-structure', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Transportation
+              {t('steel.structure')}
+            </a>
+          </li>
+          <!-- <li>
+            <a href={getLocalizedPath('/capabilities', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
+              {t('manufacturing')}
             </a>
           </li>
           <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/capabilities', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Manufacturing
+              {t('supply.chain.management')}
             </a>
-          </li>
-          <li>
-            <a href="/capabilities" class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Supply Chain Management
-            </a>
-          </li>
+          </li> -->
         </ul>
       </div>
 
       <!-- Contact -->
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">
-          <!-- Get Started -->
+        <!-- <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">
+          
           {t('footer.GetStarted')}
-        </h3>
-        <ul class="space-y-3 text-sm">
+        </h3> -->
+        <!-- <ul class="space-y-3 text-sm">
           <li>
-            <a href="/rfq" class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/rfq', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Request a Quote
+              {t('request.for.quote')}
             </a>
           </li>
           <li>
-            <a href="/facilities" class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/facilities', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Find a Facility
+              {t('nav.facilities')}
             </a>
           </li>
           <li>
-            <a href="/documentation" class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
+            <a href={getLocalizedPath('/documentation', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
               <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              Documentation
+              {t('documentation')}
             </a>
-          </li>
+          </li>  -->
         </ul>
         
         <div class="mt-8">
           <a
-            href="/rfq"
+            href={getLocalizedPath('/rfq', lang)}
             class="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-lg hover:shadow-xl transition-all"
           >
-            Get Started
+            {t('hero.cta.quote')}
           </a>
         </div>
       </div>
@@ -158,16 +158,17 @@ import { Image } from 'astro:assets';
           &copy; {new Date().getFullYear()} {SITE.author}. All rights reserved.
         </p>
         <div class="flex items-center space-x-6 text-sm">
-          <a href="/" class="text-slate-400 hover:text-blue-400 transition-colors">
-            Privacy Policy
+          <a href={getLocalizedPath('/privacy', lang)} class="text-slate-400 hover:text-blue-400 transition-colors">
+            {t('privacy.policy')}
+            
           </a>
           <span class="text-slate-700">•</span>
-          <a href="/" class="text-slate-400 hover:text-blue-400 transition-colors">
-            Terms of Service
+          <a href={getLocalizedPath('/terms', lang)}  class="text-slate-400 hover:text-blue-400 transition-colors">
+            {t('terms.of.service')}
           </a>
           <span class="text-slate-700">•</span>
-          <a href="/" class="text-slate-400 hover:text-blue-400 transition-colors">
-            Cookie Policy
+          <a href={getLocalizedPath('/cookies', lang)} class="text-slate-400 hover:text-blue-400 transition-colors">
+            {t('cookie.policy')}
           </a>
         </div>
       </div>

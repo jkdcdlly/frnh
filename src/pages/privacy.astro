@@ -1,0 +1,8 @@
+---
+import LegalPage from '@/components/LegalPage.astro';
+import { legalContent } from '@/data/legal';
+import { defaultLang } from '@/i18n/ui';
+
+const { title, content } = legalContent[defaultLang].privacy;
+---
+<LegalPage title={title} content={content} lang={defaultLang} />

@@ -6,7 +6,7 @@ import implementationImg from "@assets/厂区实力/673582483_-1713819689_167229
 import optimizationImg from "@assets/厂区实力/-851394577_-1616383441_-1645369499.jpg";
 import supportGrowthImg from "@assets/厂区实力/-2030029167_730982163_-1967713043.jpg";
 
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations,getLocalizedPath } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 interface Step {
@@ -104,10 +104,12 @@ const arrowPath = "M9 5l7 7-7 7";
         {
           steps.map((step) => (
             <div class="relative h-full">
+              <a href={getLocalizedPath('/facilities', lang)}>
               <div
                 class={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border-2 border-slate-100 ${step.hoverBorder} relative z-10 flex flex-col h-full`}
               >
                 <div class="relative h-48 overflow-hidden">
+                  
                   <Image
                     src={step.image}
                     alt={step.alt}
@@ -115,14 +117,12 @@ const arrowPath = "M9 5l7 7-7 7";
                     width={800}
                     height={400}
                   />
-                  {/* <div
-                    class={`absolute inset-0 bg-linear-to-t ${step.gradient} to-transparent`}
-                  /> */}
                   <div
                     class={`absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center ${step.textColor} font-bold text-xl shadow-lg`}
                   >
                     {step.number}
                   </div>
+                  
                 </div>
                 <div class="p-8 flex flex-col flex-1">
                   <h3 class="text-xl font-bold text-slate-900 mb-3">
@@ -134,7 +134,6 @@ const arrowPath = "M9 5l7 7-7 7";
                   <div
                     class={`mt-6 flex items-center text-sm ${step.textColor} font-semibold`}
                   >
-                    {/* Learn more */}
                     {t('process.learnMore')}
                     <svg
                       class="w-4 h-4 ml-1"
@@ -152,13 +151,14 @@ const arrowPath = "M9 5l7 7-7 7";
                   </div>
                 </div>
               </div>
+              </a>
             </div>
           ))
         }
       </div>
     </div>
 
-    <!-- Key Benefits -->
+    <!-- Key Benefits 
     <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="text-center">
         <div
@@ -178,12 +178,10 @@ const arrowPath = "M9 5l7 7-7 7";
           </svg>
         </div>
         <h4 class="text-lg font-semibold text-slate-900 mb-2">
-          <!-- Fast Deployment -->
            {t('process.benefit1.title')}
         </h4>
         <p class="text-slate-600">
           {t('process.benefit1.desc')}
-          <!-- Get up and running in weeks, not months -->
         </p>
       </div>
       <div class="text-center">
@@ -231,5 +229,6 @@ const arrowPath = "M9 5l7 7-7 7";
         <p class="text-slate-600">{t('process.benefit3.desc')}</p>
       </div>
     </div>
+    -->
   </div>
 </section>

@@ -1,12 +1,6 @@
 ---
 // 1. 导入 [lang] 目录下的页面组件
 import CapabilitiesPage from './[lang]/capabilities.astro';
-import { defaultLang } from '@/i18n/ui';
-
-// 2. 构造一个假的 Astro.params，传入默认语言
-// 注意：这里我们并不需要真的跳转，而是直接复用那个组件的渲染逻辑
-// 但是，直接导入 .astro 文件作为组件使用时，它接收的是 props，而不是 params
 ---
 
-<!-- 3. 直接渲染该组件，并传入 lang 属性 -->
-<CapabilitiesPage lang={defaultLang} />
+<CapabilitiesPage lang='en' />
