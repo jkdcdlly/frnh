@@ -2,7 +2,7 @@
 import ProductDetailPage from '../../[lang]/products/detail/[slug].astro';
 import { defaultLang } from '@/i18n/ui';
 import { getAllProducts } from '@/data/products/index';
-
+// 这个不能使用  export { getStaticPaths } from "@/i18n/utils";
 export function getStaticPaths() {
   // 获取默认语言的所有产品
   const products = getAllProducts(defaultLang);

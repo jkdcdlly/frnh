@@ -22,9 +22,9 @@ interface FeatureShowcaseProps {
   lang?: Language;
 }
 
+import { defaultLang } from '@/i18n/ui';
 
-
-export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
+export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseProps) {
   // 根据传入的 lang 获取对应的数据，默认为 en
   const currentProducts = productsMap[lang] ?? productsMap.en;
 
@@ -173,7 +173,13 @@ export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 backdrop-blur-sm bg-blue-700/70 rounded-b-lg">
-                <h3 className="text-2xl font-bold mb-2">{feature.title}</h3>
+                {/* 修改说明：
+                    1. h-16: 设置固定高度为 4rem (64px)，正好是 text-2xl (32px行高) 的两倍。
+                    2. line-clamp-2: 限制最多显示2行，多余的显示省略号。
+                    3. overflow-hidden: 防止极端情况下内容溢出。
+                    4. 移除了 mb-2，因为固定高度已经包含了所需的空间，且下方描述已注释。
+                */}
+                <h3 className="text-2xl font-bold line-clamp-1 h-8 overflow-hidden">{feature.title}</h3>
                 {/* <p className="text-sm text-gray-900 opacity-90">{feature.description}</p> */}
               </div>
             </div>

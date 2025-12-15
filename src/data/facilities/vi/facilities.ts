@@ -6,7 +6,7 @@ import { SITE } from '@/config/site';
 
 export const facilities = [
   {
-    name: 'Office environment',
+    name: 'Môi trường văn phòng',
     location: 'Chicago, Illinois',
     address: '1234 Industrial Boulevard, Chicago, IL 60609',
     type: 'Distribution & Manufacturing',
@@ -20,7 +20,7 @@ export const facilities = [
     manager: 'Sarah Johnson',
     hours: '24/7 Operations',
     features: [
-      "Langfang Fengrui Refractory Materials Co., Ltd. is a company engaged in the production of fire protection products and fire retardant materials. It is located in the heart of the Beijing-Tianjin-Hebei Bohai Rim Economic Circle, adjacent to Xiong'an New Area, and is a key enterprise in the fire protection materials industry in Hebei Province.",
+      'Công ty TNHH Vật liệu Chịu lửa Fengrui Langfang là một doanh nghiệp chuyên sản xuất các sản phẩm phòng cháy chữa cháy và vật liệu chống cháy, tọa lạc tại trung tâm Khu kinh tế vành đai Bắc Kinh - Thiên Tân - Hà Bắc, gần Khu vực mới Xiong\'an, là doanh nghiệp trọng điểm trong ngành vật liệu chống cháy của tỉnh Hà Bắc.',
       
       
       
@@ -28,7 +28,7 @@ export const facilities = [
     certifications: ['ISO 9001', 'ISO 14001', 'OSHA Compliant']
   },
   {
-    name: 'Production site',
+    name: 'Sản xuất tại chỗ',
     location: 'Los Angeles, California',
     address: '5678 Portside Drive, Los Angeles, CA 90040',
     type: 'Port Logistics & Warehousing',
@@ -42,12 +42,12 @@ export const facilities = [
     manager: 'Michael Chen',
     hours: 'Mon-Sun: 6:00 AM - 10:00 PM',
     features: [
-      'Our company currently offers three major series with 28 varieties. Our products are sold nationwide and exported to countries and regions such as the Middle East and Southeast Asia.',
+      'Công ty chúng tôi hiện cung cấp ba dòng sản phẩm chính với 28 chủng loại. Sản phẩm của chúng tôi được bán trên toàn quốc và xuất khẩu sang các quốc gia và khu vực như Trung Đông và Đông Nam Á.',
     ],
     certifications: ['C-TPAT', 'ISO 9001', 'FDA Registered']
   },
   {
-    name: 'Production workshop',
+    name: 'Sản xuất tại chỗ',
     location: 'Newark, New Jersey',
     address: '9012 Commerce Way, Newark, NJ 07114',
     type: 'Distribution & Value-Added Services',
@@ -61,12 +61,12 @@ export const facilities = [
     manager: 'David Rodriguez',
     hours: 'Mon-Fri: 7:00 AM - 8:00 PM, Sat: 8:00 AM - 4:00 PM',
     features: [
-      'Leading products such as indoor/outdoor intumescent and non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof pillows, fireproof boards, and fireproof modules enjoy a high reputation in China.'
+      'Các sản phẩm chủ đạo như sơn chống cháy kết cấu thép phồng trong nhà/ngoài trời, sơn chống cháy kết cấu thép không phồng trong nhà/ngoài trời, sơn chống cháy hầm, sơn chống cháy cáp, vật liệu bịt kín hữu cơ linh hoạt, vật liệu bịt kín vô cơ, gối chống cháy, tấm chống cháy và mô-đun chống cháy được đánh giá cao trong nước.'
     ],
     certifications: ['ISO 9001', 'ISTA Certified', 'TSA Approved']
   },
   {
-    name: 'Production equipment',
+    name: 'Sản xuất thiết bị',
     location: 'Houston, Texas',
     address: '3456 Manufacturing Parkway, Houston, TX 77001',
     type: 'Manufacturing & Assembly',
@@ -80,7 +80,7 @@ export const facilities = [
     manager: 'Jennifer Martinez',
     hours: 'Mon-Fri: 6:00 AM - 6:00 PM',
     features: [
-      'All products have passed the rigorous review and certification of the Fire Product Certification Center of the Ministry of Emergency Management.'
+      'Tất cả sản phẩm đã vượt qua sự xem xét nghiêm ngặt và chứng nhận của Trung tâm Chứng nhận Sản phẩm Chống cháy của Bộ Quản lý Khẩn cấp.'
     ],
     certifications: ['ISO 9001', 'AS9100', 'ITAR Registered']
   },

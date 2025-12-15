@@ -9,14 +9,14 @@ interface Props {
   description?: string;
     lang?: string; // 可选的语言参数
 }
-
+import { defaultLang } from '@/i18n/ui';
 const currentPathname = Astro.url.pathname;
 
 const { 
   title = SITE.title, 
   description = SITE.description ,
   // 解构出 lang，并设置默认值
-  lang = 'en' 
+  lang = defaultLang 
 } = Astro.props;
 ---
 <!-- 将 lang 属性应用到 html 标签上，这对 SEO 和浏览器识别语言很重要 -->

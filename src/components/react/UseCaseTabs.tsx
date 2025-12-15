@@ -42,18 +42,13 @@ export default function UseCaseTabs({ useCases }: Props) {
     <Tabs.Root defaultValue={industries[0]} className="w-full">
       <Tabs.List className="flex flex-wrap gap-2 border-b-2 border-gray-200 mb-8 pb-2">
         {industries.map((industry) => {
-          const useCase = useCases.find((uc) => uc.industry === industry);
-          const IconComponent = useCase ? iconMap[useCase.iconName] : null;
-          
           return (
             <Tabs.Trigger
               key={industry}
               value={industry}
               className="group px-6 py-3 text-sm font-semibold text-gray-600 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-300 transition-all duration-200 data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 flex items-center gap-2"
             >
-              {IconComponent && (
-                <IconComponent className="w-4 h-4 group-data-[state=active]:text-blue-600" />
-              )}
+              
               {industry}
             </Tabs.Trigger>
           );
@@ -64,7 +59,7 @@ export default function UseCaseTabs({ useCases }: Props) {
         const useCase = useCases.find((uc) => uc.industry === industry);
         if (!useCase) return null;
 
-        const IconComponent = iconMap[useCase.iconName];
+        
 
         return (
           <Tabs.Content 

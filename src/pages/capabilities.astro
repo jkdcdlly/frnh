@@ -1,6 +1,7 @@
 ---
 // 1. 导入 [lang] 目录下的页面组件
 import CapabilitiesPage from './[lang]/capabilities.astro';
+import { defaultLang } from '@/i18n/ui';
 ---
 
-<CapabilitiesPage lang='en' />
+<CapabilitiesPage lang={defaultLang} />

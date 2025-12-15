@@ -23,11 +23,11 @@ interface FeatureShowcaseProps {
   // 使用更通用且类型安全的写法
   lang?: Language;
 }
-
+import { defaultLang } from '@/i18n/ui';
 
 // const features = [...originalFeatures];
 
-export default function FeatureShowcase({ lang = 'en' }: FeatureShowcaseProps) {
+export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseProps) {
   // 根据传入的 lang 获取对应的数据，默认为 en
   const currentProducts = productsMap[lang] ?? productsMap.en;
 

@@ -6,7 +6,7 @@ import { SITE } from '@/config/site';
 
 export const facilities = [
   {
-    name: 'Office environment',
+    name: '办公环境',
     location: 'Chicago, Illinois',
     address: '1234 Industrial Boulevard, Chicago, IL 60609',
     type: 'Distribution & Manufacturing',
@@ -20,7 +20,7 @@ export const facilities = [
     manager: 'Sarah Johnson',
     hours: '24/7 Operations',
     features: [
-      "Langfang Fengrui Refractory Materials Co., Ltd. is a company engaged in the production of fire protection products and fire retardant materials. It is located in the heart of the Beijing-Tianjin-Hebei Bohai Rim Economic Circle, adjacent to Xiong'an New Area, and is a key enterprise in the fire protection materials industry in Hebei Province.",
+      '廊坊丰瑞耐火材料有限公司是一家从事消防产品及防火阻燃材料生产的企业，坐落于京津冀环渤海经济圈腹地，紧邻雄安新区，河北省防火材料行业重点企业。',
       
       
       
@@ -28,7 +28,7 @@ export const facilities = [
     certifications: ['ISO 9001', 'ISO 14001', 'OSHA Compliant']
   },
   {
-    name: 'Production site',
+    name: '生产现场',
     location: 'Los Angeles, California',
     address: '5678 Portside Drive, Los Angeles, CA 90040',
     type: 'Port Logistics & Warehousing',
@@ -42,12 +42,12 @@ export const facilities = [
     manager: 'Michael Chen',
     hours: 'Mon-Sun: 6:00 AM - 10:00 PM',
     features: [
-      'Our company currently offers three major series with 28 varieties. Our products are sold nationwide and exported to countries and regions such as the Middle East and Southeast Asia.',
+      '我公司产品现有三大系列28个品种，产品销往全国各地，并出口中东，东南亚等国家和地区。',
     ],
     certifications: ['C-TPAT', 'ISO 9001', 'FDA Registered']
   },
   {
-    name: 'Production workshop',
+    name: '生产车间',
     location: 'Newark, New Jersey',
     address: '9012 Commerce Way, Newark, NJ 07114',
     type: 'Distribution & Value-Added Services',
@@ -61,12 +61,12 @@ export const facilities = [
     manager: 'David Rodriguez',
     hours: 'Mon-Fri: 7:00 AM - 8:00 PM, Sat: 8:00 AM - 4:00 PM',
     features: [
-      'Leading products such as indoor/outdoor intumescent and non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof pillows, fireproof boards, and fireproof modules enjoy a high reputation in China.'
+      '其中室内外膨胀型钢结构防火涂料、室内外非膨胀型钢结构防火涂料、隧道防火涂料、电缆防火涂料、柔性有机堵料、无机堵料、阻火包、防火隔板、阻火模块等主导产品在国内享有较高声誉。'
     ],
     certifications: ['ISO 9001', 'ISTA Certified', 'TSA Approved']
   },
   {
-    name: 'Production equipment',
+    name: '生产设备',
     location: 'Houston, Texas',
     address: '3456 Manufacturing Parkway, Houston, TX 77001',
     type: 'Manufacturing & Assembly',
@@ -80,7 +80,7 @@ export const facilities = [
     manager: 'Jennifer Martinez',
     hours: 'Mon-Fri: 6:00 AM - 6:00 PM',
     features: [
-      'All products have passed the rigorous review and certification of the Fire Product Certification Center of the Ministry of Emergency Management.'
+      '所有产品均已通过应急管理部消防产品合格评定中心的严格审查认证。'
     ],
     certifications: ['ISO 9001', 'AS9100', 'ITAR Registered']
   },

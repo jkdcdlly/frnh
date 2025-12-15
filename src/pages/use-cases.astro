@@ -1,6 +1,6 @@
 ---
 import Usecases from '@/pages/[lang]/use-cases.astro';
-
+import { defaultLang } from '@/i18n/ui';
 ---
 <!-- 默认语言为 en -->
-<Usecases lang="en" />
+<Usecases lang={defaultLang} />

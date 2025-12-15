@@ -6,9 +6,10 @@ import { getAllProducts } from "@/data/products/index";
 
 import { Image } from "astro:assets";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-
+import { defaultLang,languages } from '@/i18n/ui';
+// 这个不能使用  export { getStaticPaths } from "@/i18n/utils";
 export function getStaticPaths() {
-  const langs = ["zh", "en", "vi"];
+  const langs = Object.keys(languages);
   const paths: any[] = [];
   langs.forEach((lang) => {
     // 获取该语言下的所有产品
@@ -24,7 +25,7 @@ export function getStaticPaths() {
   return paths;
 }
 
-
+// export { getStaticPaths } from "@/i18n/utils";
 
 interface Props {
   lang?: string;
@@ -34,7 +35,7 @@ interface Props {
 
 
 // 优先从 props 获取，如果没有则从 Astro.props (getStaticPaths 传来的) 获取
-const { lang = Astro.params.lang || 'en', product = Astro.props.product } = Astro.props;
+const { lang = Astro.params.lang || defaultLang, product = Astro.props.product } = Astro.props;
 
 // 过滤掉当前正在显示的产品
 const allProducts = getAllProducts(lang);

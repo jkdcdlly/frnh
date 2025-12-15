@@ -4,15 +4,10 @@ import { languages } from '../../i18n/ui';
 
 // 1. getStaticPaths 告诉 Astro 我们要生成哪些静态页面
 // 这里的 params.lang 对应文件名中的 [lang]
-export function getStaticPaths() {
-  return [
-    { params: { lang: 'zh' } },
-    { params: { lang: 'vi' } },
-  ];
-}
-
+export { getStaticPaths } from "@/i18n/utils";
 // 2. 获取当前页面的语言参数
-const { lang } = Astro.params;
+import { getLangFromUrl } from '@/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!-- 3. 调用通用模板，并传入语言参数 -->

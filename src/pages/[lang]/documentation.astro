@@ -137,15 +137,11 @@ const faqs = [
   }
 ];
 
-export function getStaticPaths() {
-  return [
-    { params: { lang: 'zh' } },
-    { params: { lang: 'vi' } },
-  ];
-}
+export { getStaticPaths } from "@/i18n/utils";
 
 // 2. 获取当前语言参数
-const { lang } = Astro.params;
+import { getLangFromUrl } from '@/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <BaseLayout title="Documentation - Resources & Guides" lang={lang}>

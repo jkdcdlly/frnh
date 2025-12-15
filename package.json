@@ -22,5 +22,13 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.17"
-  }
+  },
+    "browserslist": [
+    "defaults",
+    "chrome >= 80",
+    "safari >= 14",
+    "ios >= 14",
+    "android >= 8",
+    "not IE 11"
+  ]
 }

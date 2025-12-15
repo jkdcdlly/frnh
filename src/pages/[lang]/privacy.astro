@@ -1,13 +1,11 @@
 ---
 import LegalPage from '@/components/LegalPage.astro';
 import { legalContent } from '@/data/legal';
-import { languages } from '@/i18n/ui';
 
-export function getStaticPaths() {
-  return Object.keys(languages).map(lang => ({ params: { lang } }));
-}
+export { getStaticPaths } from "@/i18n/utils";
 
-const { lang } = Astro.params;
+import { getLangFromUrl } from '@/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 const { title, content } = legalContent[lang as keyof typeof legalContent].privacy;
 ---
 <LegalPage title={title} content={content} lang={lang} />

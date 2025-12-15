@@ -1,7 +1,7 @@
 ---
 import ProductsPage from '../[lang]/products/[...category].astro';
 import { defaultLang } from '@/i18n/ui';
-
+// 这个不能使用  export { getStaticPaths } from "@/i18n/utils";
 export function getStaticPaths() {
   // 这里只需要生成分类的路径，不需要语言参数
   const categories = ['all', 'fire-sealing', 'steel-structure'];
@@ -19,6 +19,7 @@ export function getStaticPaths() {
   
   return paths;
 }
+// export { getStaticPaths } from "@/i18n/utils";
 ---
 
 <!-- 直接渲染多语言组件，强制传入默认语言 -->

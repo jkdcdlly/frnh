@@ -31,6 +31,9 @@ export const en = {
   'complete.certification': 'Complete Certification',
   'physical.manufacturer': 'Physical Manufacturer',
   'high.quality.products': 'High-quality products',
+  'industry.solutions':'Industry Solutions',
+  'usecase.description':"Real-world solutions delivering measurable results across diverse industries. See how we've transformed operations.",
+  'facilities.description2':'Strategically located facilities across North America equipped with state-of-the-art technology and industry certifications.',
   
   // Technology Section
   'tech.label': 'Technology & Innovation',
@@ -97,6 +100,9 @@ export const en = {
 
   
   'OurProducts': 'Our Products',
+  'our': 'Our',
+  'products': 'Products',
+  'Explore our comprehensive range of fire protection solutions.': 'Explore our comprehensive range of fire protection solutions.',
   'ServiceHighlights3.title1': 'Fire-resistant',
   'ServiceHighlights3.title2': 'Sealing Materials',
   'ServiceHighlights3.desc': 'Special flame-retardant materials used to seal penetrations and construction joints in buildings or facilities to prevent the spread of flames and toxic smoke.',
@@ -104,6 +110,26 @@ export const en = {
   'facilities.ourInfrastructure': 'Our Factory Area Facilities',
   'facilities.our': 'Our',
   'facilities.facilities': 'Factory Area Facilities',
+  'get.your.custom.quote.today': 'Get Your Custom Quote Today',
+  'get.your.custom.quote.description': 'Get a customized quote tailored to your specific logistics and manufacturing needs. We typically respond within 24 hours with a comprehensive proposal.',
+  'response.time':'Response Time',
+  'happy.clients':'Happy Clients',
+  'on.time.rate':'On-Time Rate',
+  'need.help': 'Need Help?',
+  'phone': 'Phone',
+  'email': 'Email',
+  'live.chat': 'Live Chat',
+  'why.choose.us': 'Why Choose Us?',
+  'industry.experience': '25+ years of industry experience',
+  'on.time.delivery.rate': '99.9% on-time delivery rate',
+  'certified.facilities': 'ISO 9001 certified facilities',
+  'customer.support': '24/7 customer support',
+  'time': 'Mon-Fri, 9am-7pm BJT ',
+  '24-hour.response.time': '24-hour response time',
+  'available.on.website': 'Available on website',
+  'instant.support':' Instant support',
+
+
   
   
 } as const;

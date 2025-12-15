@@ -72,7 +72,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-2',
-    title: '多组分封堵材料',
+    title: 'Vật liệu niêm phong đa thành phần',
     description: 'Multi-modal logistics network ensuring rapid delivery.',
     fullDescription: 'Detailed description for Fast Transportation...',
     image: fanghuo02,
@@ -86,7 +86,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-3',
-    title: '防爆胶泥',
+    title: 'Putty chống cháy nổ',
     description: 'ISO-certified production with precision engineering.',
     fullDescription: 'Detailed description for Quality Manufacturing...',
     image: fanghuo03,
@@ -100,7 +100,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-4',
-    title: '防火槽盒',
+    title: 'Hộp rãnh chống cháy',
     description: 'Complete supply chain visibility with advanced tracking.',
     fullDescription: 'Detailed description for Real-Time Analytics...',
     image: fanghuo04,
@@ -114,7 +114,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-5',
-    title: '防火密封胶',
+    title: 'Keo chống cháy',
     description: 'Industry-leading security protocols protecting assets.',
     fullDescription: 'Detailed description for Secure Operations...',
     image: fanghuo05,
@@ -128,7 +128,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '防火涂层板',
+    title: 'Lớp phủ chống cháy',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo06,
@@ -142,7 +142,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '复合防火金属板',
+    title: 'Tấm kim loại chống cháy tổng hợp',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo07,
@@ -150,7 +150,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '柔性有机堵料（可塑型）',
+    title: 'Vật liệu bịt kín hữu cơ linh hoạt',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo08,
@@ -164,7 +164,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '无机堵料（速固型）',
+    title: 'Vật liệu bịt kín vô cơ (cố định nhanh)',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo09,
@@ -178,7 +178,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '无机堵料',
+    title: 'Vật liệu bịt kín vô cơ',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo10,
@@ -192,7 +192,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '无机防火隔板',
+    title: 'Vật liệu chống cháy vô cơ',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo11,
@@ -206,7 +206,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '有机防火板',
+    title: 'Vật liệu chống cháy hữu cơ',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo12,
@@ -220,7 +220,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '自粘性防火包带',
+    title: 'Băng chống cháy tự dính',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo13,
@@ -234,7 +234,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: '阻火模块',
+    title: 'Mô-đun chống cháy',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo14,
@@ -248,7 +248,7 @@ export const fireSealingProducts: Product[] = [
   },
   {
     slug: 'fanghuo-6',
-    title: 'L型防火隔板',
+    title: 'Tấm chắn chống cháy hình L',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: fanghuo15,

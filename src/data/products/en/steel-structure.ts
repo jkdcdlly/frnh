@@ -48,7 +48,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-2',
-    title: '室内非膨胀防火涂料-石膏基',
+    title: 'Indoor non-expanding fire-retardant coating - gypsum-based',
     description: 'Multi-modal logistics network ensuring rapid delivery.',
     fullDescription: 'Detailed description for Fast Transportation...',
     image: gangjiegou02,
@@ -56,7 +56,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-3',
-    title: '室内非膨胀型防火涂料-水泥基',
+    title: 'Indoor non-expanding fire-retardant coating - cement-based',
     description: 'ISO-certified production with precision engineering.',
     fullDescription: 'Detailed description for Quality Manufacturing...',
     image: gangjiegou03,
@@ -64,7 +64,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-4',
-    title: '室内膨胀型防火涂料',
+    title: 'Indoor expanding fire-retardant coating',
     description: 'Complete supply chain visibility with advanced tracking.',
     fullDescription: 'Detailed description for Real-Time Analytics...',
     image: gangjiegou04,
@@ -72,7 +72,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-5',
-    title: '室外非膨胀型防火涂料',
+    title: 'Outdoor non-expanding fire-retardant coating',
     description: 'Industry-leading security protocols protecting assets.',
     fullDescription: 'Detailed description for Secure Operations...',
     image: gangjiegou05,
@@ -80,7 +80,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-6',
-    title: '室外膨胀型钢结构防火涂料',
+    title: 'Outdoor expanding steel structure fire-retardant coating',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou06,
@@ -88,7 +88,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-7',
-    title: '隧道防火涂料',
+    title: 'Tunnel fire-retardant coating',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou07,
@@ -96,7 +96,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-8',
-    title: '特种室外非膨胀型防火涂料',
+    title: 'Special outdoor non-expanding fire-retardant coating',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou08,
@@ -104,7 +104,7 @@ export const steelStructureProducts: Product[] = [
   },
   {
     slug: 'steelStructure-9',
-    title: '特种室外膨胀型防火涂料',
+    title: 'Special outdoor expanding fire-retardant coating',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou09,

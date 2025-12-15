@@ -7,12 +7,12 @@ import { Image } from 'astro:assets';
 import ImageReveal from '@/components/react/ImageReveal';
 import { SITE } from '@config/site'; 
 import { getProductsByCategory, getCategories } from '@/data/products/index';
-import { getLocalizedPath } from '@/i18n/utils';
-import { defaultLang } from '@/i18n/ui';
+import { getLocalizedPath,useTranslations } from '@/i18n/utils';
+import { defaultLang,languages } from '@/i18n/ui';
 import heroBgImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
-
+// 这个不能使用  export { getStaticPaths } from "@/i18n/utils";
 export function getStaticPaths() {
-  const langs = ['zh', 'en', 'vi'];
+  const langs = Object.keys(languages);
   const categories = ['fire-sealing', 'steel-structure'];
   
   const paths: any[] = [];
@@ -31,10 +31,10 @@ export function getStaticPaths() {
 
   return paths;
 }
-// const { lang = Astro.params.lang || 'en', category = Astro.props.category || 'all' } = Astro.props;
-// const { lang } = Astro.params;
+
 const { category = 'all' } = Astro.params;
-const lang = Astro.props.lang || Astro.params.lang || defaultLang;
+import { getLangFromUrl } from '@/i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 
 // 获取当前语言的分类列表和产品数据
 const categoryList = getCategories(lang);
@@ -42,6 +42,7 @@ const products = getProductsByCategory(category, lang);
 
 // 页面标题
 const currentCategoryName = categoryList.find(c => c.id === category)?.name || 'Products';
+const t = useTranslations(lang);
 ---
 
 <BaseLayout title={`${currentCategoryName} - ${SITE.title}`} lang={lang}>
@@ -59,10 +60,10 @@ const currentCategoryName = categoryList.find(c => c.id === category)?.name || '
     </div>
     <div class="container mx-auto relative z-10 px-4 text-center">
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-        Our <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">Products</span>
+        {t('our')} <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">{t('products')}</span>
       </h1>
       <p class="text-xl text-slate-200 max-w-2xl mx-auto">
-        Explore our comprehensive range of fire protection solutions.
+        {t('Explore our comprehensive range of fire protection solutions.')}
       </p>
     </div>
   </section>

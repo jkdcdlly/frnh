@@ -1,4 +1,6 @@
 ---
+// 此页面是：首页的设施展示部分
+
 import ImageReveal from '@components/react/ImageReveal';
 import { Image } from 'astro:assets';
 import shigong1 from '@assets/施工案例/Snipaste_2025-12-10_23-06-06.png';
@@ -7,9 +9,9 @@ import shigong3 from '@assets/施工案例/微信图片_20251210110935_465_4.png
 import shigong4 from '@assets/施工案例/微信图片_20251210110237_459_4.png';
 import shigong5 from '@assets/施工案例/微信图片_20251210110122_458_4.png';
 import { useTranslations,getLocalizedPath, getLangFromUrl } from '@/i18n/utils';
-// 接收父组件传来的 lang
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 ---
 
 <section class="py-24 bg-white">
