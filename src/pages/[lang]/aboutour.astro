@@ -5,36 +5,21 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Section from "@/components/ui/Section.astro";
 import { Image } from "astro:assets";
 import ImageReveal from "@/components/react/ImageReveal";
-import { SITE } from "@config/site";
-import { getProductsByCategory, getCategories } from "@/data/products/index";
-
-import {
-  getLangFromUrl,
-  getLocalizedPath,
-  useTranslations,
-} from "@/i18n/utils";
+import { getTechnologies } from "@/data/aboutus";
+import { useTranslations } from "@/i18n/utils";
 import { defaultLang } from "@/i18n/ui";
-import heroBgImg from "@/assets/施工案例/微信图片_20251210110122_458_4.png";
-import companyImg from "@/assets/厂区实力/-851394577_-1616383441_-1645369499.jpg";
+import heroBgImg from "@assets/frnh/2901765448440_.pic_hd.jpg";
 
 export { getStaticPaths } from "@/i18n/utils";
-// const { lang = Astro.params.lang || 'en', category = Astro.props.category || 'all' } = Astro.props;
-// const { lang } = Astro.params;
-const { category = "all" } = Astro.params;
-const lang = Astro.props.lang || Astro.params.lang || defaultLang;
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-// 获取当前语言的分类列表和产品数据
-const categoryList = getCategories(lang);
-const products = getProductsByCategory(category, lang);
-
-// 页面标题
-const currentCategoryName =
-  categoryList.find((c) => c.id === category)?.name || "Products";
-import TechnologyInnovation from "@/components/home/TechnologyInnovation.astro";
+// 获取公司介绍数据
+const technologies = getTechnologies(t);
 ---
 
-<BaseLayout title={`${currentCategoryName} - ${SITE.title}`} lang={lang}>
+<!-- 公司介绍-->
+<BaseLayout title={t("nav.aboutour")} lang={lang}>
   <!-- Hero Section -->
   <section
     class="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden"
@@ -42,7 +27,7 @@ import TechnologyInnovation from "@/components/home/TechnologyInnovation.astro";
     <div class="absolute inset-0">
       <Image
         src={heroBgImg}
-        alt="Products Hero"
+        alt={t("nav.aboutour")}
         class="w-full h-full object-cover"
         width={2070}
         height={1380}
@@ -60,28 +45,20 @@ import TechnologyInnovation from "@/components/home/TechnologyInnovation.astro";
           >{t("company")}</span
         >
       </h1>
-      <p class="text-xl text-slate-200 max-w-2xl mx-auto">
-        Explore our comprehensive range of fire protection solutions.
-      </p>
     </div>
   </section>
-  <!-- <hr class="my-16 border-slate-300" />
-  <TechnologyInnovation lang={lang} /> -->
   <Section background="white">
-    
-    <!-- 公司介绍-->
     <div class="space-y-24">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border-b border-slate-300 pb-24 last:border-0 last:pb-0"
       >
-        {/* Image Side */}
         <div>
           <ImageReveal client:load delay={0}>
             <div
               class="relative aspect-4/3 group overflow-hidden rounded-2xl shadow-xl"
             >
               <Image
-                src={companyImg}
+                src={heroBgImg}
                 alt={t("company")}
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 width={800}
@@ -94,75 +71,36 @@ import TechnologyInnovation from "@/components/home/TechnologyInnovation.astro";
         {/* Content Side */}
         <div class="animate-fadeInUp">
           {
-            /* <h2 class="text-3xl font-bold text-slate-900 mb-4">{t('facilities.our')}{t('company.profile')}</h2> */
+            technologies.map((tech) => (
+              <div class="flex items-start group">
+                <div
+                  class={`shrink-0 w-12 h-12 rounded-lg bg-linear-to-br ${tech.iconGradient} flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d={tech.iconPath}
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold  mb-2">{tech.title}</h3>
+                  <p class="text-slate-400 leading-relaxed">
+                    {tech.description}
+                  </p>
+                </div>
+              </div>
+            ))
           }
-
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center space-x-3">
-              <svg
-                class="w-5 h-5 text-teal-500 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-slate-700">
-                {t("tech.ai.desc")}
-              </span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <svg
-                class="w-5 h-5 text-teal-500 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-slate-700">{t("tech.visibility.desc")}</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <svg
-                class="w-5 h-5 text-teal-500 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-slate-700">{t("tech.iot.desc")}</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <svg
-                class="w-5 h-5 text-teal-500 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-slate-700">{t("tech.security.desc")}</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
-  </Section> 
+  </Section>
 </BaseLayout>

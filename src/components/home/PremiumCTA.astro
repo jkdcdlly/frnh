@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import warehouseBgImg from "@assets/frnh/1119942995_1234150482_1934581389_副本.png";
-import { getLangFromUrl, useTranslations,getLocalizedPath } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---

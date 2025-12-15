@@ -6,9 +6,9 @@ import shigong2 from '@assets/施工案例/微信图片_20251210110505_463_4.png
 import shigong3 from '@assets/施工案例/微信图片_20251210110935_465_4.png';
 import shigong4 from '@assets/施工案例/微信图片_20251210110237_459_4.png';
 import shigong5 from '@assets/施工案例/微信图片_20251210110122_458_4.png';
-import { useTranslations,getLocalizedPath } from '@/i18n/utils';
+import { useTranslations,getLocalizedPath, getLangFromUrl } from '@/i18n/utils';
 // 接收父组件传来的 lang
-const { lang = 'en' } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 

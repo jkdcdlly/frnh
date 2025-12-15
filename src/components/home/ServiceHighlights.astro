@@ -1,8 +1,8 @@
 ---
 import FeatureShowcase from '../react/FeatureShowcase';
-import { useTranslations,getLocalizedPath } from '@/i18n/utils';
+import { useTranslations,getLocalizedPath,getLangFromUrl } from '@/i18n/utils';
 // 接收父组件传来的 lang
-const { lang = 'en' } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 

@@ -11,30 +11,9 @@ import ecommerceImg from '@/assets/施工案例/-1815801961_-364583281_-14572831
 import healthcareImg from '@/assets/施工案例/微信图片_20251210105840_454_4.png';
 import automotiveImg from '@/assets/施工案例/微信图片_20251210105936_455_4.png';
 import technologyImg from '@/assets/施工案例/微信图片_20251210105947_456_4.png';
-import consumerGoodsImg from '@/assets/施工案例/微信图片_20251210110038_457_4.png';
-import foodBeverageImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
 import { getLangFromUrl, useTranslations, getStaticPaths as getI18nPaths } from '@/i18n/utils';
 // 2. 导出给 Astro 用
 export const getStaticPaths = getI18nPaths
-// /assets/施工案例/微信图片_20251210105840_454_4.png
-// /assets/施工案例/微信图片_20251210105936_455_4.png
-// /assets/施工案例/微信图片_20251210105947_456_4.png
-// /assets/施工案例/微信图片_20251210110038_457_4.png
-// /assets/施工案例/微信图片_20251210110122_458_4.png
-// /assets/施工案例/微信图片_20251210110237_459_4.png
-// /assets/施工案例/微信图片_20251210110302_460_4.png
-// /assets/施工案例/微信图片_20251210110340_461_4.png
-// /assets/施工案例/微信图片_20251210110402_462_4.png
-// /assets/施工案例/微信图片_20251210110505_463_4.png
-// /assets/施工案例/微信图片_20251210110609_464_4.png
-// /assets/施工案例/微信图片_20251210110935_465_4.png
-// /assets/施工案例/微信图片_20251210111007_466_4.png
-// /assets/施工案例/微信图片_20251210111231_467_4.png
-// /assets/施工案例/微信图片_20251210111920_469_4.png
-
-import testimonial1Img from '@/assets/photo-1494790108377-be9c29b29330.jpg';
-import testimonial2Img from '@/assets/photo-1559839734-2b71ea197ec2.jpg';
-import testimonial3Img from '@/assets/photo-1507003211169-0a1dd7228f2d.jpg';
 
 import heroBgImg from '@/assets/frnh/photo-1586528116311-ad8dd3c8310d.jpg';
 import ctaBgImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
@@ -78,32 +57,8 @@ const useCases:any[] = [
  
 ];
 
-const testimonials:any[] = [
-  {
-    quote: `${SITE.title}'s automated warehousing solution transformed our e-commerce operations. We reduced order processing time by 40% and achieved 99.5% accuracy. Their same-day shipping capabilities helped us compete with industry giants.`,
-    name: "Sarah Mitchell",
-    role: "VP Operations, TechRetail",
-    image: testimonial1Img,
-    ringColor: "ring-blue-200"
-  },
-  {
-    quote: "Their FDA-compliant cold chain logistics are exceptional. We've maintained 100% regulatory compliance with zero temperature excursions. The real-time monitoring and complete audit trails give us complete confidence.",
-    name: "Dr. James Chen",
-    role: "Director, PharmaLogistics",
-    image: testimonial2Img,
-    ringColor: "ring-teal-200"
-  },
-  {
-    quote: "Just-in-time delivery with 99.8% on-time performance and zero production stoppages. Their strategic distribution centers and predictive inventory management cut our inventory costs by 50%.",
-    name: "Robert Johnson",
-    role: "Operations Manager, AutoParts Co.",
-    image: testimonial3Img,
-    ringColor: "ring-blue-200"
-  }
-];
-
 // 2. 获取当前语言参数
-const { lang='en' } = Astro.params;
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 

@@ -1,6 +1,7 @@
 import { ui, defaultLang } from './ui';
 
 export function getLangFromUrl(url: URL) {
+  // 从 URL 路径中提取语言代码，假设路径格式为 /en/..., /zh/...
   const [, lang] = url.pathname.split('/');
   if (lang in ui) return lang as keyof typeof ui;
   return defaultLang;

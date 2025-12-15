@@ -6,7 +6,7 @@ import MobileMenu from '@components/react/MobileMenu';
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '@/i18n/utils';
 const { currentPathname } = Astro.props;
 // const isActiveLink = (href: string) : boolean => { return href === currentPathname; }
-const lang = getLangFromUrl(new URL(currentPathname, Astro.site || 'http://localhost:4321'));
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 import logoImage from '@/assets/logo.jpg'; 
 import { Image } from 'astro:assets';
