@@ -1,0 +1,56 @@
+---
+import VideoGrid from '../react/VideoGrid';
+import { useTranslations, getLangFromUrl } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// 模拟视频数据，实际项目中你可以从 CMS 或配置文件导入
+// 注意：这里的图片和视频路径需要替换为你实际的资源路径
+const videos = [
+  {
+    id: '1',
+    title: '1.5倍速播放',
+    description: '视频描述1',
+    thumbnail: '/防火涂料防火测试视频/1.5倍速播放.jpg', // 替换为你的图片路径，例如 /assets/...
+    // 路径这么写对吗？
+    videoUrl: '/防火涂料防火测试视频/1.5倍速播放.mp4'       // 替换为你的视频路径
+  },
+  {
+    id: '2',
+    title: '3.5倍速播放',
+    description: '视频描述2',
+    thumbnail: '/防火涂料防火测试视频/3.5倍速播放.jpg',
+    videoUrl: '/防火涂料防火测试视频/3.5倍速播放.mp4 '
+  },
+  
+  
+  {
+    id: '3',
+    title: '测试过程',
+    description: '视频描述3',
+    thumbnail: '/防火涂料防火测试视频/测试过程.jpg',
+    videoUrl: '/防火涂料防火测试视频/测试过程.mp4'
+  }
+];
+---
+
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+        <!-- Video Gallery -->
+         防火涂料防火测试视频
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        观看我们的 <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">测试视频</span>
+      </h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+        <!-- Explore our manufacturing facilities and product demonstrations through these videos. -->
+        通过这些视频，了解我们的产品演示。
+      </p>
+    </div>
+
+    <VideoGrid client:visible videos={videos} />
+  </div>
+</section>

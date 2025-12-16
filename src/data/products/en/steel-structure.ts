@@ -8,14 +8,16 @@ import gangjiegou06 from '@/assets/产品图片/钢结构防火涂料/室外膨�
 import gangjiegou07 from '@/assets/产品图片/钢结构防火涂料/隧道防火涂料1.jpg';
 import gangjiegou08 from '@/assets/产品图片/钢结构防火涂料/特种室外非膨胀型防火涂料1.jpg';
 import gangjiegou09 from '@/assets/产品图片/钢结构防火涂料/特种室外膨胀型防火涂料1.jpg';
-
+import colorScheme1 from '@/assets/产品图片/钢结构防火涂料/1防火涂料超薄型.jpg'
+import colorScheme2 from '@/assets/产品图片/钢结构防火涂料/2防火涂料薄型.jpg'
+import colorScheme3 from '@/assets/产品图片/钢结构防火涂料/3防火涂料厚型.jpg'
 // 定义接口（也可以提取到单独的 types 文件中）
 import type { Product } from '../types';
-export const steelStructureProducts: Product[] = [
+const steelStructureProductsMap: Product[] = [
   {
     slug: 'steelStructure-1',
     title: 'Decorative fire-retardant coatings',
-    category: '钢结构防火涂料',
+    category: 'steel-structure',
     category_id: 'steel-structure-coatings',
     description: '阻火包是我公司研制的防火配套耐火材料，阻火包形状如小枕头...',
     fullDescription: `
@@ -24,6 +26,7 @@ export const steelStructureProducts: Product[] = [
       当封堵厚度达到200mm时，耐火极限可达到180min以上。
     `,
     image: gangjiegou01,
+    images: [gangjiegou01, gangjiegou02, gangjiegou03,gangjiegou04,gangjiegou05,gangjiegou06,gangjiegou07,gangjiegou08,gangjiegou09],
     icon: Warehouse,
     features: [
       '无毒、无味、无腐蚀',
@@ -49,6 +52,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-2',
     title: 'Indoor non-expanding fire-retardant coating - gypsum-based',
+    category: 'steel-structure',
     description: 'Multi-modal logistics network ensuring rapid delivery.',
     fullDescription: 'Detailed description for Fast Transportation...',
     image: gangjiegou02,
@@ -57,6 +61,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-3',
     title: 'Indoor non-expanding fire-retardant coating - cement-based',
+    category: 'steel-structure',
     description: 'ISO-certified production with precision engineering.',
     fullDescription: 'Detailed description for Quality Manufacturing...',
     image: gangjiegou03,
@@ -65,6 +70,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-4',
     title: 'Indoor expanding fire-retardant coating',
+    category: 'steel-structure',
     description: 'Complete supply chain visibility with advanced tracking.',
     fullDescription: 'Detailed description for Real-Time Analytics...',
     image: gangjiegou04,
@@ -73,6 +79,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-5',
     title: 'Outdoor non-expanding fire-retardant coating',
+    category: 'steel-structure',
     description: 'Industry-leading security protocols protecting assets.',
     fullDescription: 'Detailed description for Secure Operations...',
     image: gangjiegou05,
@@ -81,6 +88,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-6',
     title: 'Outdoor expanding steel structure fire-retardant coating',
+    category: 'steel-structure',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou06,
@@ -89,6 +97,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-7',
     title: 'Tunnel fire-retardant coating',
+    category: 'steel-structure',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou07,
@@ -97,6 +106,7 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-8',
     title: 'Special outdoor non-expanding fire-retardant coating',
+    category: 'steel-structure',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou08,
@@ -105,9 +115,19 @@ export const steelStructureProducts: Product[] = [
   {
     slug: 'steelStructure-9',
     title: 'Special outdoor expanding fire-retardant coating',
+    category: 'steel-structure',
     description: 'Dedicated teams available around the clock.',
     fullDescription: 'Detailed description for 24/7 Support...',
     image: gangjiegou09,
     icon: Headphones,
   }
 ];
+export const steelStructureProducts: Product[] = steelStructureProductsMap.map(product => ({
+  ...product,
+  colorScheme: [{"img":colorScheme1,"desc":"Ultra-thin fire-retardant coating"}, {"img":colorScheme2,"desc":"Thin fire-retardant coating"}, {"img":colorScheme3,"desc":"Thick fire-retardant coating"}],specs: {
+      "耐火极限": "≥180min",
+      "封堵厚度": "200mm",
+      "特性": "无毒、无味、无腐蚀",
+      "适用范围": "电力、电信、邮政、化工、工矿、企业、建筑及地下工程封堵"
+    },
+}));

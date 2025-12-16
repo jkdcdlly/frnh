@@ -1,51 +1,102 @@
 export const zh = {
+  common: {
+    getQuote: '立即询价'
+  },
+
+
+  // 导航栏
   'nav.home': '首页',
   'nav.products': '我们的产品',
   'nav.useCases': '施工案例',
-  'nav.facilities': '厂区示例',
+  'nav.facilities': '厂区实力',
   'nav.rfq': '获取报价',
   'nav.docs': '文档中心',
   'nav.aboutour': '关于我们公司',
+
   'hero.title': '优化您的运营流程',
   'hero.subtitle': '通过我们的一体化物流和制造解决方案，彻底改变您的供应链。',
   'hero.cta.quote': '立即询价',
   'hero.cta.explore': '探索方案',
+
+  // 底部导航
   'footer.QuickLinks': '快速链接',
   'footer.Services': '服务项目',
   'footer.GetStarted': '开始使用',
   'company': '公司',
-  'company.profile':'公司介绍',
-  'premiumHero.slogan': '行业领先的物流解决方案',
-  'premiumHero.globalClients': '全球客户',
-  'premiumHero.unitsShipped': '发货单位',
-  'premiumHero.onTime': '准时率',
-  'premiumHero.facilities': '设施',
+  'company.profile': '公司介绍',
+
+  //  首页-premiumHero 部分
+  premiumHero: {
+    "eyebrowtext": "专注研发与生产高性能防火涂料",
+    "title": "被动防火专业服务商",
+    "subtitle": "我们是中国领先的耐火材料和防火施工的专业供应商，拥有先进的生产设备和丰富的行业经验",
+    'globalClientsNum': '500+',
+    'globalClientsText': '全球客户',
+    'unitsShippedNum': '5000万+',
+    'unitsShippedText': '发货单位',
+    'onTimeNum': '99.9%',
+    'onTimeText': '交付准时率',
+    'facilitiesNum': '15+',
+    'facilitiesText': '专业生产基地',
+  },
+
+
+  // 首页-ProcessWorkflow 部分
+  'ProcessWorkflow.label': '我们的优势',
+  'ProcessWorkflow.title.prefix': '选择我们',
+  'ProcessWorkflow.title.highlight': '的理由',
+  'ProcessWorkflow.description': '一家专业从事消防产品及防火阻燃材料生产的企业，坐落于京津冀环渤海经济圈腹地紧邻雄安新区，河北省防火材料行业重点企业。',
+  'ProcessWorkflow.learnMore': '了解更多',
+  'ProcessWorkflow.step1.title': '厂家优势',
+  'ProcessWorkflow.step1.desc': '集研发、生产、销售、技术服务为一体的专业化防火材料的大型企业。',
+  'ProcessWorkflow.step2.title': '产品优势',
+  'ProcessWorkflow.step2.desc': '产品现有三大系列28个品种产品销往全国各地，并出口中东，东南亚等国家和地区。',
+  'ProcessWorkflow.step3.title': '专业优势',
+  'ProcessWorkflow.step3.desc': '所有产品均已通过应急管理部消防产品合格评定中心的严格审查认证。',
+  'ProcessWorkflow.step4.title': '服务优势',
+  'ProcessWorkflow.step4.desc': '从材料生产到施工指导，专业团队，经验丰富，为节能建材事业做贡献。',
+
+  // [slug].astro 部分
+  slug:{
+    application: '适用范围',
+    constructionMethod: '施工方法',
+    fullDescription: '详细描述',
+    packagingAndTransportation: '包装与运输',
+    precautions: '注意事项',
+    specs: '产品规格',
+    usage: '使用方法',
+    colorScheme: '颜色方案',
+    highlights: "突出优点"
+  }
+  ,
+
+
   'explore.all.products': '探索所有产品',
   'our.infrastructure': '我们的基础设施',
   'world.class': '世界级',
-  'facilities':'设施',
+  'facilities': '设施',
   'world.class.facilities': '世界级设施',
-  'facilities.description':'采用最先进的基础设施和尖端技术，旨在实现我们全球所有地点的卓越运营。',
+  'facilities.description': '采用最先进的基础设施和尖端技术，旨在实现我们全球所有地点的卓越运营。',
   'tour.our.facilities': '参观我们的设施',
   'complete.certification': '完整认证',
   'physical.manufacturer': '实体制造商',
   'high.quality.products': '高质量产品',
-  'fire.sealing':'防火封堵材料',
+  'fire.sealing': '防火封堵材料',
   'steel.structure': '钢结构防火涂料',
 
-    'warehousing.storage': '仓储与存储',
-  'transportation':'运输',
-  'manufacturing':'制造',
-  'supply.chain.management':'供应链管理',
+  'warehousing.storage': '仓储与存储',
+  'transportation': '运输',
+  'manufacturing': '制造',
+  'supply.chain.management': '供应链管理',
   'request.for.quote': '请求报价',
 
-    'find.a.facility': '查找设施',
+  'find.a.facility': '查找设施',
   'documentation': '文档中心',
   'get.started': '开始使用',
   'privacy.policy': '隐私政策',
   'terms.of.service': '服务条款',
   'cookie.policy': 'Cookie 政策',
-  
+
   // Technology Section
   'tech.label': '技术与创新',
   'tech.title.prefix': '驱动于',
@@ -66,29 +117,10 @@ export const zh = {
   'tech.security.title': '发展愿景与合作展望',
   'tech.security.desc': '本公司将一如既往地用诚信与创新的态度，继续坚持以客户需求为导向，不断奋进，奉献出更好的产品和更上乘的服务，尽力做到客户满意。本公司衷心感谢海内外合作伙伴的大鼎力相助和良好合作，并真诚企盼与致力于节能建材事业的朋友携手合作，为节能建材事业做出新的贡献。',
 
-  // Process Section
-  'process.label': '工作流程',
-  'process.title.prefix': '我们成熟的',
-  'process.title.highlight': '服务流程',
-  'process.description': '旨在从第一天起就交付成果的简化方法，并提供持续的优化和支持。',
-  'process.learnMore': '了解更多',
-  'process.step1.title': '探索与规划',
-  'process.step1.desc': '我们分析您当前的运营状况，识别痛点，并设计符合您业务目标的定制解决方案。',
-  'process.step2.title': '实施部署',
-  'process.step2.desc': '我们的专家团队搭建您的基础设施，集成系统，并确保无缝上线，将干扰降至最低。',
-  'process.step3.title': '持续优化',
-  'process.step3.desc': '持续的监控和数据驱动的改进确保您的运营随着时间的推移变得更加高效和经济。',
-  'process.step4.title': '支持与增长',
-  'process.step4.desc': '专属的客户管理和 24/7 支持帮助您扩展运营并适应不断变化的市场需求。',
-  'process.benefit1.title': '快速部署',
-  'process.benefit1.desc': '在几周内而非几个月内启动并运行',
-  'process.benefit2.title': '既定成果',
-  'process.benefit2.desc': '从第一天起就有可衡量的改进',
-  'process.benefit3.title': '24/7 全天候支持',
-  'process.benefit3.desc': '随时为您提供服务',
+
 
   // Site Meta
-  'site.description':'我们是领先的优化物流和制造解决方案提供商，拥有先进的设施和丰富的行业经验。',
+  'site.description': '我们是领先的优化物流和制造解决方案提供商，拥有先进的设施和丰富的行业经验。',
 
   'OurProducts': '我们的产品',
   'our': '我们的',
@@ -96,22 +128,22 @@ export const zh = {
   'Explore our comprehensive range of fire protection solutions.': '探索我们全面的防火解决方案。',
   'ServiceHighlights.title1': '钢结构',
   'ServiceHighlights.title2': '防火涂料',
-  'ServiceHighlights.desc':'涂覆在钢结构表面，能通过隔热等方式延缓钢材在火灾中升温，从而提高其耐火极限，为人员疏散和灭火救援争取时间的特种涂料',
+  'ServiceHighlights.desc': '涂覆在钢结构表面，能通过隔热等方式延缓钢材在火灾中升温，从而提高其耐火极限，为人员疏散和灭火救援争取时间的特种涂料',
   'ServiceHighlights3.title1': '防火',
   'ServiceHighlights3.title2': '封堵材料',
   'ServiceHighlights3.desc': '用于密封建筑物或设施中的贯穿孔洞和构造缝隙，以防止火焰和有毒烟气蔓延的专用阻燃材料',
 
-    'facilities.ourInfrastructure': '我们的厂区设施',
+  'facilities.ourInfrastructure': '我们的厂区设施',
   'facilities.our': '我们的',
   'facilities.facilities': '厂区设施',
-  'industry.solutions':'行业解决方案',
-  'usecase.description':"切实可行的解决方案，在各行各业实现可衡量的成果。了解我们如何转变运营。",
-  'facilities.description2':'战略性地分布在北美的设施，配备了最先进的技术和行业认证。',
+  'industry.solutions': '行业解决方案',
+  'usecase.description': "切实可行的解决方案，在各行各业实现可衡量的成果。了解我们如何转变运营。",
+  'facilities.description2': '战略性地分布在北美的设施，配备了最先进的技术和行业认证。',
   'get.your.custom.quote.today': '立即获取您的定制报价',
   'get.your.custom.quote.description': '根据您的具体物流和制造需求，获取定制报价。我们通常在24小时内回复，提供全面的方案。',
-   'response.time':'响应时间',
-  'happy.clients':'满意客户',
-  'on.time.rate':'准时率',
+  'response.time': '响应时间',
+  'happy.clients': '满意客户',
+  'on.time.rate': '准时率',
   'need.help': '需要帮助？',
   'phone': '电话',
   'email': '电子邮件',
@@ -124,5 +156,5 @@ export const zh = {
   'time': '周一至周五，上午9点至下午7点（北京时间）',
   '24-hour.response.time': '24小时响应时间',
   'available.on.website': '网站可用',
-  'instant.support':'即时支持',
+  'instant.support': '即时支持',
 } as const;

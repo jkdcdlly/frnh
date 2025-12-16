@@ -12,6 +12,7 @@ import ProcessWorkflow from '@/components/home/ProcessWorkflow.astro';
 import PremiumCTA from '@/components/home/PremiumCTA.astro';
 import ServiceHighlights2 from '@/components/home/ServiceHighlights2.astro';
 import ServiceHighlights3 from '@/components/home/ServiceHighlights3.astro';
+import VideoShowcase from '@/components/home/VideoShowcase.astro';
 // 接收语言参数
 const { lang } = Astro.props;
 ---
@@ -21,13 +22,12 @@ const { lang } = Astro.props;
 <BaseLayout lang={lang}>
   <PremiumHero lang={lang}/>
   <ServiceHighlights lang={lang}/>
+  <VideoShowcase />
   <!-- <ServiceHighlights2 lang={lang}/> -->
   <ServiceHighlights3 lang={lang}/>
   <ImageGrid lang={lang}/>
   <!-- <IndustriesServed lang={lang}/> -->
   <TechnologyInnovation lang={lang}/>
-  
-  
   <ProcessWorkflow lang={lang}/>
   <!-- <StatsShowcase lang={lang}/>
   <Testimonials lang={lang}/> -->

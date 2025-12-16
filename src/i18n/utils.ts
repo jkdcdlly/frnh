@@ -11,9 +11,42 @@ export function getLangFromUrl(url: URL) {
 export function useTranslations(lang: keyof typeof ui) {
   // 返回翻译函数 t,接受一个参数 key，返回对应的翻译文本
   // 返回值示例：ui['zh']['nav.home'] => '首页'
-  return function t(key: keyof typeof ui[typeof defaultLang]) {
-    return ui[lang][key] || ui[defaultLang][key];
+  
+  return function t(key: keyof typeof ui[typeof defaultLang]|string) {
+    // const value = ui[lang][key] || ui[defaultLang][key]
+    return  (ui[lang] as any)[key] || getNestedValue(ui[lang], key) || getNestedValue(ui[defaultLang], key) || key;
+    
   }
+}
+
+function getNestedValue<T>(obj: T, path: string): any {
+    console.log('getNestedValue Debug:', { path});
+    // 检查输入参数的有效性
+    if (!obj || typeof obj !== 'object' || !path || typeof path !== 'string') {
+        return undefined;
+    }
+    
+    // 分割路径为各个部分
+    const keys = path.split('.');
+    let current: any = obj;
+    
+    // 逐级访问嵌套属性
+    for (const key of keys) {
+        // 检查当前级别是否存在且为对象
+        if (current === null || current === undefined || typeof current !== 'object') {
+            return undefined;
+        }
+        
+        // 访问下一级属性
+        current = current[key];
+        
+        // 如果已经是undefined，提前返回
+        if (current === undefined) {
+            return undefined;
+        }
+    }
+    
+    return current;
 }
 
 // 辅助函数：生成带语言前缀的路径

@@ -23,8 +23,8 @@ interface Step {
 const steps = [
   {
     number: 1,
-    title: t("process.step1.title"),
-    description: t("process.step1.desc"),
+    title: t("ProcessWorkflow.step1.title"),
+    description: t("ProcessWorkflow.step1.desc"),
     image: discoveryImg,
     alt: "Business planning and strategy",
     hoverBorder: "hover:border-blue-500",
@@ -33,8 +33,8 @@ const steps = [
   },
   {
     number: 2,
-    title: t("process.step2.title"),
-    description: t("process.step2.desc"),
+    title: t("ProcessWorkflow.step2.title"),
+    description: t("ProcessWorkflow.step2.desc"),
     image: implementationImg,
     alt: "Team collaboration and implementation",
     hoverBorder: "hover:border-teal-500",
@@ -43,8 +43,8 @@ const steps = [
   },
   {
     number: 3,
-    title: t("process.step3.title"),
-    description: t("process.step3.desc"),
+    title: t("ProcessWorkflow.step3.title"),
+    description: t("ProcessWorkflow.step3.desc"),
     image: optimizationImg,
     alt: "Data analytics and optimization",
     hoverBorder: "hover:border-blue-500",
@@ -53,8 +53,8 @@ const steps = [
   },
   {
     number: 4,
-    title: t("process.step4.title"),
-    description: t("process.step4.desc"),
+    title: t("ProcessWorkflow.step4.title"),
+    description: t("ProcessWorkflow.step4.desc"),
     image: supportGrowthImg,
     alt: "Customer support and growth",
     hoverBorder: "hover:border-teal-500",
@@ -73,21 +73,20 @@ const arrowPath = "M9 5l7 7-7 7";
         class="inline-block px-4 py-2 mb-4 bg-teal-100 text-teal-800 text-sm font-semibold rounded-full"
       >
         <!-- How We Work -->
-        {t('process.label')}
+        {t('ProcessWorkflow.label')}
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
         <!-- Our Proven -->
-         {t('process.title.prefix')}
+         {t('ProcessWorkflow.title.prefix')}
          <span
           class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">
-          Process
-          {t('process.title.highlight')}
+          {t('ProcessWorkflow.title.highlight')}
         </span>
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
         <!-- A streamlined approach designed to deliver results from day one, with
         continuous optimization and support. -->
-        {t('process.description')}
+        {t('ProcessWorkflow.description')}
       </p>
     </div>
 
@@ -134,7 +133,7 @@ const arrowPath = "M9 5l7 7-7 7";
                   <div
                     class={`mt-6 flex items-center text-sm ${step.textColor} font-semibold`}
                   >
-                    {t('process.learnMore')}
+                    {t('ProcessWorkflow.learnMore')}
                     <svg
                       class="w-4 h-4 ml-1"
                       fill="none"
@@ -158,77 +157,5 @@ const arrowPath = "M9 5l7 7-7 7";
       </div>
     </div>
 
-    <!-- Key Benefits 
-    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div
-          class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4"
-        >
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">
-           {t('process.benefit1.title')}
-        </h4>
-        <p class="text-slate-600">
-          {t('process.benefit1.desc')}
-        </p>
-      </div>
-      <div class="text-center">
-        <div
-          class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 text-teal-600 mb-4"
-        >
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-            ></path>
-          </svg>
-        </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">
-          {t('process.benefit2.title')}
-        </h4>
-        <p class="text-slate-600">{t('process.benefit2.desc')}</p>
-      </div>
-      <div class="text-center">
-        <div
-          class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4"
-        >
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-            ></path>
-          </svg>
-        </div>
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">{t('process.benefit3.title')}</h4>
-        <p class="text-slate-600">{t('process.benefit3.desc')}</p>
-      </div>
-    </div>
-    -->
   </div>
 </section>

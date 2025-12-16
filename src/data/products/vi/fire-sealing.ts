@@ -7,7 +7,7 @@ import fanghuo05 from '@/assets/产品图片/防火封堵材料/防火密封胶1
 import fanghuo06 from '@/assets/产品图片/防火封堵材料/防火涂层板1.jpg';
 import fanghuo07 from '@/assets/产品图片/防火封堵材料/复合防火金属板.png';
 import fanghuo08 from '@/assets/产品图片/防火封堵材料/柔性有机堵料1.jpg';
-import fanghuo09 from '@/assets/产品图片/防火封堵材料/未11标题-1.jpg';
+import fanghuo09 from '@/assets/产品图片/防火封堵材料/阻火包.jpg';
 import fanghuo10 from '@/assets/产品图片/防火封堵材料/无机堵料.jpg';
 import fanghuo11 from '@/assets/产品图片/防火封堵材料/无机防火隔板.png';
 import fanghuo12 from '@/assets/产品图片/防火封堵材料/有机防火板1.jpg';
@@ -35,11 +35,12 @@ export const capabilities = [
   }
 ];
 
-export const fireSealingProducts: Product[] = [
+const rawProducts: Product[] = [
   {
     slug: 'fanghuo-1',
     title: 'Lớp phủ chống cháy cho cáp',
     category: '防火封堵材料',
+    
     category_id: 'fire-sealing-materials',
     description: '阻火包是我公司研制的防火配套耐火材料，阻火包形状如小枕头...',
     fullDescription: `
@@ -263,3 +264,7 @@ export const fireSealingProducts: Product[] = [
 ];
 
 
+export const fireSealingProducts: Product[] = rawProducts.map(product => ({
+  ...product,
+  category: 'fire-sealing'
+}));

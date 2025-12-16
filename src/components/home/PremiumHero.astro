@@ -1,14 +1,15 @@
 ---
 import Button from '@/components/ui/Button.astro';
-import heroBgImg1 from '@assets/frnh/photo-1586528116311-ad8dd3c8310d.jpg';
-import heroBgImg2 from '@assets/施工案例/微信图片_20251210110122_458_4.png';
+import heroBgImg1 from '@assets/frnh/PremiumHeroImage1.jpg';
+import heroBgImg2 from '@assets/frnh/PremiumHeroImage2.png';
+import heroBgImg3 from '@assets/frnh/PremiumHeroImage3.jpg';
 import {SITE } from '@config/site';
 import HeroBackground from '@/components/react/HeroBackground';
 import { useTranslations,getLocalizedPath,getLangFromUrl } from '@/i18n/utils';
 const heroImages = [
-  { src: heroBgImg1.src, alt: "Modern logistics warehouse" },
-  { src: heroBgImg2.src, alt: "Automated supply chain" }, // 请替换为 heroBgImg2
-  
+  { src: heroBgImg1.src, alt: "heroBgImg1" },
+  { src: heroBgImg2.src, alt: "heroBgImg2" },
+  { src: heroBgImg3.src, alt: "heroBgImg3" },
 ];
 
 const lang = getLangFromUrl(Astro.url);
@@ -26,33 +27,29 @@ const t = useTranslations(lang);
         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
         </svg>
-        {t('premiumHero.slogan')}
-        <!--  翻译上面的话：行业领先的物流解决方案 -->
+        {t('premiumHero.eyebrowtext')}
       </div>
       
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
         <!-- Optimize Your Operations with -->
-        {t('hero.title')} 
+        {t('premiumHero.title')} 
         <span class="block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400 mt-2">
           {SITE.title}
         </span>
       </h1>
       
       <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
-        <!-- Transform your supply chain with our integrated logistics and manufacturing solutions. 
-        From warehousing to delivery, we power your success with cutting-edge technology. -->
-        {t('hero.subtitle')}
+        {t('premiumHero.subtitle')}
       </p>
       
       
       <div class="flex flex-col sm:flex-row gap-4 mb-12">
         <Button href={getLocalizedPath('/rfq', lang)} size="lg" class="bg-blue-600! hover:bg-blue-700! text-white! shadow-2xl!">
-          <!-- Request a Quote -->
-          {t('hero.cta.quote')}
+          {t('common.getQuote')}
         </Button>
         
+        
         <Button href={getLocalizedPath('/use-cases', lang)} size="lg" variant="outline" class="border-2! border-white! text-white! hover:bg-white/10! shadow-2xl!">
-          <!-- Explore Solutions -->
           {t('nav.useCases')}
         </Button>
       </div>
@@ -60,20 +57,20 @@ const t = useTranslations(lang);
       <!-- Quick Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
         <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">500+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.globalClients')}</div>
+          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.globalClientsNum')}</div>
+          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.globalClientsText')}</div>
         </div>
         <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">50M+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.unitsShipped')}</div>
+          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.unitsShippedNum')}</div>
+          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.unitsShippedText')}</div>
         </div>
         <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">99.9%</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.onTime')}</div>
+          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.onTimeNum')}</div>
+          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.onTimeText')}</div>
         </div>
         <div class="group">
-          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">15+</div>
-          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.facilities')}</div>
+          <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.facilitiesNum')}</div>
+          <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.facilitiesText')}</div>
         </div>
       </div>
     </div>

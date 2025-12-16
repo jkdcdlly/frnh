@@ -25,8 +25,6 @@ interface FeatureShowcaseProps {
 }
 import { defaultLang } from '@/i18n/ui';
 
-// const features = [...originalFeatures];
-
 export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseProps) {
   // 根据传入的 lang 获取对应的数据，默认为 en
   const currentProducts = productsMap[lang] ?? productsMap.en;
