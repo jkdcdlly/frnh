@@ -32,7 +32,7 @@ export const getNavigation = (lang: keyof typeof ui) => {
           href: getLocalizedPath(`/products/${cat.id}`, lang)
         }))
     },
-    { name: t('nav.useCases'), href: getLocalizedPath('/use-cases', lang) },
+    { name: t('nav.useCases'), href: getLocalizedPath('/usecases', lang) },
     { name: t('nav.facilities'), href: getLocalizedPath('/facilities', lang) },
     // { name: t('nav.rfq'), href: getLocalizedPath('/rfq', lang) },
     

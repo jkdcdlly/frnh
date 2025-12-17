@@ -1,3 +1,5 @@
+import type { Watch } from "lucide-react";
+
 export const zh = {
   common: {
     getQuote: '立即询价',
@@ -120,6 +122,10 @@ export const zh = {
   },
   // 视频组件
   VideoShowcase:{
+    videogallery:'防火涂料防火测试视频',
+    watchours:'观看我们的',
+    testvideo:'测试视频',
+    description:'通过这些视频，了解我们的产品演示。',
     title1: '1.5倍速播放',
     description1: '防火涂料遇火膨胀，提供长达2h以上对钢结构的保护，为人员逃生预留时间。',
     title2: '3.5倍速播放',

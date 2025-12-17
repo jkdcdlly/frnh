@@ -19,7 +19,7 @@ import { getAllData } from "@/data/usecases/index"; // 确保数据被打包
 // 2. 获取当前语言参数
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const useCases = getAllData(lang);
+const useCasesData = getAllData(lang);
 ---
 
 <BaseLayout title="Construction Case - Industry Solutions" lang={lang}>
@@ -80,7 +80,7 @@ const useCases = getAllData(lang);
   <Section background="gray">
     <!-- <UseCaseTabs useCases={useCases} client:load /> -->
     {
-      useCases.map((useCase) => (
+      useCasesData.map((useCase) => (
         <div class="mb-16">
           {/* <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
           {useCase.industry}

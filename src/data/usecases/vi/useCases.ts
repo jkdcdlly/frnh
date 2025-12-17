@@ -1,4 +1,5 @@
 import ecommerceImg from '@/assets/施工案例/-1815801961_-364583281_-1457283138.jpg';
+
 import useCase01 from '@/assets/usecaseimg/useCase01.png'
 import useCase02 from '@/assets/usecaseimg/useCase02.jpg'
 import useCase03 from '@/assets/usecaseimg/useCase03.png'
@@ -9,9 +10,9 @@ import useCase07 from '@/assets/usecaseimg/20251210105947_456_4.png'
 import useCase08 from '@/assets/usecaseimg/20251210110302_460_4.png'
 import useCase09 from '@/assets/usecaseimg/20251210110340_461_4.png'
 import useCase10 from '@/assets/usecaseimg/20251210110402_462_4.png'
-import useCase11 from '@/assets/usecaseimg/20251210110505_463_4.png'
+import useCase11 from '@/assets/usecaseimg/202512101105054634.png'
 import useCase12 from '@/assets/usecaseimg/20251210110609_464_4.png'
-import useCase13 from '@/assets/usecaseimg/20251210110935_465_4.png'
+import useCase13 from '@/assets/usecaseimg/202512101109354654.png'
 import useCase14 from '@/assets/usecaseimg/20251210111007_466_4.png'
 import useCase15 from '@/assets/usecaseimg/20251210111231_467_4.png'
 import useCase16 from '@/assets/usecaseimg/20251210111920_469_4.png'
@@ -20,32 +21,58 @@ import useCase18 from '@/assets/usecaseimg/useCase18.png'
 
 export const useCases:any[] = [
   {
-    industry: 'Fire-retardant coating application site',
+    industry: 'Hiện trường thi công sơn chống cháy',
     iconName: 'ShoppingCart',
     image: ecommerceImg,
 
     challenge: 'Managing high-volume orders during peak seasons with tight delivery windows and customer expectations for fast, accurate fulfillment.',
     solution: 'Scalable warehousing with automated order processing, same-day shipping capabilities, and integrated returns management.',
-    results: [{'img':useCase01,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép trong các nhà máy'},
-{'img':useCase02,title:'Vỏ cáp phủ chống cháy'},
-{'img':useCase03,title:'Ứng dụng phủ chống cháy cho cáp'},
-{'img':useCase04,title:'Nghiên cứu trường hợp phủ chống cháy cho đường hầm'},
-{'img':useCase05,title:'Ứng dụng phủ chống cháy cho đường hầm'},
-{'img':useCase06,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase07,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase08,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase09,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase10,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase11,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase12,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase13,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase14,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase15,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase16,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase17,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
-{'img':useCase18,title:'Nghiên cứu trường hợp ứng dụng phủ chống cháy cho kết cấu thép'},
+results: [
+{'img':useCase01,title:'Dự án sơn chống cháy kết cấu thép nhà xưởng'},
+{'img':useCase02,title:'Dự án sơn chống cháy cáp điện'},
+{'img':useCase03,title:'Thi công sơn chống cháy cáp điện'},
+{'img':useCase04,title:'Dự án sơn chống cháy đường hầm'},
+{'img':useCase05,title:'Thi công sơn chống cháy đường hầm'},
+{'img':useCase06,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase07,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase08,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase09,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase10,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase11,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase12,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase13,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase14,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase15,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase16,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase17,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'},
+{'img':useCase18,title:'Dự án ứng dụng sơn chống cháy kết cấu thép'}
 ],
   },
+  // {
+  //   industry: 'Chống cháy trong nhà',
+  //   iconName: 'Heart',
+  //   image: healthcareImg,
+  //   challenge: 'Maintaining strict temperature controls, regulatory compliance, and chain of custody for sensitive medical products and pharmaceuticals.',
+  //   solution: 'FDA-compliant climate-controlled facilities with validated cold chain logistics, real-time monitoring, and full audit trails.',
+  //   results: [healthcareImg,healthcareImg,healthcareImg,healthcareImg],
+  // },
+  // {
+  //   industry: 'Chống cháy cáp điện',
+  //   iconName: 'Car',
+  //   image: automotiveImg,
+  //   results: [automotiveImg,automotiveImg,automotiveImg,automotiveImg],
+  //   challenge: 'Coordinating just-in-time delivery of components across multiple manufacturing plants while minimizing inventory holding costs.',
+  //   solution: 'Strategic distribution centers near production facilities, milk-run logistics, and predictive inventory management.',
+    
+  // },
+  // {
+  //   industry: 'Chống cháy đường hầm',
+  //   iconName: 'Laptop',
+  //   image: technologyImg,
+  //   results: [technologyImg,technologyImg,technologyImg,technologyImg],
+  //   challenge: 'Secure handling of high-value electronics, efficient reverse logistics for returns, and rapid product lifecycle management.',
+  //   solution: 'ESD-protected environments, secure chain of custody, streamlined returns processing, and asset recovery programs.',
   
+  // },
  
 ];

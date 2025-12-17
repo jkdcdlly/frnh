@@ -6,13 +6,13 @@ import { useCases as viUseCases } from './vi/useCases';
 
 const useCasesMap = {
   zh: {
-    'use-cases': zhUseCases,
+    'usecases': zhUseCases,
   },
   en: {
-    'use-cases': enUseCases,
+    'usecases': enUseCases,
   },
   vi: {
-    'use-cases': viUseCases,
+    'usecases': viUseCases,
   }
 };
 
