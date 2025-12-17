@@ -20,7 +20,7 @@ export function useTranslations(lang: keyof typeof ui) {
 }
 
 function getNestedValue<T>(obj: T, path: string): any {
-    console.log('getNestedValue Debug:', { path});
+    // console.log('getNestedValue Debug:', { path});
     // 检查输入参数的有效性
     if (!obj || typeof obj !== 'object' || !path || typeof path !== 'string') {
         return undefined;

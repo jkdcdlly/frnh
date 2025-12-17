@@ -1,26 +1,23 @@
 import ecommerceImg from '@/assets/施工案例/-1815801961_-364583281_-1457283138.jpg';
-import healthcareImg from '@/assets/施工案例/微信图片_20251210105840_454_4.png';
-import automotiveImg from '@/assets/施工案例/微信图片_20251210105936_455_4.png';
-import technologyImg from '@/assets/施工案例/微信图片_20251210105947_456_4.png';
 
-import useCase01 from '@/assets/施工案例20251216/厂房钢结构防火涂料案例.png'
-import useCase02 from '@/assets/施工案例20251216/电缆防火涂料案例.jpg'
-import useCase03 from '@/assets/施工案例20251216/电缆防火涂料施工.png'
-import useCase04 from '@/assets/施工案例20251216/隧道防火涂料案例.png'
-import useCase05 from '@/assets/施工案例20251216/隧道防火涂料施工.png'
-import useCase06 from '@/assets/施工案例20251216/微信图片_20251210105936_455_4.png'
-import useCase07 from '@/assets/施工案例20251216/微信图片_20251210105947_456_4.png'
-import useCase08 from '@/assets/施工案例20251216/微信图片_20251210110302_460_4.png'
-import useCase09 from '@/assets/施工案例20251216/微信图片_20251210110340_461_4.png'
-import useCase10 from '@/assets/施工案例20251216/微信图片_20251210110402_462_4.png'
-import useCase11 from '@/assets/施工案例20251216/微信图片_20251210110505_463_4.png'
-import useCase12 from '@/assets/施工案例20251216/微信图片_20251210110609_464_4.png'
-import useCase13 from '@/assets/施工案例20251216/微信图片_20251210110935_465_4.png'
-import useCase14 from '@/assets/施工案例20251216/微信图片_20251210111007_466_4.png'
-import useCase15 from '@/assets/施工案例20251216/微信图片_20251210111231_467_4.png'
-import useCase16 from '@/assets/施工案例20251216/微信图片_20251210111920_469_4.png'
-import useCase17 from '@/assets/施工案例20251216/微信图片_20251215184010_487_4.png'
-import useCase18 from '@/assets/施工案例20251216/image.png'
+import useCase01 from '@/assets/usecaseimg/useCase01.png'
+import useCase02 from '@/assets/usecaseimg/useCase02.jpg'
+import useCase03 from '@/assets/usecaseimg/useCase03.png'
+import useCase04 from '@/assets/usecaseimg/useCase04.png'
+import useCase05 from '@/assets/usecaseimg/useCase05.png'
+import useCase06 from '@/assets/usecaseimg/20251210105936_455_4.png'
+import useCase07 from '@/assets/usecaseimg/20251210105947_456_4.png'
+import useCase08 from '@/assets/usecaseimg/20251210110302_460_4.png'
+import useCase09 from '@/assets/usecaseimg/20251210110340_461_4.png'
+import useCase10 from '@/assets/usecaseimg/20251210110402_462_4.png'
+import useCase11 from '@/assets/usecaseimg/20251210110505_463_4.png'
+import useCase12 from '@/assets/usecaseimg/20251210110609_464_4.png'
+import useCase13 from '@/assets/usecaseimg/20251210110935_465_4.png'
+import useCase14 from '@/assets/usecaseimg/20251210111007_466_4.png'
+import useCase15 from '@/assets/usecaseimg/20251210111231_467_4.png'
+import useCase16 from '@/assets/usecaseimg/20251210111920_469_4.png'
+import useCase17 from '@/assets/usecaseimg/20251215184010_487_4.png'
+import useCase18 from '@/assets/usecaseimg/useCase18.png'
 
 export const useCases:any[] = [
   {
