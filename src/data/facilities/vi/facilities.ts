@@ -20,10 +20,7 @@ export const facilities = [
     manager: 'Sarah Johnson',
     hours: '24/7 Operations',
     features: [
-      'Công ty TNHH Vật liệu Chịu lửa Fengrui Langfang là một doanh nghiệp chuyên sản xuất các sản phẩm phòng cháy chữa cháy và vật liệu chống cháy, tọa lạc tại trung tâm Khu kinh tế vành đai Bắc Kinh - Thiên Tân - Hà Bắc, gần Khu vực mới Xiong\'an, là doanh nghiệp trọng điểm trong ngành vật liệu chống cháy của tỉnh Hà Bắc.',
-      
-      
-      
+      'Công ty TNHH Vật liệu chịu lửa Fengrui Trung Quốc là một doanh nghiệp chuyên sản xuất các sản phẩm phòng cháy chữa cháy và vật liệu chống cháy. Công ty nằm ở trung tâm vòng tròn kinh tế Bắc Kinh-Thiên Tân-Hà Bắc của Trung Quốc, và là một doanh nghiệp chủ chốt trong ngành vật liệu phòng cháy chữa cháy tại Hà Bắc, Trung Quốc.',
     ],
     certifications: ['ISO 9001', 'ISO 14001', 'OSHA Compliant']
   },
@@ -42,7 +39,7 @@ export const facilities = [
     manager: 'Michael Chen',
     hours: 'Mon-Sun: 6:00 AM - 10:00 PM',
     features: [
-      'Công ty chúng tôi hiện cung cấp ba dòng sản phẩm chính với 28 chủng loại. Sản phẩm của chúng tôi được bán trên toàn quốc và xuất khẩu sang các quốc gia và khu vực như Trung Đông và Đông Nam Á.',
+      'Sản phẩm của chúng tôi gồm 3 dòng chính với 28 chủng loại, được tiêu thụ toàn quốc và xuất khẩu sang Trung Đông, Đông Nam Á, v.v. Các sản phẩm chủ lực như sơn chống cháy giãn nở/không giãn nở cho kết cấu thép trong nhà/ngoài trời, sơn chống cháy hầm, sơn chống cháy cáp điện, vật liệu bịt kín hữu cơ/vô cơ dẻo, gối chặn lửa, tấm ngăn cháy, mô-đun chặn lửa có uy tín cao trong nước.',
     ],
     certifications: ['C-TPAT', 'ISO 9001', 'FDA Registered']
   },
@@ -61,7 +58,7 @@ export const facilities = [
     manager: 'David Rodriguez',
     hours: 'Mon-Fri: 7:00 AM - 8:00 PM, Sat: 8:00 AM - 4:00 PM',
     features: [
-      'Các sản phẩm chủ đạo như sơn chống cháy kết cấu thép phồng trong nhà/ngoài trời, sơn chống cháy kết cấu thép không phồng trong nhà/ngoài trời, sơn chống cháy hầm, sơn chống cháy cáp, vật liệu bịt kín hữu cơ linh hoạt, vật liệu bịt kín vô cơ, gối chống cháy, tấm chống cháy và mô-đun chống cháy được đánh giá cao trong nước.'
+      'Tất cả các sản phẩm đã vượt qua quá trình đánh giá và chứng nhận nghiêm ngặt của Trung tâm Chứng nhận Sản phẩm Phòng cháy chữa cháy thuộc Bộ Quản lý Khẩn cấp. Tất cả nhân viên công ty tuân thủ triết lý phát triển "dựa trên sự trung thực, khách hàng là trên hết, lấy con người làm trung tâm và kinh doanh với đức hạnh". Sau nhiều năm nỗ lực, chúng tôi đã nhận được sự công nhận từ các ngành xã hội.'
     ],
     certifications: ['ISO 9001', 'ISTA Certified', 'TSA Approved']
   },
@@ -80,7 +77,7 @@ export const facilities = [
     manager: 'Jennifer Martinez',
     hours: 'Mon-Fri: 6:00 AM - 6:00 PM',
     features: [
-      'Tất cả sản phẩm đã vượt qua sự xem xét nghiêm ngặt và chứng nhận của Trung tâm Chứng nhận Sản phẩm Chống cháy của Bộ Quản lý Khẩn cấp.'
+      'Công ty sẽ tiếp tục duy trì thái độ trung thực và đổi mới, lấy nhu cầu khách hàng làm định hướng, không ngừng nỗ lực và cống hiến các sản phẩm tốt hơn cùng dịch vụ ưu việt để đạt được sự hài lòng của khách hàng. Chúng tôi chân thành cảm ơn các đối tác trong và ngoài nước đã hỗ trợ mạnh mẽ và hợp tác tốt, và chân thành mong muốn hợp tác với những người bạn cam kết với ngành vật liệu xây dựng tiết kiệm năng lượng để đóng góp mới cho ngành này.'
     ],
     certifications: ['ISO 9001', 'AS9100', 'ITAR Registered']
   },

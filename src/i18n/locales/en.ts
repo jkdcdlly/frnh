@@ -1,7 +1,22 @@
 export const en = {
 
   common: {
-    getQuote: 'Request a Quote'
+    getQuote: 'Request a Quote',
+    qualifications: 'Qualifications',
+    CompanyOverviewandLocationAdvantages: 'Company Overview and Location Advantages',
+    CompanyOverviewandLocationAdvantagesDesc: 'China Langfang Fengrui Refractory Materials Co., Ltd. is a company engaged in the production of fire protection products and fire-retardant materials, located in the heart of the Beijing-Tianjin-Hebei Bohai Economic Circle in China, and is a key enterprise in the fire-retardant materials industry of Hebei Province, China.',
+    CoreProductsandMarketCoverage: 'Core Products and Market Coverage',
+    CoreProductsandMarketCoverageDesc: 'Our company has three major series and 28 varieties of products, sold nationwide and exported to the Middle East, Southeast Asia, and other countries and regions. Among them, indoor and outdoor intumescent steel structure fireproof coatings, indoor and outdoor non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof bags, fireproof partitions, and fireproof modules enjoy a high reputation in China.',
+    QualificationCertificationandBusinessPhilosophy: 'Qualification Certification and Business Philosophy',
+    QualificationCertificationandBusinessPhilosophyDesc: 'All products have passed the rigorous review and certification of the Fire Product Certification Center of the Ministry of Emergency Management. All employees of the company adhere to the development philosophy of "integrity-based, customer first, people-oriented, and business with virtue". After years of hard work, we have won recognition from all sectors of society.',
+    DevelopmentVisionandCooperationProspects: 'Development Vision and Cooperation Prospects',
+    DevelopmentVisionandCooperationProspectsDesc: 'The company will continue to maintain an attitude of integrity and innovation, adhere to customer needs as the orientation, keep striving, and dedicate better products and superior services to achieve customer satisfaction. We sincerely thank domestic and foreign partners for their strong support and good cooperation, and sincerely look forward to working with friends who are committed to the energy-saving building materials industry to make new contributions to the energy-saving building materials industry.',
+
+    nonexpandingtypecoatingproductionequipment:'Non-expanding type coating production equipment',
+    nonexpandingtypecoatingproductionequipmentDesc: 'The core advantages of fire-retardant coatings include: 1. High fire resistance: They form a protective layer through expansion and insulation or low thermal conductivity, slowing down the spread of fire and buying time for rescue efforts. 2. Multifunctionality: They combine decorative functions (such as surface finishes) with structural protection (for steel structures and concrete). 3. Environmental friendliness and safety: Primarily composed of inorganic components, they produce less smoke and toxic gases during a fire. 4. Economical and practical: They are easy to apply, have low maintenance costs, and are suitable for a variety of substrates.',
+    expandingtypecoatingproductionequipment:'Intumescent coating production equipment',
+    expandingtypecoatingproductionequipmentDesc: 'Fire-retardant coatings are primarily used in the following areas: 1. Steel structures: such as high-rise buildings and industrial plants, to protect steel components and extend their fire resistance. 2. Wooden structures and combustible substrates: such as wood and fiberboard, where fire-retardant coatings are applied as a surface treatment to prevent combustion. 3. Tunnels and underground engineering: used for fire protection of concrete structures, such as subways and underground parking garages. 4. Cables and pipelines: to prevent the spread of fire, commonly found in power and chemical facilities. 5. Transportation facilities: such as fire protection for the internal structures of aircraft and ships.',
+    
   },
 
   // 导航栏
@@ -29,9 +44,9 @@ export const en = {
 
   // 首页-premiumHero 部分
   premiumHero: {
-    "eyebrowtext": "Focused on the research, development, and production of high-performance fire-retardant coatings.",
+    "eyebrowtext": "Focused on R&D and Production of High-Performance Fire Protection Materials",
     "title": "Passive Fire Protection Specialist",
-    "subtitle": "We are a leading supplier of refractory materials and fire protection construction in China, equipped with advanced production facilities and extensive industry experience.",
+    "subtitle": "We are a leading supplier of fire-retardant materials and fire protection construction in China, equipped with advanced production facilities and extensive industry experience.",
     'globalClientsNum': '500+',
     'globalClientsText': 'Global Clients',
     'unitsShippedNum': '50 M+',
@@ -46,7 +61,8 @@ export const en = {
   'ProcessWorkflow.label': 'Our Advantages',
   'ProcessWorkflow.title.prefix': 'Choose Us',
   'ProcessWorkflow.title.highlight': 'Reasons',
-  'ProcessWorkflow.description': 'A professional enterprise engaged in the production of fire protection and flame-retardant materials, located in the Beijing-Tianjin-Hebei Bohai Rim Economic Zone and adjacent to Xiong\'an New Area, a key fireproof materials enterprise in Hebei Province.',
+
+  'ProcessWorkflow.description': 'This company, specializing in the production of fire protection products and fire-retardant materials, is located in the heart of the Beijing-Tianjin-Hebei Bohai Economic Circle in China, and is a key enterprise in the fire-retardant materials industry of Hebei Province, China.',
   'ProcessWorkflow.learnMore': 'Learn More',
   'ProcessWorkflow.step1.title': 'Manufacturer Advantage',
   'ProcessWorkflow.step1.desc': 'A large enterprise specializing in fireproof materials integrating R&D, production, sales, and technical services.',
@@ -58,21 +74,72 @@ export const en = {
   'ProcessWorkflow.step4.desc': 'From material production to construction guidance, a professional and experienced team contributes to the energy-saving building materials industry.',
 
   // [slug].astro 部分
-  'slug.astro': 'Application Areas',
+  slug: {
+    application: 'Application',
+    constructionMethod: 'Construction Method',
+    fullDescription: 'Full Description',
+    packagingAndTransportation: 'Packaging and Transportation',
+    precautions: 'Precautions',
+    specs: 'Specifications',
+    usage: 'Usage',
+    colorScheme: 'Product Appearance Samples',
+    highlights: "Highlights"
+  }
+  ,
+  // ImageGrid 组件部分
+  ImageGrid: {
+    ourinfrastructure: 'Product Application Cases',
+    worldclass: 'Fireproof Coatings',
+    facilities: 'Construction Cases',
+    facilitiesdescription: 'Covering various fields of passive fire protection, systematic services to ensure fire safety.',
+    tourourfacilities: 'More Case Displays',
+  }
+  ,
+  // Footer 组件部分
+  footer: {
+    'sitedescription': 'We are a leading professional supplier of fire protection materials and fire protection construction in China, equipped with advanced production facilities and extensive industry experience.',
+  },
+
+  // facilities 页面
+  facilities: {
+    ourInfrastructure: 'Our factory environment',
+    our: 'Our',
+    facilities: 'Factory environment',
+    description2: 'Multiple production lines to meet customer order demands. Stable supply, welcome to inquire.',
+    officeenvironment: 'Office Environment',
+    productionsite: 'Production Site',
+    productionworkshop: 'Production Workshop',
+    productionequipment: 'Production Equipment',
+  },
+
+
+    // 视频组件
+  VideoShowcase:{
+    title1: '1.5x Speed Playback',
+    description1: 'Fireproof coatings expand when exposed to fire, providing over 2 hours of protection for steel structures, allowing time for evacuation.',
+    title2: '3.5x Speed Playback',
+    description2: 'Intumescent coatings form a porous char layer when heated, effectively insulating heat and preventing steel structure collapse.',
+    title3: 'Test Process',
+    description3: 'Coatings transform into a foam state when heated, effectively blocking flame spread and propagation.',
+  },
 
   'explore.all.products': 'Explore all products',
-  'our.infrastructure': 'Our Infrastructure',
-  'world.class': 'World-Class',
-  'facilities': 'Facilities',
+
+
   'world.class.facilities': 'World-Class Facilities',
-  'facilities.description': 'State-of-the-art infrastructure and cutting-edge technology designed for operational excellence across all our global locations.',
-  'tour.our.facilities': 'Tour Our Facilities',
+
+
   'complete.certification': 'Complete Certification',
   'physical.manufacturer': 'Physical Manufacturer',
   'high.quality.products': 'High-quality products',
-  'industry.solutions': 'Industry Solutions',
-  'usecase.description': "Real-world solutions delivering measurable results across diverse industries. See how we've transformed operations.",
-  'facilities.description2': 'Strategically located facilities across North America equipped with state-of-the-art technology and industry certifications.',
+
+  usecase:{
+  solutions: 'Fire Protection Solutions',
+  description: "Fireproof coatings are widely used in steel structure buildings, wood structures and combustible substrates, tunnels and underground projects, cables and pipelines, transportation facilities, and more.",
+  }
+  ,
+  
+
 
   // Technology Section
   'tech.label': 'Technology & Innovation',
@@ -84,7 +151,9 @@ export const en = {
 
 
   "tech.ai.title": "Company Profile & Location",
-  "tech.ai.desc": "Langfang Fengrui Refractory Materials Co., Ltd. produces fire protection and flame-retardant materials. Located in the Beijing-Tianjin-Hebei Bohai Rim Economic Zone and adjacent to Xiong'an New Area, it is a key fireproof materials enterprise in Hebei Province.",
+
+
+  'tech.ai.desc': 'China Fengrui Refractory Materials Co., Ltd. is engaged in the research, development, and production of fire protection and flame-retardant materials. It is located in the Beijing-Tianjin-Hebei Bohai Rim Economic Zone, a key fireproof materials enterprise in Hebei Province.',
 
   "tech.visibility.title": "Core Products & Market",
   "tech.visibility.desc": "Our products include 3 series and 28 varieties, sold nationwide and exported to the Middle East, Southeast Asia, etc. Leading products like indoor/outdoor intumescent and non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof pillows, fireproof boards, and fireproof modules enjoy a high reputation in China.",
@@ -128,11 +197,15 @@ export const en = {
   'ServiceHighlights3.title2': 'Sealing Materials',
   'ServiceHighlights3.desc': 'Special flame-retardant materials used to seal penetrations and construction joints in buildings or facilities to prevent the spread of flames and toxic smoke.',
 
-  'facilities.ourInfrastructure': 'Our Factory Area Facilities',
-  'facilities.our': 'Our',
-  'facilities.facilities': 'Factory Area Facilities',
-  'get.your.custom.quote.today': 'Get Your Custom Quote Today',
-  'get.your.custom.quote.description': 'Get a customized quote tailored to your specific logistics and manufacturing needs. We typically respond within 24 hours with a comprehensive proposal.',
+
+
+
+rfq:{
+    description:"All products have been reviewed and certified by the Fire Product Certification Center of the Ministry of Emergency Management",
+    quotetoday: 'Get Your Custom Quote Today',
+  },
+  
+  
   'response.time': 'Response Time',
   'happy.clients': 'Happy Clients',
   'on.time.rate': 'On-Time Rate',
@@ -143,7 +216,7 @@ export const en = {
   'why.choose.us': 'Why Choose Us?',
   'industry.experience': '25+ years of industry experience',
   'on.time.delivery.rate': '99.9% on-time delivery rate',
-  'certified.facilities': 'ISO 9001 certified facilities',
+  'certified.facilities': 'ISO 9001 certification',
   'customer.support': '24/7 customer support',
   'time': 'Mon-Fri, 9am-7pm BJT ',
   '24-hour.response.time': '24-hour response time',

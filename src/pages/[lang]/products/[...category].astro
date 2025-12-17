@@ -1,29 +1,29 @@
 ---
 // 产品列表页
 
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import Section from '@/components/ui/Section.astro';
-import { Image } from 'astro:assets';
-import ImageReveal from '@/components/react/ImageReveal';
-import { SITE } from '@config/site'; 
-import { getProductsByCategory, getCategories } from '@/data/products/index';
-import { getLocalizedPath,useTranslations } from '@/i18n/utils';
-import { defaultLang,languages } from '@/i18n/ui';
-import heroBgImg from '@/assets/施工案例/微信图片_20251210110122_458_4.png';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Section from "@/components/ui/Section.astro";
+import { Image } from "astro:assets";
+import ImageReveal from "@/components/react/ImageReveal";
+import { SITE } from "@config/site";
+import { getProductsByCategory, getCategories } from "@/data/products/index";
+import { getLocalizedPath, useTranslations } from "@/i18n/utils";
+import { defaultLang, languages } from "@/i18n/ui";
+import heroBgImg from "@/assets/施工案例/微信图片_20251210110122_458_4.png";
 // 这个不能使用  export { getStaticPaths } from "@/i18n/utils";
 export function getStaticPaths() {
   const langs = Object.keys(languages);
-  const categories = ['fire-sealing', 'steel-structure'];
-  
+  const categories = ["fire-sealing", "steel-structure"];
+
   const paths: any[] = [];
-  
-  langs.forEach(lang => {
+
+  langs.forEach((lang) => {
     // 1. 生成 /zh/products (对应 category 为 undefined 或 'all')
     paths.push({ params: { lang, category: undefined } });
-    
+
     // 2. 生成 /zh/products/fire-sealing 等
-    categories.forEach(cat => {
-      if (cat !== 'all') {
+    categories.forEach((cat) => {
+      if (cat !== "all") {
         paths.push({ params: { lang, category: cat } });
       }
     });
@@ -32,8 +32,8 @@ export function getStaticPaths() {
   return paths;
 }
 
-const { category = 'all' } = Astro.params;
-import { getLangFromUrl } from '@/i18n/utils';
+const { category = "all" } = Astro.params;
+import { getLangFromUrl } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 
 // 获取当前语言的分类列表和产品数据
@@ -41,29 +41,39 @@ const categoryList = getCategories(lang);
 const products = getProductsByCategory(category, lang);
 
 // 页面标题
-const currentCategoryName = categoryList.find(c => c.id === category)?.name || 'Products';
+const currentCategoryName =
+  categoryList.find((c) => c.id === category)?.name || "Products";
 const t = useTranslations(lang);
 ---
 
 <BaseLayout title={`${currentCategoryName} - ${SITE.title}`} lang={lang}>
   <!-- Hero Section -->
-  <section class="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden">
+  <section
+    class="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden"
+  >
     <div class="absolute inset-0">
-      <Image 
+      <Image
         src={heroBgImg}
         alt="Products Hero"
         class="w-full h-full object-cover"
         width={2070}
         height={1380}
       />
-      <div class="absolute inset-0 bg-linear-to-r from-slate-900/95 via-slate-900/80 to-slate-900/50"></div>
+      <div
+        class="absolute inset-0 bg-linear-to-r from-slate-900/95 via-slate-900/80 to-slate-900/50"
+      >
+      </div>
     </div>
     <div class="container mx-auto relative z-10 px-4 text-center">
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-        {t('our')} <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400">{t('products')}</span>
+        {t("our")}
+        <span
+          class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-teal-400"
+          >{t("products")}</span
+        >
       </h1>
       <p class="text-xl text-slate-200 max-w-2xl mx-auto">
-        {t('Explore our comprehensive range of fire protection solutions.')}
+        {t("Explore our comprehensive range of fire protection solutions.")}
       </p>
     </div>
   </section>
@@ -71,79 +81,91 @@ const t = useTranslations(lang);
   <Section background="white" class="py-16">
     <!-- Category Tabs -->
     <div class="flex flex-wrap justify-center gap-4 mb-16">
-      {categoryList.map(cat => {
-        const isActive = category === cat.id || (category === undefined && cat.id === 'all');
-        // 构建链接：如果是 'all'，链接到 /products；否则链接到 /products/category-id
-        const href = cat.id === 'all' 
-          ? getLocalizedPath('/products', lang)
-          : getLocalizedPath(`/products/${cat.id}`, lang);
+      {
+        categoryList.map((cat) => {
+          const isActive =
+            category === cat.id || (category === undefined && cat.id === "all");
+          // 构建链接：如果是 'all'，链接到 /products；否则链接到 /products/category-id
+          const href =
+            cat.id === "all"
+              ? getLocalizedPath("/products", lang)
+              : getLocalizedPath(`/products/${cat.id}`, lang);
 
-        return (
-          <a 
-            href={href}
-            class={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-              isActive 
-                ? 'bg-blue-600 text-white shadow-lg scale-105' 
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900'
-            }`}
-          >
-            {cat.name}
-          </a>
-        );
-      })}
+          return (
+            <a
+              href={href}
+              class={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                isActive
+                  ? "bg-blue-600 text-white shadow-lg scale-105"
+                  : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
+              }`}
+            >
+              {cat.name}
+            </a>
+          );
+        })
+      }
     </div>
 
-    <!-- Product List -->
-    <div class="space-y-24">
-      {products.length > 0 ? (
-        products.map((product, index) => (
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border">
-            {/* Image Side */}
-            <div class={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-              <ImageReveal client:load delay={index * 0.1}>
-                <div class="relative aspect-3/4 group overflow-hidden rounded-2xl shadow-xl">
-                  <Image 
-                    src={product.image}
-                    alt={product.title}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    width={800}
-                    height={800}
-                  />
-                </div>
-              </ImageReveal>
-            </div>
 
-            {/* Content Side */}
-            <div class={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''} animate-fadeInUp`}>
-              <h2 class="text-3xl font-bold text-slate-900 mb-4">{product.title}</h2>
-              <p class="text-lg text-slate-600 mb-6 leading-relaxed">{product.description}</p>
-              
-              {product.features && (
-                <ul class="space-y-3 mb-8">
-                  {product.features.map((feature) => (
-                    <li class="flex items-center space-x-3">
-                      <svg class="w-5 h-5 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span class="text-slate-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              
-              <a 
-              href={getLocalizedPath(`/products/detail/${product.slug}`, lang)} 
-              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">
-                Learn more <span class="ml-2">→</span>
-              </a>
+
+        <!-- Product List -->
+    {/* 修改1: 移除 space-y-24 和 h-100px，使用 gap-8 控制间距 */}
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {
+        products.length > 0 ? (
+          products.map((product, index) => (
+            // 修改2: 添加 h-full 让卡片填满网格高度
+            <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full" >
+              {/* Image Side */}
+              <div class="p-6 bg-white h-full flex flex-col">
+                <ImageReveal client:load delay={index * 0.1}>
+                  <div class="mb-4"> {/* 添加 mb-4 给图片和标题留间距 */}
+                    <a
+                    href={getLocalizedPath(
+                      `/products/detail/${product.slug}`,
+                      lang,
+                    )}
+                   
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      // 修改3: 使用 h-64 (256px) 或 h-[300px] 固定高度，确保所有图片一样高
+                      class="w-full h-96 object-contain rounded-lg" 
+                      width={800}
+                      height={800}
+                    />
+                    </a>
+                  </div>
+                </ImageReveal>
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4"> {/* 稍微调小标题字号 */}
+                  <a
+                    href={getLocalizedPath(
+                      `/products/detail/${product.slug}`,
+                      lang,
+                    )}
+                    class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+                  >
+                    {product.title}
+                  </a>
+                </h2>
+                {/* 修改4: 添加 flex-grow 让描述占据剩余空间，并限制行数 */}
+                <p class="text-base text-slate-600 mb-6 leading-relaxed overflow-hidden line-clamp-3 flex-grow">
+                  {product.description}
+                </p>
+              </div>
             </div>
+          ))
+        ) : (
+          <div class="text-center py-20 col-span-3">
+            <p class="text-xl text-slate-500">
+              No products found in this category.
+            </p>
           </div>
-        ))
-      ) : (
-        <div class="text-center py-20">
-          <p class="text-xl text-slate-500">No products found in this category.</p>
-        </div>
-      )}
+        )
+      }
     </div>
   </Section>
 </BaseLayout>

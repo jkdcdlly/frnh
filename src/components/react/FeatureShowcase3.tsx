@@ -144,7 +144,6 @@ export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseP
               <div className="relative h-full overflow-hidden">
                 <a
                   href={getLocalizedPath(`/products/detail/${feature.slug}`, lang)}
-
                   // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
                   draggable={false}
                 >
@@ -155,37 +154,12 @@ export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseP
                     loading="lazy"
                     decoding="async" // 异步解码，防止阻塞主线程导致动画卡顿
                   />
-
-                  {/* <div
-                    className={`absolute top-4 left-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-teal-700 font-bold text-xl `}
-                  >
-                                        {SITE.title}
-                                        
-
-                  </div> */}
                 </a>
-                {/* <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" /> */}
-
-                {/* Icon overlay */}
-                {/* <div className="absolute top-4 right-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg z-10">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
-                </div> */}
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 backdrop-blur-sm bg-blue-700/70 rounded-b-lg">
-                {/* 修改说明：
-                    1. h-16: 设置固定高度为 4rem (64px)，正好是 text-2xl (32px行高) 的两倍。
-                    2. line-clamp-2: 限制最多显示2行，多余的显示省略号。
-                    3. overflow-hidden: 防止极端情况下内容溢出。
-                    4. 移除了 mb-2，因为固定高度已经包含了所需的空间，且下方描述已注释。
-                */}
-                <h3 className="text-2xl font-bold line-clamp-1 h-8 overflow-hidden">{feature.title}</h3>
-                {/* <p className="text-sm text-gray-900 opacity-90">{feature.description}</p> */}
               </div>
             </div>
 
             <div className="mt-4 px-4">
-              {/* <h3 className="text-2xl font-bold mb-2">{feature.title}</h3> */}
+              <h3 className="text-2xl text-white font-bold mb-2">{feature.title}</h3>
               <p className="text-sm text-white opacity-90">{feature.description}</p>
             </div>
           </div>

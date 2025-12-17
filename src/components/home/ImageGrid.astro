@@ -18,13 +18,13 @@ const t = useTranslations(lang);
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <div class="inline-block px-4 py-2 mb-4 bg-teal-100 text-teal-800 text-sm font-semibold rounded-full">
-        {t('our.infrastructure')}
+        {t('ImageGrid.ourinfrastructure')}
       </div>
       <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        {t('world.class')} <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">{t('facilities')}</span>
+        {t('ImageGrid.worldclass')} <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-teal-600">{t('ImageGrid.facilities')}</span>
       </h2>
       <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        {t('facilities.description')}
+        {t('ImageGrid.facilitiesdescription')}
       </p>
     </div>
 
@@ -41,10 +41,6 @@ const t = useTranslations(lang);
               height={800}
             />
             <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <!-- <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-              <h3 class="text-2xl font-bold mb-2">Automated Warehousing</h3>
-              <p class="text-gray-200">Advanced robotics and AI-powered inventory management</p>
-            </div> -->
           </div>
         </ImageReveal>
       </div>
@@ -59,10 +55,6 @@ const t = useTranslations(lang);
             height={600}
           />
           <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-          <!-- <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-xl font-bold mb-1">Fleet Management</h3>
-            <p class="text-sm text-gray-200">Modern vehicles, optimized routes</p>
-          </div> -->
         </div>
       </ImageReveal>
 
@@ -76,10 +68,6 @@ const t = useTranslations(lang);
             height={600}
           />
           <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-          <!-- <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-            <h3 class="text-xl font-bold mb-1">Manufacturing</h3>
-            <p class="text-sm text-gray-200">ISO-certified production lines</p>
-          </div> -->
         </div>
       </ImageReveal>
 
@@ -94,10 +82,6 @@ const t = useTranslations(lang);
               height={600}
             />
             <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <!-- <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-xl font-bold mb-1">Command Center</h3>
-              <p class="text-sm text-gray-200">Real-time visibility and control across all operations</p>
-            </div> -->
           </div>
         </ImageReveal>
       </div>
@@ -112,10 +96,6 @@ const t = useTranslations(lang);
               height={600}
             />
             <div class="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            <!-- <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-xl font-bold mb-1">Distribution Hub</h3>
-              <p class="text-sm text-gray-200">High-speed sorting and cross-docking</p>
-            </div> -->
           </div>
         </ImageReveal>
       </div>
@@ -124,10 +104,10 @@ const t = useTranslations(lang);
     <!-- Bottom CTA -->
     <div class="text-center mt-16">
       <a 
-        href={getLocalizedPath('/facilities', lang)} 
+        href={getLocalizedPath('/use-cases', lang)} 
         class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-linear-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 rounded-lg shadow-lg hover:shadow-xl transition-all group"
       >
-        {t('tour.our.facilities')}
+        {t('ImageGrid.tourourfacilities')}
         <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>

@@ -10,16 +10,16 @@ const t = useTranslations(lang);
 const videos = [
   {
     id: '1',
-    title: '1.5倍速播放',
-    description: '视频描述1',
+    title: t('VideoShowcase.title1'),
+    description: t('VideoShowcase.description1'),
     thumbnail: '/防火涂料防火测试视频/1.5倍速播放.jpg', // 替换为你的图片路径，例如 /assets/...
     // 路径这么写对吗？
     videoUrl: '/防火涂料防火测试视频/1.5倍速播放.mp4'       // 替换为你的视频路径
   },
   {
     id: '2',
-    title: '3.5倍速播放',
-    description: '视频描述2',
+    title: t('VideoShowcase.title2'),
+    description: t('VideoShowcase.description2'),
     thumbnail: '/防火涂料防火测试视频/3.5倍速播放.jpg',
     videoUrl: '/防火涂料防火测试视频/3.5倍速播放.mp4 '
   },
@@ -27,8 +27,8 @@ const videos = [
   
   {
     id: '3',
-    title: '测试过程',
-    description: '视频描述3',
+    title: t('VideoShowcase.title3'),
+    description: t('VideoShowcase.description3'),
     thumbnail: '/防火涂料防火测试视频/测试过程.jpg',
     videoUrl: '/防火涂料防火测试视频/测试过程.mp4'
   }

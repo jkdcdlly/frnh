@@ -20,10 +20,7 @@ export const facilities = [
     manager: 'Sarah Johnson',
     hours: '24/7 Operations',
     features: [
-      "Langfang Fengrui Refractory Materials Co., Ltd. is a company engaged in the production of fire protection products and fire retardant materials. It is located in the heart of the Beijing-Tianjin-Hebei Bohai Rim Economic Circle, adjacent to Xiong'an New Area, and is a key enterprise in the fire protection materials industry in Hebei Province.",
-      
-      
-      
+      "China Fengrui Refractory Materials Co., Ltd. is a company engaged in the production of fire protection products and fire-retardant materials, located in the heart of the Beijing-Tianjin-Hebei Bohai Economic Circle in China, and is a key enterprise in the fire-retardant materials industry of Hebei Province, China.",
     ],
     certifications: ['ISO 9001', 'ISO 14001', 'OSHA Compliant']
   },
@@ -42,7 +39,7 @@ export const facilities = [
     manager: 'Michael Chen',
     hours: 'Mon-Sun: 6:00 AM - 10:00 PM',
     features: [
-      'Our company currently offers three major series with 28 varieties. Our products are sold nationwide and exported to countries and regions such as the Middle East and Southeast Asia.',
+      'Our company has three major series and 28 varieties of products, sold nationwide and exported to the Middle East, Southeast Asia, and other countries and regions. Among them, indoor and outdoor intumescent steel structure fireproof coatings, indoor and outdoor non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof bags, fireproof partitions, and fireproof modules enjoy a high reputation in China.',
     ],
     certifications: ['C-TPAT', 'ISO 9001', 'FDA Registered']
   },
@@ -61,7 +58,7 @@ export const facilities = [
     manager: 'David Rodriguez',
     hours: 'Mon-Fri: 7:00 AM - 8:00 PM, Sat: 8:00 AM - 4:00 PM',
     features: [
-      'Leading products such as indoor/outdoor intumescent and non-intumescent steel structure fireproof coatings, tunnel fireproof coatings, cable fireproof coatings, flexible organic sealants, inorganic sealants, fireproof pillows, fireproof boards, and fireproof modules enjoy a high reputation in China.'
+      'All products have passed the rigorous review and certification of the Fire Product Certification Center of the Ministry of Emergency Management. All employees of the company adhere to the development philosophy of "integrity-based, customer first, people-oriented, and business with virtue". After years of hard work, we have won recognition from all sectors of society.'
     ],
     certifications: ['ISO 9001', 'ISTA Certified', 'TSA Approved']
   },
@@ -80,7 +77,7 @@ export const facilities = [
     manager: 'Jennifer Martinez',
     hours: 'Mon-Fri: 6:00 AM - 6:00 PM',
     features: [
-      'All products have passed the rigorous review and certification of the Fire Product Certification Center of the Ministry of Emergency Management.'
+      'The company will continue to maintain an attitude of integrity and innovation, adhere to customer needs as the orientation, keep striving, and dedicate better products and superior services to achieve customer satisfaction. We sincerely thank domestic and foreign partners for their strong support and good cooperation, and sincerely look forward to working with friends who are committed to the energy-saving building materials industry to make new contributions to the energy-saving building materials industry.'
     ],
     certifications: ['ISO 9001', 'AS9100', 'ITAR Registered']
   },

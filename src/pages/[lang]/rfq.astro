@@ -36,47 +36,44 @@ const t = useTranslations(lang);
     <!-- Content -->
     <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
+          
         <div class="inline-flex items-center px-4 py-2 mb-6 bg-linear-to-r from-blue-600 to-teal-600 text-white text-sm font-semibold rounded-full shadow-lg animate-fadeInUp">
           <FileText className="w-4 h-4 mr-2" />
-          {t('get.your.custom.quote.today')}
+          {t('rfq.quotetoday')}
         </div>
         
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fadeInUp" style="animation-delay: 0.1s">
           {t('hero.cta.quote')}
+          
         </h1>
-        
         <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style="animation-delay: 0.2s">
-          {t('get.your.custom.quote.description')}
+          {t('rfq.description')}
         </p>
+        
+      
 
         <!-- Quick Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20 animate-fadeInUp" style="animation-delay: 0.3s">
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">24hr</div>
-            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('response.time')}</div>
+            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.globalClientsNum')}</div>
+            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.globalClientsText')}</div>
           </div>
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">500+</div>
-            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('happy.clients')}</div>
+            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.unitsShippedNum')}</div>
+            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.unitsShippedText')}</div>
           </div>
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">99.9%</div>
-            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('on.time.rate')}</div>
+            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.onTimeNum')}</div>
+            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.onTimeText')}</div>
           </div>
           <div class="group">
-            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">15+</div>
-            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('facilities')}</div>
+            <div class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-200 mb-1">{t('premiumHero.facilitiesNum')}</div>
+            <div class="text-sm text-slate-300 group-hover:text-teal-300 transition-colors">{t('premiumHero.facilitiesText')}</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Wave separator -->
-    <!-- <div class="absolute bottom-0 left-0 right-0">
-      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-      </svg>
-    </div> -->
   </section>
 
   <!-- Main Form Section -->

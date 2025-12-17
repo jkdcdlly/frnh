@@ -134,19 +134,16 @@ export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseP
         className="flex gap-8 w-max px-4"
         style={{ x }} 
       >
-        
         {features.map((feature, index) => (
           <div
             key={`${feature.title}-${index}`}
             className="relative w-[300px] shrink-0 group cursor-pointer"
           >  
             <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-[400px]">
-           
               {/* Image */}
               <div className="relative h-full overflow-hidden">
                  <a 
                     href={getLocalizedPath(`/products/detail/${feature.slug}`, lang)} 
-                    
                     // 防止拖拽时触发点击（如果以后加拖拽的话），目前可以直接点击
                     draggable={false}
                   >
@@ -157,18 +154,7 @@ export default function FeatureShowcase({ lang = defaultLang }: FeatureShowcaseP
                   loading="lazy"
                   decoding="async" // 异步解码，防止阻塞主线程导致动画卡顿
                 /></a>
-                {/* <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60" /> */}
-                
-                {/* Icon overlay */}
-                {/* <div className="absolute top-4 right-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg z-10">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
-                </div> */}
               </div>
-              
-              {/* <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10 backdrop-blur-sm bg-blue-700/70 rounded-b-lg"> */}
-                {/* <h3 className="text-2xl font-bold mb-2">{feature.title}</h3> */}
-                {/* <p className="text-sm text-gray-900 opacity-90">{feature.description}</p> */}
-              {/* </div> */}
             </div>
 
                 <div className="mt-4 px-4">

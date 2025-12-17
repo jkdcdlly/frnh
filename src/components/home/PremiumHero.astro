@@ -1,7 +1,7 @@
 ---
 import Button from '@/components/ui/Button.astro';
 import heroBgImg1 from '@assets/frnh/PremiumHeroImage1.jpg';
-import heroBgImg2 from '@assets/frnh/PremiumHeroImage2.png';
+import heroBgImg2 from '@assets/frnh/PremiumHeroImage2.jpg';
 import heroBgImg3 from '@assets/frnh/PremiumHeroImage3.jpg';
 import {SITE } from '@config/site';
 import HeroBackground from '@/components/react/HeroBackground';
@@ -23,20 +23,23 @@ const t = useTranslations(lang);
   <!-- Content -->
   <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <!-- Optimize Your Operations with -->
+        
+        <span class="block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400 mt-2">
+          {SITE.title}
+        </span>
+        {t('premiumHero.title')}
+      </h1>
       <div class="inline-flex items-center px-4 py-2 mb-6 bg-linear-to-r from-blue-600 to-teal-600 text-white text-sm font-semibold rounded-full shadow-lg">
+        
         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
         </svg>
         {t('premiumHero.eyebrowtext')}
       </div>
       
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        <!-- Optimize Your Operations with -->
-        {t('premiumHero.title')} 
-        <span class="block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-teal-400 to-blue-400 mt-2">
-          {SITE.title}
-        </span>
-      </h1>
+      
       
       <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl leading-relaxed">
         {t('premiumHero.subtitle')}

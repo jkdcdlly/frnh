@@ -78,7 +78,7 @@ console.log("isSteelStructure:", product.category);
             </h1>
             {
               product.labels && Array.isArray(product.labels) && (
-                product.labels.map((label) =>
+                product.labels.map((label:any) =>
                 <div class="inline-block px-4 py-1.5 mb-6 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full mx-1">
                   {label}
                 </div>
@@ -297,7 +297,7 @@ product.highlights && (
               >
                 <div class="h-98 overflow-hidden">
                   <Image
-                    src={p.image}
+                    src={p.image!}
                     alt={p.title}
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

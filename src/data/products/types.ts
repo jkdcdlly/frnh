@@ -1,12 +1,12 @@
 export interface Product {
   slug: string;
   title: string;
-  description: string;
+  description?: string;
   labels?: string[];
   category?: string;
   category_id?: string;
   colorScheme?: { img: ImageMetadata; desc: string }[];
-  fullDescription?: string;
+  fullDescription: string;
   image?: ImageMetadata;
   images?: ImageMetadata[];
   icon?: any;

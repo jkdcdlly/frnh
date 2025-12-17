@@ -20,6 +20,7 @@ import useCase14 from '@/assets/施工案例20251216/微信图片_20251210111007
 import useCase15 from '@/assets/施工案例20251216/微信图片_20251210111231_467_4.png'
 import useCase16 from '@/assets/施工案例20251216/微信图片_20251210111920_469_4.png'
 import useCase17 from '@/assets/施工案例20251216/微信图片_20251215184010_487_4.png'
+import useCase18 from '@/assets/施工案例20251216/image.png'
 
 export const useCases:any[] = [
   {
@@ -29,7 +30,8 @@ export const useCases:any[] = [
 
     challenge: 'Managing high-volume orders during peak seasons with tight delivery windows and customer expectations for fast, accurate fulfillment.',
     solution: 'Scalable warehousing with automated order processing, same-day shipping capabilities, and integrated returns management.',
-    results: [{'img':useCase01,title:'厂房钢结构防火涂料案例'},
+results: [
+{'img':useCase01,title:'厂房钢结构防火涂料案例'},
 {'img':useCase02,title:'电缆防火涂料案例'},
 {'img':useCase03,title:'电缆防火涂料施工'},
 {'img':useCase04,title:'隧道防火涂料案例'},
@@ -45,7 +47,9 @@ export const useCases:any[] = [
 {'img':useCase14,title:'钢结构防火涂料应用案例'},
 {'img':useCase15,title:'钢结构防火涂料应用案例'},
 {'img':useCase16,title:'钢结构防火涂料应用案例'},
-{'img':useCase17,title:'钢结构防火涂料应用案例'}],
+{'img':useCase17,title:'钢结构防火涂料应用案例'},
+{'img':useCase18,title:'钢结构防火涂料应用案例'}
+],
   },
   // {
   //   industry: '室内防火',

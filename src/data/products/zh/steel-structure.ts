@@ -29,7 +29,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-1',
     title: '室内膨胀型钢结构防火涂料',
     category: 'steel-structure',
-    description: '室内膨胀型钢结构防火涂料 遇火时形成均匀而致密的蜂窝状或海绵状的炭质泡沫层，对可燃性基材有良好的保护作用...',
     fullDescription: '室内膨胀型钢结构防火涂料 遇火时形成均匀而致密的蜂窝状或海绵状的炭质泡沫层，对可燃性基材有良好的保护作用。该种涂料耐水、有较好的附着力、良好的成膜性能，硬度大、耐洗刷性。',
     image: getImg('1室内膨胀型钢结构防火涂料/室内膨胀型钢结构防火涂料水基型.png')!,
     images: [
@@ -60,7 +59,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-2',
     title: '室外膨胀型钢结构防火涂料',
     category: 'steel-structure',
-    description: '室外膨胀型钢结构防火涂料是一种专门用于室外环境的防火涂料，其主要特点在于具备了出色的防火、隔热效果以及优良的耐候性能...',
     fullDescription: '室外膨胀型钢结构防火涂料是一种专门用于室外环境的防火涂料，其主要特点在于具备了出色的防火、隔热效果以及优良的耐候性能。这种涂料采用特殊配方，在高温条件下能够迅速膨胀，形成致密的泡沫层。这一特性不仅能够有效阻止火焰对钢结构的侵蚀，还能隔绝热量传递，为钢结构提供长时间的防护。此外，它还具有很好的附着力和耐久性，能够在户外环境下长时间保持涂层完好。相较于其他类型的防火涂料，室外膨胀型钢结构防火涂料在应对恶劣自然环境方面表现出色。它能够抵御风雨、紫外线等自然因素的侵扰，确保涂装后的钢结构长期保持良好的防火安全状态。总之，这种防火涂料是保障室外钢结构安全的理想选择。',
     image: getImg('2室外膨胀型钢结构防火涂料/室外膨胀型钢结构防火涂料(水基型).png')!,
     images: [
@@ -80,7 +78,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-3',
     title: '室内非膨胀型钢结构防火涂料（石膏基）',
     category: 'steel-structure',
-    description: '石膏基防火涂料以石膏为主要基材，采用无机轻质隔热和纤维材料组成的粉料...',
     fullDescription: '石膏基防火涂料以石膏为主要基材，采用无机轻质隔热和纤维材料组成的粉料。相比水泥基防火涂料，石膏基涂料绿色环保，原材料低碳节能，材料轻、密度小。同时，粘接力强，变形能力好，耐火性能优异。成品不易开裂兑落，突破泥基分层分道施工的瓶颈，可以实现一次喷涂施工成型。',
     image: getImg('3室内非膨胀型钢结构防火涂料/室内非膨胀型钢结构防火涂料（石膏基）.png')!,
     images: [
@@ -111,7 +108,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-4',
     title: '室外非膨胀型钢结构防火涂料',
     category: 'steel-structure',
-    description: '室外非膨胀型钢结构防火涂料是我公司研制成功的新型钢结构防火涂料，该产品适用于钢结构表面喷涂，形成一层隔热防火层...',
     fullDescription: '室外非膨胀型钢结构防火涂料是我公司研制成功的新型钢结构防火涂料，该产品适用于钢结构表面喷涂，形成一层隔热防火层，使其在火灾中受到隔热保护，室外非膨胀型钢结构防火涂料以无机隔热材料为主要成份，无毒无味，具有施工方便、涂层附着力强、机械强度高、耐火时间长等特点。',
     image: getImg('4室外非膨胀型钢结构防火涂料/室外非膨胀型钢结构防火涂料.png')!,
     images: [
@@ -148,7 +144,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-5',
     title: '特种室外膨胀型钢结构防火涂料',
     category: 'steel-structure',
-    description: '室外特种膨胀型钢结构防火涂料是一种特殊的防火涂层材料，主要用于钢结构的防火保护...',
     fullDescription: '室外特种膨胀型钢结构防火涂料是一种特殊的防火涂层材料，主要用于钢结构的防火保护。特种钢结构防火涂料在型式试验中采用烃类（HC）火灾升温试验条件。对防火涂料涂层的耐火隔热等性能要求很高。这种涂料广泛应用于建筑、石油化工设施等行业的户外钢结构中。例如化工厂、装置区、管廊、桥梁、风力发电塔等重要设施的防护都离不开它。此外，它也常常应用于一些需要特殊保护的场所或环境中，如消防通道中的隔离设备或者高温环境下的建筑结构维护等等。',
     image: getImg('5特种钢结构防火涂料/特种室外膨胀型钢结构防火涂料(特种溶剂型).png')!,
     images: [
@@ -165,7 +160,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-6',
     title: '隧道防火涂料',
     category: 'steel-structure',
-    description: '本产品适用于公路隧道、铁路隧道的防火，还适用于石化工程、高层建筑、钢结构、地下车库的防火需要...',
     fullDescription: '本产品适用于公路隧道、铁路隧道的防火，还适用于石化工程、高层建筑、钢结构、地下车库的防火需要。公路隧道一般在山区，隧道洞为阴凉、潮湿、通风性也较差。混凝土内壁容易出现受潮霉变、返碱、脱落等现象。长隧道多远离城市，无可靠的消防水源，隧道中的车流量不均衡，车载物品不确定，火灾荷载不确定，这些决定了长隧道火灾的不可预见性。所以，公路隧道洞内涂装工程既要考虑其良好的装饰性，又要考虑其优异的防水性能，防霉变性能和防火性能。',
     image: getImg('6隧道防火涂料/隧道防火涂料.png')!,
     images: [
@@ -180,7 +174,6 @@ const steelStructureProductsMap: Product[] = [
     category: 'steel-structure',
     category_id: 'steel-structure-coatings',
     image: getImg('饰面型防火涂料.jpg')!,
-    description: '阻火包是我公司研制的防火配套耐火材料，阻火包形状如小枕头...',
     fullDescription: `
       饰面型防火涂料是一种集装饰和防火功能为一体的新型涂料品种。当防火涂料涂覆于可燃基材上时，平时可起到装饰作用，一旦火灾发生时，则可阻止火势蔓延，达到保护基材的目的，生产的饰面型防火涂料均为膨胀型防火涂料，品种有水性防火涂料、透明防火涂料和溶剂型防火涂料，所用的防火助剂基本相同。
       饰面型防火涂料适用于一般工业及民用建筑、高层建筑、宾馆、文化娱乐场所、古建筑的木结构材料、纤维板、刨花板、玻璃钢板制品等易燃材料，以及水泥墙面等，起到防火保护作用。饰面型防火涂料成膜后涂层性能稳定，能使用各种气候条件，因此在全国各地均可使用。
@@ -192,7 +185,6 @@ const steelStructureProductsMap: Product[] = [
     slug: 'steelStructure-8',
     title: '特种室外非膨胀型钢结构防火涂料（特种型）',
     category: 'steel-structure',
-    description: '石油化工设施特种室外非膨胀型钢结构防火涂料耐火性能2.0h、2.5h、3.0h厚涂型用于石油化工设施、变配电站等特殊建筑物钢结构表面的防火保护...',
     fullDescription: '石油化工设施特种室外非膨胀型钢结构防火涂料耐火性能2.0h、2.5h、3.0h厚涂型用于石油化工设施、变配电站等特殊建筑物钢结构表面的防火保护，特种钢结构防火涂料在型式试验中采用烃类（HC）火灾升温试验条件。对防火涂料涂层的耐火隔热等性能要求很高。该涂料适用于特殊室外承重钢结构建筑的防火保护工程，如化工设备、变电站、配电站、火电厂、核电站等石油化工、冶金、电厂等室外钢结构建筑的防火保护工程。涂层导热系数低，耐候性好、抗氧化、粉化能力强，涂层遇火形成高密度釉层即隔热又耐进一步氧化，使其耐火极限达3.0小时以上。',
     image: getImg('4室外非膨胀型钢结构防火涂料/特种室外非膨胀型钢结构防火涂料（特种型）.png')!,
     images: [
@@ -210,8 +202,7 @@ const steelStructureProductsMap: Product[] = [
   }, {
     slug: 'steelStructure-9',
     title: '室内非膨胀型钢结构防火涂料（水泥基）',
-    category: 'steel-structure',
-    description: '本产品是我公司根据GB14907-2018国家标准研制成功的产品，该产品适用于钢结构表面喷涂，形成一层隔热防火层使其在火灾中受到隔热保护...',
+    
     fullDescription: '本产品是我公司根据GB14907-2018国家标准研制成功的产品，该产品适用于钢结构表面喷涂，形成一层隔热防火层使其在火灾中受到隔热保护。具有施工方便快捷，涂层附着力强，机械强度高，耐火极限时间长，耐火性能稳定可靠等特点。',
     image:getImg('3室内非膨胀型钢结构防火涂料/室内非膨胀型钢结构防火涂料（水泥基）.png')!,
     images: [
@@ -251,5 +242,8 @@ packagingAndTransportation: [
 
 
 export const steelStructureProducts: Product[] = steelStructureProductsMap.map(product => ({
-  ...product
+  ...product,
+    description: (product.fullDescription ? product.fullDescription.substring(0, 50) + '...' : ''),
+    category: 'steel-structure',
+    labels: ['源头厂家', '供货稳定', '发货快速'],
 }));

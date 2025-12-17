@@ -20,10 +20,7 @@ export const facilities = [
     manager: 'Sarah Johnson',
     hours: '24/7 Operations',
     features: [
-      '廊坊丰瑞耐火材料有限公司是一家从事消防产品及防火阻燃材料生产的企业，坐落于京津冀环渤海经济圈腹地，紧邻雄安新区，河北省防火材料行业重点企业。',
-      
-      
-      
+      '中国丰瑞耐火材料有限公司是一家从事消防产品及防火阻燃材料生产的企业，坐落于中国京津冀环渤海经济圈腹地，中国河北防火材料行业重点企业。',
     ],
     certifications: ['ISO 9001', 'ISO 14001', 'OSHA Compliant']
   },
@@ -42,7 +39,7 @@ export const facilities = [
     manager: 'Michael Chen',
     hours: 'Mon-Sun: 6:00 AM - 10:00 PM',
     features: [
-      '我公司产品现有三大系列28个品种，产品销往全国各地，并出口中东，东南亚等国家和地区。',
+      '我公司产品现有三大系列28个品种，产品销往全国各地，并出口中东，东南亚等国家和地区，其中室内外膨胀型钢结构防火涂料、室内外非膨胀型钢结构防火涂料、隧道防火涂料、电缆防火涂料、柔性有机堵料、无机堵料、阻火包、防火隔板、阻火模块等主导产品在国内享有较高声誉。',
     ],
     certifications: ['C-TPAT', 'ISO 9001', 'FDA Registered']
   },
@@ -61,7 +58,7 @@ export const facilities = [
     manager: 'David Rodriguez',
     hours: 'Mon-Fri: 7:00 AM - 8:00 PM, Sat: 8:00 AM - 4:00 PM',
     features: [
-      '其中室内外膨胀型钢结构防火涂料、室内外非膨胀型钢结构防火涂料、隧道防火涂料、电缆防火涂料、柔性有机堵料、无机堵料、阻火包、防火隔板、阻火模块等主导产品在国内享有较高声誉。'
+      '所有产品均已通过消防产品合格评定中心的严格审查认证。公司全体员工秉承“诚信为本，用户至上，以人为本，以德经商”的发展理念，经数年拼搏，赢得社会各界认可。'
     ],
     certifications: ['ISO 9001', 'ISTA Certified', 'TSA Approved']
   },
@@ -80,7 +77,7 @@ export const facilities = [
     manager: 'Jennifer Martinez',
     hours: 'Mon-Fri: 6:00 AM - 6:00 PM',
     features: [
-      '所有产品均已通过应急管理部消防产品合格评定中心的严格审查认证。'
+      '本公司将一如既往地用诚信与创新的态度，继续坚持以客户需求为导向，不断奋进，奉献出更好的产品和更上乘的服务，尽力做到客户满意。本公司衷心感谢海内外合作伙伴的大鼎力相助和良好合作，并真诚企盼与致力于节能建材事业的朋友携手合作，为节能建材事业做出新的贡献。'
     ],
     certifications: ['ISO 9001', 'AS9100', 'ITAR Registered']
   },

@@ -16,13 +16,6 @@ import { Image } from 'astro:assets';
       <!-- Company Info -->
       <div class="lg:col-span-1 space-y-6">
         <a href={getLocalizedPath('/', lang)} class="flex items-center space-x-3 group">
-          <!-- <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-linear-to-br from-blue-600 to-teal-600">
-            <Package className="w-7 h-7 text-white" />
-          </div>
-          <span class="text-2xl font-bold text-white">
-            {SITE.title}
-          </span> -->
-
           <Image 
           src={logoImage} 
           alt={SITE.title} 
@@ -31,7 +24,7 @@ import { Image } from 'astro:assets';
         />
         </a>
         <p class="text-sm text-slate-400 leading-relaxed max-w-xs">
-          {t('site.description')}
+          {t('footer.sitedescription')}
         </p>
         <div class="flex space-x-4">
           <a
@@ -98,48 +91,11 @@ import { Image } from 'astro:assets';
               {t('steel.structure')}
             </a>
           </li>
-          <!-- <li>
-            <a href={getLocalizedPath('/capabilities', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              {t('manufacturing')}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath('/capabilities', lang)} class="text-sm text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              {t('supply.chain.management')}
-            </a>
-          </li> -->
         </ul>
       </div>
 
       <!-- Contact -->
       <div>
-        <!-- <h3 class="text-sm font-semibold uppercase tracking-wider text-white mb-6">
-          
-          {t('footer.GetStarted')}
-        </h3> -->
-        <!-- <ul class="space-y-3 text-sm">
-          <li>
-            <a href={getLocalizedPath('/rfq', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              {t('request.for.quote')}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath('/facilities', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              {t('nav.facilities')}
-            </a>
-          </li>
-          <li>
-            <a href={getLocalizedPath('/documentation', lang)} class="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center group">
-              <span class="w-0 group-hover:w-2 h-0.5 bg-blue-400 transition-all mr-0 group-hover:mr-2"></span>
-              {t('documentation')}
-            </a>
-          </li>  -->
-        </ul>
-        
         <div class="mt-8">
           <a
             href={getLocalizedPath('/rfq', lang)}

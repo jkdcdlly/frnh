@@ -5,13 +5,13 @@ import { SITE } from '@config/site';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/ui/Section.astro';
 import Card from '@/components/ui/Card.astro';
-import Button from '@/components/ui/Button.astro';
 import { Image } from 'astro:assets';
 import ImageReveal from '@/components/react/ImageReveal';
-import { getAllData } from '@/data/facilities/index';
 
 
-import ctaBgImg from '@assets/photo-1565043589221-1a6fd9ae45c7.jpg';
+import { getTechnologies } from "@/data/facilities";
+import ctaBgImg from '@assets/厂区实力/image.png'; // banner 图片
+// import ctaBgImg from '@assets/photo-1565043589221-1a6fd9ae45c7.jpg';
 import { getLangFromUrl, useTranslations,getLocalizedPath } from '@/i18n/utils';
 // getStaticPaths 这个函数必须有，否则报错。Astro 框架规定的一个特殊函数,必须导出，用于多语言路由支持
 export { getStaticPaths } from '@/i18n/utils';
@@ -19,7 +19,9 @@ export { getStaticPaths } from '@/i18n/utils';
 // 2. 获取当前语言参数
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const facilities =getAllData(lang);
+
+const technologies = getTechnologies(t);
+
 ---
 
 <BaseLayout title={`Our Facilities - ${SITE.title}`} lang={lang}>
@@ -62,74 +64,40 @@ const facilities =getAllData(lang);
     
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      {facilities.map((facility, index) => (
+      {technologies.map((facility, index) => (
         <ImageReveal client:load delay={index * 0.1}>
           <Card hover class="overflow-hidden animate-fadeInUp group" style={`animation-delay: ${index * 0.1}s`}>
             <!-- Facility Image -->
             <div class="relative  overflow-hidden">
               <Image 
                 src={facility.image}
-                alt={facility.name}
+                alt={facility.title}
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div class="absolute inset-0 bg-linear-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
-              
               <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 class="text-2xl font-bold mb-1">{facility.name}</h3>
-              
+                <h3 class="text-2xl font-bold mb-1">{facility.title}</h3>
               </div>
             </div>
-
             <div class="p-6 space-y-5">
-              
-
               <!-- Features -->
               <div>
                 
                 <ul class="grid grid-cols-1 gap-2.5">
-                  {facility.features.map((feature) => (
+                  { facility.description && (
                     <li class="flex items-start space-x-2.5 text-sm">
                       <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <span class="text-gray-600">{feature}</span>
+                      <span class="text-gray-600">{facility.description}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
-
-              
             </div>
           </Card>
         </ImageReveal>
       ))}
     </div>
   </Section>
-
-  
-  <!-- CTA Section 
-  <section class="relative py-32 overflow-hidden">
-    <div class="absolute inset-0">
-      <Image 
-        src={ctaBgImg}
-        alt="Modern facilities and infrastructure"
-        class="w-full h-full object-cover"
-        width={2070}
-        height={1380}
-      />
-      <div class="absolute inset-0 bg-linear-to-r from-blue-900/95 to-teal-900/95"></div>
-    </div>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="max-w-4xl mx-auto text-center text-white">
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button href={getLocalizedPath('/rfq',lang)} size="lg" class="bg-blue-600! hover:bg-blue-700! text-white! shadow-2xl!">
-            {t('request.for.quote')}
-          </Button>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
 </BaseLayout>
